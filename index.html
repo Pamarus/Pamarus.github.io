@@ -185,10 +185,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建于：2020-05-04 21:36:45 / 更新于：23:54:43" itemprop="dateCreated datePublished" datetime="2020-05-04T21:36:45+08:00">2020-05-04</time>
+              <time title="创建于：2020-05-04 21:36:45" itemprop="dateCreated datePublished" datetime="2020-05-04T21:36:45+08:00">2020-05-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="更新于：2020-05-05 00:04:17" itemprop="dateModified" datetime="2020-05-05T00:04:17+08:00">2020-05-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -226,7 +232,7 @@
 <p>  （themes是本地博客文件夹名，<code>主题名</code>是本地展示的主题文件夹名称）</p>
 </blockquote>
 <p>等待下载完成:</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9801-%E5%85%8B%E9%9A%86%E4%B8%BB%E9%A2%98.jpg" alt="01-克隆主题"></p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9801-%E5%85%8B%E9%9A%86%E4%B8%BB%E9%A2%98.jpg" alt="01-克隆主题 =x150"></p>
 <p>最后本地 <code>themes</code> 文件夹下载成功next文件。</p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9802-%E4%B8%8B%E8%BD%BD%E5%AE%8C.jpg" alt="02-下载成功"></p>
 <blockquote>
@@ -235,14 +241,16 @@
 <h2 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h2><p>前往<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">NexT GitHub项目页</a></p>
 <p>选择你所需要的版本，下载 Download 区域下的 <code>Source Code (zip)</code>到本地。</p>
 <p>解压所下载的压缩包至站点的 <code>themes</code> 目录下， 并将 解压后的文件夹名称更改为 <code>next</code>。</p>
-<h1 id="启用并验证主题"><a href="#启用并验证主题" class="headerlink" title="启用并验证主题"></a>启用并验证主题</h1><p>（1）打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</p>
+<h1 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h1><p>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
-<p>（2）再启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 <code>hexo s --debug</code>。 </p>
+<h1 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h1><p>启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 <code>hexo s --debug</code>。 </p>
 <p>当命令行输出中提示出现：</p>
-<pre><code>INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</code></pre><p>此时即可使用浏览器访问 <a href="http://localhost:4000，检查站点是否正确运行。">http://localhost:4000，检查站点是否正确运行。</a></p>
+<pre><code>INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</code></pre><p>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，检查站点是否正确运行。</p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9803-%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2.jpg" alt="03-主题页面"></p>
-<p>（3）若博客关联了GitHub，终端界面输入<code>hexo g -d</code>命令，next主题便成功部署到GitHub上了。</p>
+<ul>
+<li>若博客关联了GitHub，终端界面输入<code>hexo g -d</code>命令，next主题便成功部署到GitHub上了。</li>
+</ul>
 
       
     </div>
