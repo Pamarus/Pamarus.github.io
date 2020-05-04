@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Pamarus">
 <meta property="og:description" content="环境配置：安装Node.js和git下载安装Node.js前往 Node.js官网 下载软件安装。 下载安装git前往 git官网 下载软件安装。 检查是否安装在命令行中输入相应命令验证是否成功，如果成功会有相应的版本号。 123node -vgit versionnpm -v  安装Hexo安装Hexo：终端中输入命令 1sudo npm install -g hexo-cli  输入管理员密码">
 <meta property="article:published_time" content="2020-05-04T13:54:48.000Z">
-<meta property="article:modified_time" content="2020-05-04T14:55:40.119Z">
+<meta property="article:modified_time" content="2020-05-04T15:01:36.427Z">
 <meta property="article:author" content="Pamarus">
 <meta property="article:tag" content="Hexo_Blog">
 <meta property="article:tag" content="GitHub">
@@ -177,7 +177,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于：2020-05-04 21:54:48 / 更新于：22:55:40" itemprop="dateCreated datePublished" datetime="2020-05-04T21:54:48+08:00">2020-05-04</time>
+              <time title="创建于：2020-05-04 21:54:48 / 更新于：23:01:36" itemprop="dateCreated datePublished" datetime="2020-05-04T21:54:48+08:00">2020-05-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,16 +224,20 @@
 <blockquote>
 <p>CD方法：<br>输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，就能自动填充文件路径，点击回车就OK了</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- 安装完的目录</span><br><span class="line">    - .</span><br><span class="line">    ├── _config.yml # 网站的配置信息，您可以在此配置大部分的参数。 </span><br><span class="line">    ├── package.json</span><br><span class="line">    ├── scaffolds # 模版文件夹</span><br><span class="line">    ├── source  # 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹</span><br><span class="line">    |   ├── _drafts # 草稿文件</span><br><span class="line">    |   └── _posts # 文章Markdowm文件 </span><br><span class="line">    └── themes  # 主题文件夹</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- 安装完的目录</span><br><span class="line">    - .</span><br><span class="line">    ├── node_modules</span><br><span class="line">    ├── scaffolds # 模版文件夹</span><br><span class="line">    ├── source  # 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹</span><br><span class="line">    |   └── _posts # 文章Markdowm文件 </span><br><span class="line">    └── themes  # 主题文件夹</span><br><span class="line">    ├── _config.yml # 网站的配置信息，您可以在此配置大部分的参数。 </span><br><span class="line">    ├── package.json</span><br><span class="line">    ├── package-lock.json</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h2><p>cd到“My_Blog”文件夹下，执行命令</p>
-<pre><code>npm install</code></pre><h2 id="执行下述命令生成本地网页文件并开启服务器："><a href="#执行下述命令生成本地网页文件并开启服务器：" class="headerlink" title="执行下述命令生成本地网页文件并开启服务器："></a>执行下述命令生成本地网页文件并开启服务器：</h2><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h2 id="执行下述命令生成本地网页文件并开启服务器："><a href="#执行下述命令生成本地网页文件并开启服务器：" class="headerlink" title="执行下述命令生成本地网页文件并开启服务器："></a>执行下述命令生成本地网页文件并开启服务器：</h2><blockquote>
 <p><code>hexo g</code> 或 <code>hexo generate</code>  生成静态文件<br><code>hexo s</code> 或者 <code>hexo server</code>    在服务器上运行</p>
 </blockquote>
 <p>此时，浏览器中打开网址 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，如果没有问题，就能看到如下页面：</p>
 <h2 id="初次写作文章"><a href="#初次写作文章" class="headerlink" title="初次写作文章"></a>初次写作文章</h2><p>control+C 暂时关闭服务器，回到命令行输入界面</p>
 <p>输入命令行</p>
-<pre><code>hexo new “My First Post&quot;</code></pre><p>source/_posts/的本地文件夹下会生成My-First-Post.md文件，可以打开编辑保存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new “My First Post&quot;</span><br></pre></td></tr></table></figure>
+
+<p>source/_posts/的本地文件夹下会生成My-First-Post.md文件，可以打开编辑保存。</p>
 <p>该md文件在自动生成时会带有一些属性：</p>
 <blockquote>
 <p>title: 定义了博文的标题<br>date: 定义了创作博文的时间<br>tags: 定义了博文的标签<br>除了这个三个属性以外我们还可以扩展一些属性：<br>update: 定义了最后修改的时间<br>comments：定义能否评论此博文(默认为true)<br>categories: 定义了博文的种类<br>网页效果如下。有标题</p>
