@@ -162,6 +162,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/05/%E3%80%90Markdown%E6%95%99%E7%A8%8B%E3%80%91Markdown%E4%B8%AD%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AAtags/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="博主">
+      <meta itemprop="description" content="坚持写作">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pamarus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/05/%E3%80%90Markdown%E6%95%99%E7%A8%8B%E3%80%91Markdown%E4%B8%AD%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AAtags/" class="post-title-link" itemprop="url">【Markdown教程】Markdown中如何添加多个tags</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建于：2020-05-05 00:30:27 / 更新于：00:30:45" itemprop="dateCreated datePublished" datetime="2020-05-05T00:30:27+08:00">2020-05-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>当添加多个标签时，小书匠编辑器默认是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: 新建,模板,小书匠</span><br></pre></td></tr></table></figure>
+
+<p>此时网页端显示就会有问题，三个标签识别为一个:</p>
+<blockquote>
+<p>#新建,模板,小书匠</p>
+</blockquote>
+<p>如果要添加多个标签，应该这样书写</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [新建,模板,小书匠]</span><br></pre></td></tr></table></figure>
+
+<p>需要将标签以英文逗号隔开，并在最外层用中括号包围。</p>
+</blockquote>
+<p>实际显示效果：</p>
+<blockquote>
+<p>#新建   #模板   #小书匠</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/%E3%80%90%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,7 +277,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-05 00:04:17" itemprop="dateModified" datetime="2020-05-05T00:04:17+08:00">2020-05-05</time>
+                <time title="更新于：2020-05-05 00:13:18" itemprop="dateModified" datetime="2020-05-05T00:13:18+08:00">2020-05-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -246,7 +330,7 @@
 
 <h1 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h1><p>启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 <code>hexo s --debug</code>。 </p>
 <p>当命令行输出中提示出现：</p>
-<pre><code>INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</code></pre><p>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，检查站点是否正确运行。</p>
+<pre><code>INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</code></pre><p>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，最终显示如下图。</p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9803-%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2.jpg" alt="03-主题页面"></p>
 <ul>
 <li>若博客关联了GitHub，终端界面输入<code>hexo g -d</code>命令，next主题便成功部署到GitHub上了。</li>
@@ -456,7 +540,7 @@ hexo d</code></pre><p>刷新网页，看见第二篇文章了。</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/03/%E3%80%90%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E3%80%91MD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/03/%E3%80%90Markdown%E6%95%99%E7%A8%8B%E3%80%91MD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -470,7 +554,7 @@ hexo d</code></pre><p>刷新网页，看见第二篇文章了。</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/03/%E3%80%90%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E3%80%91MD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">【博客教程】MD语法学习及快速入门</a>
+            <a href="/2020/05/03/%E3%80%90Markdown%E6%95%99%E7%A8%8B%E3%80%91MD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">【博客教程】MD语法学习及快速入门</a>
         </h2>
 
         <div class="post-meta">
@@ -748,7 +832,7 @@ _   底线
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
