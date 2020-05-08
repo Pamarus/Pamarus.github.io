@@ -419,7 +419,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/%E3%80%90%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -433,7 +433,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/04/%E3%80%90%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E3%80%91%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" class="post-title-link" itemprop="url">【博客教程】如何更换Hexo_Blog博客主题</a>
+            <a href="/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" class="post-title-link" itemprop="url">如何更换Hexo_Blog博客主题</a>
         </h2>
 
         <div class="post-meta">
@@ -450,7 +450,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-05 18:04:44" itemprop="dateModified" datetime="2020-05-05T18:04:44+08:00">2020-05-05</time>
+                <time title="更新于：2020-05-08 12:32:12" itemprop="dateModified" datetime="2020-05-08T12:32:12+08:00">2020-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -458,7 +458,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">博客教程</span></a>
                 </span>
             </span>
 
@@ -478,19 +478,25 @@
 </blockquote>
 <h1 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h1><p>有两种方法下载主题：克隆和下载压缩包</p>
 <p>建议使用<code>克隆最新版本</code>的方式，之后的更新可以通过<code>git pull</code>来快速更新， 而不用再次下载压缩包替换。</p>
-<h2 id="克隆主题"><a href="#克隆主题" class="headerlink" title="克隆主题"></a>克隆主题</h2><p>cd到博客本地文件夹，</p>
-<p>cd方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">终端界面输入&#96;cd&#96;+&#96;空格&#96;</span><br><span class="line">将想要定位的文件夹拖进终端，就能自动填充文件路径，点击回车就OK了</span><br><span class="line">再输入以下命令：</span><br></pre></td></tr></table></figure>
-
-<p>再输入用以下命令：</p>
+<h2 id="克隆主题"><a href="#克隆主题" class="headerlink" title="克隆主题"></a>克隆主题</h2><ul>
+<li>cd到博客本地文件夹，</li>
+</ul>
+<blockquote>
+<p>cd方法：<br>终端界面输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，就能自动填充文件路径，点击回车就OK了</p>
+</blockquote>
+<ul>
+<li>再输入用以下命令：</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p><strong>格式：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 主题的GitHub链接 themes&#x2F;主题名</span><br></pre></td></tr></table></figure>
-<p>  （themes是本地博客文件夹名，<code>主题名</code>是本地展示的主题文件夹名称）</p>
+<p>  （themes是本地博客文件夹名，<code>主题名</code>是将要保存到本地的主题文件夹名称。这个是NexT主题，本地文件夹名为next）</p>
 </blockquote>
-<p>等待下载完成:</p>
+<ul>
+<li>等待下载完成:</li>
+</ul>
 <center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
 <img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题01-克隆主题.jpg" width="80%" height="80%" />
 
@@ -499,7 +505,9 @@
 
 
 
-<p>最后本地 <code>themes</code> 文件夹下载成功next文件。</p>
+<ul>
+<li>最后本地 <code>themes</code> 文件夹下载成功next文件。</li>
+</ul>
 <center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
 <img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题02-下载完.jpg" width="15%" height="15%" />
 
@@ -507,11 +515,16 @@
 </center>
 
 <blockquote>
-<p>更多主题参考Hexo官网：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+<p>更多主题样式参考Hexo官网：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网 https://hexo.io/themes/</a></p>
 </blockquote>
-<h2 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h2><p>前往<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">NexT GitHub项目页</a></p>
-<p>选择你所需要的版本，下载 Download 区域下的 <code>Source Code (zip)</code>到本地。</p>
-<p>解压所下载的压缩包至站点的 <code>themes</code> 目录下， 并将 解压后的文件夹名称更改为 <code>next</code>。</p>
+<h2 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h2><ul>
+<li><p>前往<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">NexT GitHub项目页</a></p>
+</li>
+<li><p>选择你所需要的版本，下载 Download 区域下的 <code>Source Code (zip)</code>到本地。</p>
+</li>
+<li><p>解压所下载的压缩包至站点的 <code>themes</code> 目录下， 并将 解压后的文件夹名称更改为 <code>next</code>。</p>
+</li>
+</ul>
 <h1 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h1><p>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
@@ -580,7 +593,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-06 23:49:38" itemprop="dateModified" datetime="2020-05-06T23:49:38+08:00">2020-05-06</time>
+                <time title="更新于：2020-05-08 12:30:57" itemprop="dateModified" datetime="2020-05-08T12:30:57+08:00">2020-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
