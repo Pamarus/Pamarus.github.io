@@ -187,7 +187,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-13 16:31:13" itemprop="dateModified" datetime="2020-05-13T16:31:13+08:00">2020-05-13</time>
+                <time title="更新于：2020-05-13 16:33:43" itemprop="dateModified" datetime="2020-05-13T16:33:43+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,71 +222,14 @@
 </ul>
 </li>
 </ul>
-<p>可以自己切换一下，看看线上效果。喜欢哪一种就选哪个。</p>
-<ul>
-<li>如何配置<ul>
-<li>打开next文件夹内的配置文件<code>_config.yml</code>，搜索 scheme 关键字。 你会看到有四行 scheme 的配置，将需启用的 scheme 前面注释<code>#</code>去除即可。</li>
-<li>下面我选中的是<code>Gemini</code>风格。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="修改基本属性"><a href="#修改基本属性" class="headerlink" title="修改基本属性"></a>修改基本属性</h1><p>其次我们就要修改标题、副标题、描述、作者、语言这些基本属性了，这是博客页面最直观的一些个人信息的展示。</p>
-<p>打开博客文件夹内的配置文件<code>_config.yml</code>，找到<code>Site</code>，修改以下属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: &#39;&#39;</span><br><span class="line">description: &#39;&#39;</span><br><span class="line">keywords:</span><br><span class="line">author: John Doe</span><br><span class="line">language: en</span><br><span class="line">timezone: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>语言默认为<code>en</code>，中文简体为<code>zh-Hans</code>，中文繁體为<code>zh-hk</code> 或者 <code>zh-tw</code></p>
-<h1 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h1><h2 id="开启–网页显示菜单"><a href="#开启–网页显示菜单" class="headerlink" title="开启–网页显示菜单"></a>开启–网页显示菜单</h2><p>打开next文件夹内的配置文件<code>_config.yml</code>，找到<code>menu</code>。配置项如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>同scheme一致，将需启用的菜单前面的注释 <code>#</code> 删去即可。也可以上下移动位置，改变网页上显示的上下位置。<br>如上，启用了home/about/tags/categories/archives</li>
-</ul>
-<blockquote>
-<p>格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item name: link || icon name</span><br></pre></td></tr></table></figure>
-<p>item name 这个名称并不直接显示在页面上，它将用于<code>匹配图标以及翻译</code>。<br> <code>||</code> 之前的是目标链接，之后的是 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" title="https://fontawesome.com/icons">Font Awesome</a> 图标的名字。<br>你可以再代码中找到图标引用的网址。</p>
-</blockquote>
-<h2 id="自定义菜单项的显示文本"><a href="#自定义菜单项的显示文本" class="headerlink" title="自定义菜单项的显示文本"></a>自定义菜单项的显示文本</h2><p>在上一步中设置的菜单的名称并不直接用于界面上的展示。</p>
-<p>Hexo 在生成的时候将使用<code>item name</code>查找对应的<code>翻译文本</code>，并提取显示。<br>这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。打开<code>zh-Hans.yml</code>，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  archives: 归档</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  schedule: 日程表</span><br><span class="line">  sitemap: 站点地图</span><br><span class="line">  commonweal: 公益404</span><br></pre></td></tr></table></figure>
-
-<p>如果不喜欢默认的，可以自定义修改这些汉字。</p>
-<h3 id="开启–关闭图标"><a href="#开启–关闭图标" class="headerlink" title="开启–关闭图标"></a>开启–关闭图标</h3><p>menu下面有如下设置项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  # Enable &#x2F; Disable menu icons &#x2F; item badges.</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br></pre></td></tr></table></figure>
-
-<p><code>icons: true</code>控制显不显示图标。可以设置成 false 不显示图标。</p>
-<blockquote>
-<p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（<code>没有设置</code>或者<code>无效的 Font Awesome 图标名字</code>） 的情况下，NexT 将会使用<code>?</code>作为图标。<br>不显示的话，将上面的代码复制到配置文件menu下面。</p>
-</blockquote>
-<h2 id="badges-设定菜单项的数额展示"><a href="#badges-设定菜单项的数额展示" class="headerlink" title="badges-设定菜单项的数额展示"></a>badges-设定菜单项的数额展示</h2><p>在上面的设置项下方，还有一个<code>badges</code>的设置，这个具体有什么效果呢，试一试。<br>修改为<code>true</code>。效果如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE01-%E5%BE%BD%E7%AB%A0.jpg" alt="01-徽章"></p>
-<p>在分类、标签、归档后面会显示对应的统计数额。我现在有1个分类、5个标签、5篇文章归档。</p>
-<h2 id="如何添加菜单项"><a href="#如何添加菜单项" class="headerlink" title="如何添加菜单项"></a>如何添加菜单项</h2><p>以简体中文为例，若你需要添加一个菜单项，在比如 something。那么就需要：</p>
-<ul>
-<li>在next文件夹内的配置文件<code>_config.yml</code>的menu中增加：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">something: &#x2F;something&#x2F; ||</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在 menu 字段下添加一项：</p>
-<p>  something: 有料</p>
-</li>
-<li><p>配置图标</p>
-</li>
-</ul>
-<p>在 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" title="https://fontawesome.com/icons">Font Awesome</a> 上找到一个图标，将相应的名称填入上面代码 <code>||</code>的后面，即可生效。比如名称为<code>coffee</code>的图标，上面的代码补充完整：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">something: &#x2F;something&#x2F; || fa fa-coffee</span><br></pre></td></tr></table></figure>
-
-<p>效果如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE02-%E6%B7%BB%E5%8A%A0%E8%8F%9C%E5%8D%95.jpg" alt="02-添加菜单"></p>
-<blockquote>
-<p>2020年5月13日更新</p>
-</blockquote>
-<h1 id="配置侧栏"><a href="#配置侧栏" class="headerlink" title="配置侧栏"></a>配置侧栏</h1><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于左侧位置。 可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/08/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%A0%B7%E5%BC%8F%E3%80%81%E8%AF%AD%E8%A8%80%E3%80%81%E8%8F%9C%E5%8D%95%E7%AD%89/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -336,7 +279,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-08 12:40:00" itemprop="dateModified" datetime="2020-05-08T12:40:00+08:00">2020-05-08</time>
+                <time title="更新于：2020-05-13 16:28:29" itemprop="dateModified" datetime="2020-05-13T16:28:29+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -362,92 +305,14 @@
           <blockquote>
 <p>上一步我们成功安装主题，打开博客地址，操作之后会发现，点击首页、归档菜单是正常打开的。但是点击分类、标签、关于页时，跳转404，报错无法打开。如下图：</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9901-%E8%B7%B3%E8%BD%AC%E6%8A%A5%E9%94%99.jpg" alt="01-跳转报错"></p>
-<h2 id="第1种方法：删除配置文件中空格"><a href="#第1种方法：删除配置文件中空格" class="headerlink" title="第1种方法：删除配置文件中空格"></a>第1种方法：删除配置文件中空格</h2><blockquote>
-<p>关于链接显示<code>20%</code>的问题</p>
-</blockquote>
-<p>这个问题更多发生在，点击首页和归档菜单，显示404，查看链接地址，结尾显示<code>20%</code>。</p>
-<p><code>20%</code>代表空格，而这个空格来自NexT主题的配置文件中。<br>配置文件中代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  #about: &#x2F;about&#x2F; || user</span><br><span class="line">  #tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  #categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>将配置文件里<code>||</code>之前所有的空格删掉，重新<code>hexo g -d</code>部署，解决问题。</p>
-<p>如果你是这种问题，可以尝试一下。</p>
-<blockquote>
-<p>建议参阅第3种方法，检查一下是不是第3种方法中说明的问题。</p>
-</blockquote>
-<h2 id="第2种方法：重新clone安装主题"><a href="#第2种方法：重新clone安装主题" class="headerlink" title="第2种方法：重新clone安装主题"></a>第2种方法：重新clone安装主题</h2><blockquote>
-<p><code>20%</code>这种问题如何发生的：</p>
-</blockquote>
-<ul>
-<li>我当时是因为clone主题出现的问题。<br>在这个网站 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a> clone主题。clone之后，点击首页、归档跳转的链接都带<code>20%</code>，如下图：</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9902-%E8%B7%B3%E8%BD%AC%E6%8A%A5%E9%94%99.jpg" alt="02-跳转报错"></p>
-<ul>
-<li><p>出现问题之后，参阅 <a href="https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md" target="_blank" rel="noopener">GitHub仓库页</a>，会明显看见不再维护的提示。</p>
-</li>
-<li><p>查阅issues找问题，也有issuus报此问题：<a href="https://github.com/iissnan/hexo-theme-next/issues/2233" target="_blank" rel="noopener">生成URL存在空格%20，导致github pages无法访问 #2233</a> ， <a href="https://github.com/iissnan/hexo-theme-next/issues/2209" target="_blank" rel="noopener">分类无法正常使用 #2209</a> ，等等，可知此问题已在新版中解决。</p>
-</li>
-<li><p>所以，建议在 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">这个仓库</a> clone安装最新版本NexT主题。大概率解决这个问题。</p>
-</li>
-</ul>
-<blockquote>
-<p>如果安装最新版本后，仍出现问题，比如首页、归档也可以正常打开，但是分类标签页报错404，参见下面的方法。</p>
-</blockquote>
-<h2 id="第3种方法：创建分类、标签等页面"><a href="#第3种方法：创建分类、标签等页面" class="headerlink" title="第3种方法：创建分类、标签等页面"></a>第3种方法：创建分类、标签等页面</h2><blockquote>
-<p>安装最新主题（v7.8.0），启用并点击分类、标签、关于页面，404报错。并且，侧边栏<code>分类</code>、<code>标签</code>都无法点击。</p>
-</blockquote>
-<h3 id="找问题"><a href="#找问题" class="headerlink" title="找问题"></a>找问题</h3><p>看一下404的英文提示文字，大概是没有链接对应的文件的意思。</p>
-<p>查阅一些文章，之后检查<code>public/</code>文件夹和对比其他博客的GitHub仓库文件，发现：<br><code>public/categories/</code>、<code>public/tags/</code> 文件夹下没有<code>index.html</code>文件，<code>public/</code>文件夹下没有<code>about</code>文件夹。所以初步判定问题是，菜单项没有根文件，不能链接到对应页面。</p>
-<p>所以设想的解决方法就是创建分类、标签、关于页面。</p>
-<h3 id="创建-分类-页面"><a href="#创建-分类-页面" class="headerlink" title="创建 [分类] 页面"></a>创建 [分类] 页面</h3><ul>
-<li>（1）终端窗口下，cd 到你的博客目录。</li>
-</ul>
-<blockquote>
-<p>CD方法：<br>输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，将会自动填充文件路径，再点击回车</p>
-</blockquote>
-<ul>
-<li>（2）输入命令，生成文件：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9903-%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2.jpg" alt="03-创建分类页面"></p>
-<ul>
-<li>（3）找到本地文件<ul>
-<li>你会发现你的<code>source/</code>文件夹下有了<code>categories/index.md</code>文件</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9904-%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.jpg" alt="04-本地文件"></p>
-<ul>
-<li><p>（4）修改<code>title</code>（可选），添加页面类型<code>type</code></p>
-<ul>
-<li><p>打开<code>index.md</code>文件将 title 设置为title: 分类。<code>分类</code>将是网页显示的标题，按照自己喜好修改或者不修改。</p>
-</li>
-<li><p>新增属性<code>type</code>，设置为<code>categories</code>，将自动为这个页面显示分类。页面内容如下：</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2020-05-05 16:38:50</span><br><span class="line">type: categories</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>（5）<code>hexo g -d</code>，生成部署即可。</p>
-</li>
-<li><p>（6）把文章归入分类只需在文章的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中。</p>
-</li>
-</ul>
-<h3 id="创建-标签-页面"><a href="#创建-标签-页面" class="headerlink" title="创建 [标签] 页面"></a>创建 [标签] 页面</h3><p>过程同上。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2020-05-05 16:54:11</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建-关于-页面"><a href="#创建-关于-页面" class="headerlink" title="创建 [关于] 页面"></a>创建 [关于] 页面</h3><p>过程同上。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 关于</span><br><span class="line">date: 2020-05-05 16:58:44</span><br><span class="line">type: about</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p><a href="https://blog.csdn.net/weixin_43790779/article/details/104854588" target="_blank" rel="noopener">1.Hexo+next主题下，点击首页，分类等导航时出现404错误</a><br><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">2.NexT仓库</a><br><a href="https://blog.csdn.net/Wonz5130/article/details/84666519" target="_blank" rel="noopener">3.解决 Hexo 搭建博客显示不出分类、标签问题</a><br><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">4.NexT使用文档</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%99%EF%BC%8C%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%80%8E%E4%B9%88%E5%8A%9E-NexT%E4%B8%BB%E9%A2%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -497,7 +362,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-06 20:40:47" itemprop="dateModified" datetime="2020-05-06T20:40:47+08:00">2020-05-06</time>
+                <time title="更新于：2020-05-13 16:29:58" itemprop="dateModified" datetime="2020-05-13T16:29:58+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -527,30 +392,15 @@
 <blockquote>
 <p>#新建,模板,小书匠</p>
 </blockquote>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>如果要添加多个标签，有两种方法书写，都有效：</p>
-<ul>
-<li>中括号包围</li>
-</ul>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [新建,模板,小书匠]</span><br></pre></td></tr></table></figure>
-
-<p>需要将标签以英文逗号隔开，并在最外层用中括号包围。</p>
-</blockquote>
-<ul>
-<li>换行书写</li>
-</ul>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tags: </span><br><span class="line">  - 新建</span><br><span class="line">  - 模板</span><br><span class="line">  - 小书匠</span><br></pre></td></tr></table></figure>
-</blockquote>
-<ul>
-<li>实际显示效果：</li>
-</ul>
-<blockquote>
-<p>#新建   #模板   #小书匠</p>
-</blockquote>
-<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NexT主题配置</a></p>
-<p><a href="https://www.zhihu.com/question/42909784" target="_blank" rel="noopener">知乎——请问，如何在markdown的tags中添加多个标签，比如有生活，有随笔等？</a></p>
-
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/05/Markdown%E4%B8%AD%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AAtags/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -583,7 +433,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">如何更换Hexo_Blog博客主题样式</a>
+            <a href="/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">如何更换Hexo_Blog博客主题样式——以NexT为例</a>
         </h2>
 
         <div class="post-meta">
@@ -600,7 +450,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-08 12:54:14" itemprop="dateModified" datetime="2020-05-08T12:54:14+08:00">2020-05-08</time>
+                <time title="更新于：2020-05-13 16:28:21" itemprop="dateModified" datetime="2020-05-13T16:28:21+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -624,70 +474,20 @@
 
       
           <blockquote>
-<p>Blog安装了NexT主题，所以博文以NexT为例<br>更换主题之前，肯定已经安装了Hexo。如何创建hexo博客，看之前一篇教程：</p>
+<p>更换主题之前，肯定已经安装了Hexo。如何创建hexo博客，看之前一篇教程：</p>
 </blockquote>
-<h1 id="克隆下载主题"><a href="#克隆下载主题" class="headerlink" title="克隆下载主题"></a>克隆下载主题</h1><ul>
-<li>cd到博客本地文件夹，</li>
-</ul>
 <blockquote>
-<p>cd方法：<br>终端界面输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，就能自动填充文件路径，点击回车就OK了</p>
+<p>更多主题样式参考：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网 https://hexo.io/themes/</a><br><a href="https://easyhexo.com/2-Theme-use-and-config/" target="_blank" rel="noopener">一些Hexo主题介绍</a></p>
+<p>看有文章说NexT是应用最广泛的主题，最开始对博客还不熟悉，为尽快写文章，先选定NexT上手。熟悉之后，再看看其他主题样式，或许可以选定其他更喜欢的。</p>
 </blockquote>
-<ul>
-<li>再输入以下命令：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>格式：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 主题的GitHub链接 themes&#x2F;主题名</span><br></pre></td></tr></table></figure>
-<p>  （themes是本地博客文件夹名，<code>主题名</code>是将要保存到本地的主题文件夹名称。这个是NexT主题，本地文件夹名为next）</p>
-</blockquote>
-<ul>
-<li>等待下载完成:</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题01-克隆主题.jpg" width="80%" height="80%" />
-
-<p>01-克隆主题</p>
-</center>
-
-
-
-<ul>
-<li>最后本地 <code>themes</code> 文件夹下载成功next文件。</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题02-下载完.jpg" width="15%" height="15%" />
-
-<p>02-下载成功</p>
-</center>
-
-<blockquote>
-<p>更多主题样式参考Hexo官网：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网 https://hexo.io/themes/</a></p>
-</blockquote>
-<h1 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h1><ul>
-<li>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，最终显示如下图。</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题03-主题页面.jpg" width="80%" height="80%" />
-
-<p>03-切换成功-主题页面</p>
-</center>
-
-
-<ul>
-<li>若博客关联了GitHub，终端界面输入<code>hexo g -d</code>命令，next主题便成功部署到GitHub上了。</li>
-</ul>
-<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT GitHub项目页</a></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md" target="_blank" rel="noopener">NexT GitHub——detailed installation instructions</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -737,7 +537,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-08 12:30:57" itemprop="dateModified" datetime="2020-05-08T12:30:57+08:00">2020-05-08</time>
+                <time title="更新于：2020-05-13 16:27:53" itemprop="dateModified" datetime="2020-05-13T16:27:53+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -764,206 +564,14 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
 <p>自己创建博客的过程整理，供日后查阅。本人Mac端，使用Hexo和GitHub搭建的博客。一步一步操作就可以。</p>
 <p>废话不多说了，下面开始。</p>
 </blockquote>
-<h1 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h1><ul>
-<li><p>选择哪种方案搭建博客</p>
-<ul>
-<li>参考这篇文章，<a href="http://arrfu.com/blog-build-jekyll-hexo-wordpress.html" target="_blank" rel="noopener">免费搭建个人博客的几种高效方案</a>，最终选定<code>+hexo+Github</code>的方式。</li>
-</ul>
-</li>
-<li><p>关于Github Page</p>
-<ul>
-<li>Github Page 是 Github 提供的一种免费的静态网页托管服务，可以用来托管博客、项目官网等静态网页。支持 Jekyll、Hugo、Hexo 编译静态资源。</li>
-</ul>
-</li>
-<li><p>关于Hexo</p>
-<ul>
-<li>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</li>
-</ul>
-</li>
-</ul>
-<h1 id="环境配置：安装Node-js和git"><a href="#环境配置：安装Node-js和git" class="headerlink" title="环境配置：安装Node.js和git"></a>环境配置：安装Node.js和git</h1><h2 id="下载安装Node-js"><a href="#下载安装Node-js" class="headerlink" title="下载安装Node.js"></a>下载安装Node.js</h2><p>Hexo 是基于 Node.js 驱动的一款博客框架，所以需安装node。</p>
-<p>前往 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js官网</a> 下载软件安装。</p>
-<h2 id="下载安装git"><a href="#下载安装git" class="headerlink" title="下载安装git"></a>下载安装git</h2><p>前往 <a href="https://git-scm.com/" target="_blank" rel="noopener">git官网</a> 下载软件安装。</p>
-<h2 id="检查是否安装"><a href="#检查是否安装" class="headerlink" title="检查是否安装"></a>检查是否安装</h2><p>在命令行中输入相应命令验证是否成功，如果成功会有相应的版本号。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">git version</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A201%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85node%E3%80%81git.jpg" alt="01验证是否安装node、git"></p>
-<h1 id="使用npm安装Hexo"><a href="#使用npm安装Hexo" class="headerlink" title="使用npm安装Hexo"></a>使用npm安装Hexo</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>终端中输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>hexo-cli：CLI就是命令行接口的意思，Command Line Interface。会安装Hexo和hexo的一些命令，也就是说可以使用命令行操作hexo</p>
-</blockquote>
-<p>输入管理员密码（Mac登录密码）即开始安装</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A203%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.jpg" alt="02安装成功"></p>
-<blockquote>
-<p>注意坑：Hexo官网上的安装命令是<code>npm install -g hexo-cli</code>，安装时不要忘记前面加上<code>sudo</code>，否则会因为权限问题报错。可能的错误如下:</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A202%E6%8A%A5%E9%94%9901.jpg" alt="02报错01"></p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A202%E6%8A%A5%E9%94%9902.jpg" alt="Hexo+GitHub搭建博客02报错02"></p>
-<blockquote>
-<p>根据报错信息的最后一行，使用<code>sudo</code>命令root执行即可。</p>
-</blockquote>
-<h2 id="本地初始化操作"><a href="#本地初始化操作" class="headerlink" title="本地初始化操作"></a>本地初始化操作</h2><ul>
-<li>执行hexo init命令，复制文件到本地</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init My_Blog</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A204%E6%9C%AC%E5%9C%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E6%88%90%E5%8A%9F.jpg" alt="Hexo+GitHub搭建博客04本地初始化成功"></p>
-<p>如果要指定上层文件夹（默认user）位置，cd 到你想安装的目录。</p>
-<blockquote>
-<p>CD方法：<br>输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，将会自动填充文件路径，再点击回车</p>
-</blockquote>
-<ul>
-<li>会在user下建立一个<code>My_Blog</code>文件夹，这个文件夹名称按照自己喜好在命令行里自定义。hexo会复制对应的文件到本地My_Blog文件夹下。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A205%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.jpg" alt="Hexo+GitHub搭建博客05本地文件"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 安装完的目录</span><br><span class="line">    - .</span><br><span class="line">    ├── node_modules</span><br><span class="line">    ├── scaffolds # 模版文件夹</span><br><span class="line">    ├── source  # 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹</span><br><span class="line">    |   └── _posts # 文章Markdowm文件 </span><br><span class="line">    └── themes  # 主题文件夹</span><br><span class="line">    |   └── landscape  # 默认的博客主题</span><br><span class="line">    ├── package-lock.json</span><br><span class="line">    ├── package.json</span><br><span class="line">    ├── _config.yml # 网站的配置信息，您可以在此配置大部分的参数。</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这些文件哪儿来的。这就是要先安装git的原因，hexo的github有个叫hexo-starter的仓库，这里面有所有的hexo包文件</p>
-</blockquote>
-<h2 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h2><p>cd到“My_Blog”文件夹下，执行命令</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A206CD.jpg" alt="Hexo+GitHub搭建博客06CD"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A207%E5%AE%89%E8%A3%85npm.jpg" alt="Hexo+GitHub搭建博客07安装npm"></p>
-<h2 id="执行下述命令生成本地网页文件并开启服务器："><a href="#执行下述命令生成本地网页文件并开启服务器：" class="headerlink" title="执行下述命令生成本地网页文件并开启服务器："></a>执行下述命令生成本地网页文件并开启服务器：</h2><blockquote>
-<p><code>hexo g</code> 或 <code>hexo generate</code>  生成静态文件<br><code>hexo s</code> 或者 <code>hexo server</code>    在服务器上运行</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A208%E7%94%9F%E6%88%90%E7%BD%91%E9%A1%B5.jpg" alt="Hexo+GitHub搭建博客08生成网页"></p>
-<p>此时，浏览器中打开网址 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，如果没有问题，就能看到如下页面：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A209%E9%BB%98%E8%AE%A4%E9%A1%B5%E9%9D%A2.jpg" alt="Hexo+GitHub搭建博客09默认页面"></p>
-<blockquote>
-<p>上图中是Hexo默认主题，后续可以修改，参考我的博客文章：</p>
-</blockquote>
-<h2 id="初次写作文章"><a href="#初次写作文章" class="headerlink" title="初次写作文章"></a>初次写作文章</h2><p><code>control+C</code>,暂时关闭服务器，回到命令行输入界面</p>
-<p>输入命令行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new “My First Post&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A210%E5%86%99%E4%BD%9C%E6%96%87%E7%AB%A0hexo_new.jpg" alt="Hexo+GitHub搭建博客10写作文章hexo new"></p>
-<p><code>source/_posts/</code>的本地文件夹下会生成<code>My-First-Post.md</code>文件，可以打开编辑保存。</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A211%E7%BC%96%E8%BE%91md.jpg" alt="Hexo+GitHub搭建博客11编辑md"></p>
-<p>该md文件在自动生成时会带有一些属性：</p>
-<blockquote>
-<p>title: 定义了博文的标题<br>date: 定义了创作博文的时间<br>tags: 定义了博文的标签<br>除了这个三个属性以外我们还可以扩展一些属性：<br>update: 定义了最后修改的时间<br>comments: 定义能否评论此博文(默认为true)<br>categories: 定义了博文的分类</p>
-<p>网页效果如下。有标题</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A212%E7%BD%91%E9%A1%B5%E6%95%88%E6%9E%9C.jpg" alt="Hexo+GitHub搭建博客12网页效果"></p>
-<h1 id="本地博客关联部署到GitHub上"><a href="#本地博客关联部署到GitHub上" class="headerlink" title="本地博客关联部署到GitHub上"></a>本地博客关联部署到GitHub上</h1><h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><h3 id="注册登录GitHub"><a href="#注册登录GitHub" class="headerlink" title="注册登录GitHub"></a>注册登录GitHub</h3><p>点击打开 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>，注册登录</p>
-<h3 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h3><p>用于存放构建后的网站文件。</p>
-<p>点击右上角加号，选择New repository，或者直接点击 <a href="https://github.com/new" target="_blank" rel="noopener">仓库新建页</a> 创建一个公开仓库</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A213%E5%BC%80%E5%A7%8B%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.jpg" alt="Hexo+GitHub搭建博客13开始创建仓库"></p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A214%E5%88%9B%E5%BB%BA%E9%A1%B5.jpg" alt="Hexo+GitHub搭建博客14创建页"></p>
-<ul>
-<li>Repository name填写<code>用户名.github.io</code></li>
-</ul>
-<blockquote>
-<p>注：Github 仅能使用一个同名仓库的代码托管一个静态站点，所以仓库名必须是“用户名.github.io”，其他名称无效。<br>用户名即setting → Account中的username</p>
-</blockquote>
-<ul>
-<li>选择public，勾选初始化readme</li>
-<li>创建成功后，以后你的博客所有代码都可以放在这个仓库里。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A215%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F.jpg" alt="Hexo+GitHub搭建博客15创建成功"></p>
-<h2 id="本地博客代码上传GitHub"><a href="#本地博客代码上传GitHub" class="headerlink" title="本地博客代码上传GitHub"></a>本地博客代码上传GitHub</h2><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>编辑自己创建的本地博客文件夹中的_config.yml中的deploy节点</p>
-<p>终端cd到<code>My_Blog</code>文件夹下，使用命令打开<code>_config.yml</code>文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
-<p>修改配置如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A216%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE_.jpg" alt="Hexo+GitHub搭建博客16修改配置 "></p>
-<blockquote>
-<p>我是使用sublime编辑保存的，或者用其他文本编辑器也可以。</p>
-</blockquote>
-<p>拉到文件末尾，填上如下配置。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#96;deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https:&#x2F;&#x2F;github.com&#x2F;Pamarus&#x2F;Pamarus.github.io.git</span><br><span class="line">branch: master&#96;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#96;deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:Pamarus&#x2F;Pamarus.github.io.git</span><br><span class="line">branch: master&#96;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：repo这一行，若没有配置SSH Key，使用https形式的地址，配置了使用下面那一种。注意type、repository、branch后均有空格。</p>
-</blockquote>
-<h3 id="安装部署插件-hexo-deployer-git"><a href="#安装部署插件-hexo-deployer-git" class="headerlink" title="安装部署插件 hexo-deployer-git"></a>安装部署插件 hexo-deployer-git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A217%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6_hexo-deployer-git.jpg" alt="Hexo+GitHub搭建博客17部署插件 hexo-deployer-git"></p>
-<blockquote>
-<p>若不执行这个命令安装部署插件，执行hexo d就会报错</p>
-<pre><code>ERROR Deployer not found: git。</code></pre></blockquote>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A219hexo_d%E6%8A%A5%E9%94%99.jpg" alt="Hexo+GitHub搭建博客19hexo d报错"></p>
-<h3 id="生成静态文件并上传到服务器"><a href="#生成静态文件并上传到服务器" class="headerlink" title="生成静态文件并上传到服务器"></a>生成静态文件并上传到服务器</h3><p>使用命令：（cd到博客的对应文件夹路径下）</p>
-<blockquote>
-<p><code>hexo g</code> 或 <code>hexo generate</code>  生成静态文件<br><code>hexo d</code> 或 <code>hexo deploy</code>      将网站部署到服务器上</p>
-<p>或 <code>hexo g -d</code></p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A218hexo_g%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2.jpg" alt="Hexo+GitHub搭建博客18hexo g生成静态页面"></p>
-<blockquote>
-<p>若执行<code>hexo g</code>出错则执行<code>npm install hexo --save</code>，若执行<code>hexo d</code>出错（即2.2可能出现的错误）则执行<code>npm install hexo-deployer-git --save</code>。错误修正后再次执行<code>hexo g</code>和<code>hexo d</code>上传到服务器。</p>
-</blockquote>
-<h3 id="填写username和password"><a href="#填写username和password" class="headerlink" title="填写username和password"></a>填写username和password</h3><p>之后终端会显示下列代码，依序输入用户名，点击enter，输入密码，enter即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Username for &#39;[https:&#x2F;&#x2F;github.com](https:&#x2F;&#x2F;github.com&#x2F;)&#39;:</span><br><span class="line">Password for &#39;[https:&#x2F;&#x2F;Pamarus@github.com](https:&#x2F;&#x2F;Pamarus@github.com&#x2F;)&#39;:</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A220hexo_d%E5%90%8E%E5%A1%AB%E5%86%99username.jpg" alt="Hexo+GitHub搭建博客20hexo d后填写username"></p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A221%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81.jpg" alt="Hexo+GitHub搭建博客21填写密码"></p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A222%E5%AE%8C%E6%88%90%E9%83%A8%E7%BD%B2.jpg" alt="Hexo+GitHub搭建博客22完成部署"></p>
-<p>deploy成功后，便可通过 <a href="https://pamarus.github.io" target="_blank" rel="noopener">https://pamarus.github.io</a> （你的GitHun博客域名）访问博客，看到的内容和 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 相同了。如下图（浏览器中域名）</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A223%E6%89%93%E5%BC%80github%E5%9F%9F%E5%90%8D%E7%BD%91%E7%AB%99.jpg" alt="Hexo+GitHub搭建博客23打开github域名网站"></p>
-<h1 id="博客写作"><a href="#博客写作" class="headerlink" title="博客写作"></a>博客写作</h1><ul>
-<li>终端内cd到博客目录，依次输入命令：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My Second Post&quot;</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A224%E5%86%99%E5%8D%9A%E5%AE%A2.jpg" alt="Hexo+GitHub搭建博客24写博客"></p>
-<ul>
-<li>刷新网页，看见第二篇文章了。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A225%E5%88%B7%E6%96%B0%E7%94%9F%E6%88%90.jpg" alt="Hexo+GitHub搭建博客25刷新生成"></p>
-<ul>
-<li>也可以在本地<code>source/_posts/</code>的文件夹下自己创建md文件。再执行<code>hexo g</code>和<code>hexo d</code>即可。</li>
-</ul>
-<blockquote>
-<p>此时本地博客内容便已关联到GitHub之中，本地博客改变之后，通过<code>hexo g</code>和<code>hexo d</code>便可更新到GitHub之中，通过 <a href="https://pamarus.github.io" target="_blank" rel="noopener">https://pamarus.github.io</a> 访问便可看到更新内容。</p>
-</blockquote>
-<blockquote>
-<p>部署前最好能先执行一下 hexo clean 命令，清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-</blockquote>
-<h1 id="配置-SSH-key"><a href="#配置-SSH-key" class="headerlink" title="配置 SSH key"></a>配置 SSH key</h1><blockquote>
-<p>这一步不是必须的，所以我放在后面了。配置SSH Key的话之后每次更新博客就不用都输入用户名和密码，可以方便一些。</p>
-</blockquote>
-<blockquote>
-<p>为什么要配置这个呢？因为提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，也很麻烦，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
-</blockquote>
-<h2 id="生成SSH-key"><a href="#生成SSH-key" class="headerlink" title="生成SSH key"></a>生成SSH key</h2><ul>
-<li>终端中输入命令：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A227%E7%94%9F%E6%88%90key.jpg" alt="Hexo+GitHub搭建博客27生成key"></p>
-<ul>
-<li>按下enter，让你输入文件名，直接enter会创建使用默认文件名的文件（推荐使用默认文件名），然后会提示你输入两次密码，可以为空。两次enter之后生成key</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;Users&#x2F;user&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;Users&#x2F;user&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is: **********</span><br><span class="line">The Key&#39;s randomart image is:</span><br><span class="line">**************</span><br></pre></td></tr></table></figure>
-
-<h2 id="找到key"><a href="#找到key" class="headerlink" title="找到key"></a>找到key</h2><p>按照上面生成的，mac下前往文件夹<code>/Users/user/.ssh</code></p>
-<blockquote>
-<p>如何前往<br>Finder中前往 -&gt; 前往文件夹… -&gt; 填入<code>/Users/user/.ssh</code> -&gt; enter。打开文件夹后就可以看到<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件</p>
-</blockquote>
-<p>打开<code>id_rsa.pub</code>文件，ssh key便在这个文件里</p>
-<h2 id="Github-上添加刚刚生成的ssh-key"><a href="#Github-上添加刚刚生成的ssh-key" class="headerlink" title="Github 上添加刚刚生成的ssh key"></a>Github 上添加刚刚生成的ssh key</h2><p>将key复制到GitHub的Add ssh key中。路径：<code>GitHub -&gt; Setting -&gt; SSH keys -&gt; add SSH key</code>。</p>
-<p>Title里填写任意标题，将复制的内容粘贴到key中，点击Add key完成添加。</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A228github%E6%B7%BB%E5%8A%A0key.jpg" alt="Hexo+GitHub搭建博客28github添加key"></p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A229%E6%B7%BB%E5%8A%A0%E9%A1%B5%E9%9D%A2.jpg" alt="Hexo+GitHub搭建博客29添加页面"></p>
-<h2 id="检验SSH-Key是否配置成功"><a href="#检验SSH-Key是否配置成功" class="headerlink" title="检验SSH Key是否配置成功"></a>检验SSH Key是否配置成功</h2><p>终端输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Are you sure you want to continue connecting (yes&#x2F;no)?</span><br></pre></td></tr></table></figure>
-
-<p>输入yes，enter返回：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi Pamarus! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-
-<p>就说明你的SSHKey配置成功了。</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A231%E6%A3%80%E6%B5%8B.jpg" alt="Hexo+GitHub搭建博客31检测"></p>
-<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://www.jianshu.com/p/cbf8ba8af532" target="_blank" rel="noopener">Mac+Hexo+GitHub博客搭建教程</a></p>
-<p><a href="https://segmentfault.com/a/1190000017986794#item-14" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/04/Mac%E7%AB%AF%E4%BD%BF%E7%94%A8Hexo+GitHub%20Pages%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -996,7 +604,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/03/Markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">MD语法学习及快速入门</a>
+            <a href="/2020/05/03/Markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">Markdown语法学习及快速入门</a>
         </h2>
 
         <div class="post-meta">
@@ -1013,7 +621,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-06 20:40:15" itemprop="dateModified" datetime="2020-05-06T20:40:15+08:00">2020-05-06</time>
+                <time title="更新于：2020-05-13 16:34:06" itemprop="dateModified" datetime="2020-05-13T16:34:06+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1039,233 +647,14 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
           <blockquote>
 <p>零到1新手，花了两天时间，4月30日把自己的第一个博客搭建成功。5.1放假除了上课做作业，空闲时间学习了博客主题配置、GitHub图床、Markdown语法、小书匠Markdown一些操作等基础知识。陆续整合到博客上，方便以后查阅，也作为最初的文章。</p>
 </blockquote>
-<hr>
-<h1 id="插入标题"><a href="#插入标题" class="headerlink" title="插入标题"></a>插入标题</h1><p>Markdown 支持两种标题的语法，<code>类Setext</code> 和 <code>类atx</code> 形式。</p>
-<h2 id="类Setext形式"><a href="#类Setext形式" class="headerlink" title="类Setext形式"></a>类Setext形式</h2><p>用底线的形式，用 <code>=</code> 表示最高阶标题，用 <code>-</code> 表示第二阶标题。大于等于1个就可以生效。如下图</p>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学习01-类Setext样式.jpg" width="100%" height="100%" />
-
-<p>01-类Setext样式</p>
-</center>
-
-<h2 id="类Atx形式"><a href="#类Atx形式" class="headerlink" title="类Atx形式"></a>类Atx形式</h2><p>在行首插入1到6个 <code>#</code> ，对应到标题1到6阶。如下图：</p>
-<blockquote>
-<p><code>#</code>后面要写空格，否则不生效。</p>
-</blockquote>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学习02-类Atx样式.jpg" width="100%" height="100%" />
-
-<p>02-类Atx样式</p>
-</center>
-
-
-<h1 id="设置粗体文字"><a href="#设置粗体文字" class="headerlink" title="设置粗体文字"></a>设置粗体文字</h1><p>对需要加粗的文字使用两个 <code>*</code> 或者 <code>_</code> 符号包裹，系统就会转换成加粗显示效果。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**双星号加粗**</span><br><span class="line">__双下划线加粗__</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p><strong>双星号加粗</strong><br><strong>双下划线加粗</strong></p>
-<p>可以随便用你喜欢的样式，唯一的限制是，用什么符号开启标签，就要用什么符号结束。</p>
-<p>注：星号与文字间不能有空格：</p>
-<p>** 前面有空格，不生效**<br>*<em>后面有空格，不生效 *</em></p>
-<h1 id="插入引用"><a href="#插入引用" class="headerlink" title="插入引用"></a>插入引用</h1><p>引用一段文字或语法,在每行的最前面加上 <code>&gt;</code> 即可：</p>
-<h2 id="单行引用"><a href="#单行引用" class="headerlink" title="单行引用"></a>单行引用</h2><ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 单行引用文字</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<blockquote>
-<p>单行引用文字</p>
-</blockquote>
-<h2 id="多行引用"><a href="#多行引用" class="headerlink" title="多行引用"></a>多行引用</h2><ul>
-<li><strong>示例：</strong></li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用文字</span><br><span class="line">&gt; 引用文字</span><br><span class="line">&gt; 引用文字</span><br><span class="line">&gt; </span><br><span class="line">&gt; 引用文字</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p><strong>显示效果：</strong></p>
-<blockquote>
-<p>引用文字<br>引用文字<br>引用文字</p>
-<p>引用文字</p>
-</blockquote>
-<h2 id="段落省略"><a href="#段落省略" class="headerlink" title="段落省略"></a>段落省略</h2><p>多行引用可以只在第一行里使用 <code>&gt;</code> 符号，只要是在同一个段落内，系统都会把该段落处理成引用。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用文字</span><br><span class="line">引用文字</span><br><span class="line">引用文字</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<blockquote>
-<p>引用文字<br>引用文字<br>引用文字</p>
-</blockquote>
-<h2 id="多级引用"><a href="#多级引用" class="headerlink" title="多级引用"></a>多级引用</h2><p>连续书写多个 <code>&gt;</code>符号，就可以实现多级引用。</p>
-<ul>
-<li><p><strong>示例：</strong></p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 层级1</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; 层级2</span><br><span class="line">&gt;&gt;&gt; 层级3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示效果：</strong></p>
-</li>
-</ul>
-<blockquote>
-<p>层级1</p>
-<blockquote>
-<p>层级2</p>
-<blockquote>
-<p>层级3</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="引用其他语法"><a href="#引用其他语法" class="headerlink" title="引用其他语法"></a>引用其他语法</h2><p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 1.引用列表项，第一行列表项。</span><br><span class="line">&gt; 2.引用列表项，是第二行列表项。</span><br><span class="line">&gt; </span><br><span class="line">&gt; 引用代码区块：</span><br><span class="line">&gt; </span><br><span class="line">&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);</span><br></pre></td></tr></table></figure>
-
-<p><strong>显示效果：</strong></p>
-<blockquote>
-<p>1.引用列表项，第一行列表项。<br>2.引用列表项，是第二行列表项。</p>
-<p>引用代码区块：</p>
-<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);</code></pre></blockquote>
-<h1 id="引用代码"><a href="#引用代码" class="headerlink" title="引用代码"></a>引用代码</h1><h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><h3 id="使用符号"><a href="#使用符号" class="headerlink" title="使用符号`"></a>使用符号<code>`</code></h3><p>在一个段落内显示一小段代码，使用 ` 符号即可。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个段落内的 &#96;one line of code&#96; 是的，就这样用</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p>这是一个段落内的 <code>one line of code</code>，是的，就这样用</p>
-<h3 id="行内代码显示"><a href="#行内代码显示" class="headerlink" title="行内代码显示`"></a>行内代码显示<code>`</code></h3><p>如何在行内代码里显示<code>`</code>符号， 可以使用连续书写两个 （`） 符号包裹（`），（`）左右有空格。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个段落内的 &#96;one line of code&#96; 是的，我要显示 &#96;&#96; &#96; &#96;&#96; 符号</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p>这是一个段落内的 <code>one line of code</code> 是的，我要显示 <code>`</code> 符号， </p>
-<h2 id="区块代码"><a href="#区块代码" class="headerlink" title="区块代码"></a>区块代码</h2><h3 id="缩进4个空格"><a href="#缩进4个空格" class="headerlink" title="缩进4个空格"></a>缩进4个空格</h3><p>在一整块范围内显示一个代码片段。缩进 4 个空格即可。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<blockquote>
-<pre><code>var x = 1; 
-var y = 2; 
-var z = 3; </code></pre></blockquote>
-<ul>
-<li><p><strong>显示效果：</strong></p>
-<p>  var x = 1;<br>  var y = 2;<br>  var z = 3; </p>
-</li>
-</ul>
-<h3 id="GFM风格代码块语法"><a href="#GFM风格代码块语法" class="headerlink" title="GFM风格代码块语法"></a>GFM风格代码块语法</h3><p>连续书写三个 <code>`</code> 或者<code>~</code>包裹代码，并可以高亮显示部分代码。通过 GFM 风格显示的代码块，不再需要像普通代码块那样，每行都要空4个空格的要求。<br>同时支持高亮语言。在 <code>`</code> 后输入语言就可以生效。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<blockquote>
-<p>` ` `<br>var x = 1;<br>var y = 2;<br>var z = 3;<br>` ` `</p>
-</blockquote>
-<blockquote>
-<p>~ ~ ~javascript<br>var x = 1;<br>var y = 2;<br>var z = 3;<br>~ ~ ~</p>
-</blockquote>
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x &#x3D; 1; </span><br><span class="line">var y &#x3D; 2; </span><br><span class="line">var z &#x3D; 3;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>; </span><br><span class="line"><span class="keyword">var</span> y = <span class="number">2</span>; </span><br><span class="line"><span class="keyword">var</span> z = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h1><p>Markdown 支持两种形式的链接语法： 内联式和引用式两种形式。</p>
-<h2 id="内联式"><a href="#内联式" class="headerlink" title="内联式"></a>内联式</h2><p>中括号内为显示文本，后面紧接一对圆括号. 圆括号里面放所需的 URL 链接,</p>
-<ul>
-<li><p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[01.Markdown语法说明](https:&#x2F;&#x2F;github.com&#x2F;appinncom&#x2F;Markdown-Syntax-CN&#x2F;blob&#x2F;master&#x2F;syntax.md)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示效果：</strong></p>
-</li>
-</ul>
-<p><a href="https://github.com/appinncom/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="noopener">01.Markdown语法说明</a></p>
-<h2 id="引用式"><a href="#引用式" class="headerlink" title="引用式"></a>引用式</h2><ul>
-<li><p>第一行：<br>引用式链接使用连续两个中括号，第一个中括号放显示文本，第二个中括号里面要填入用以辨识链接的标记。<br>标记可以有字母、数字、空白和标点符号</p>
-</li>
-<li><p>第二行：定义链接</p>
-<ul>
-<li>需要单独占一行。格式是：<br>（1）中括号中包含标记文本 (可以用三个以上的空白符来添加缩进);<br>（2）接着是冒号;<br>（3）接着是链接的 URL;<br>（4）接着是可选的标题, 可以用单引号, 双引号, 或者圆括号包围。</li>
-</ul>
-</li>
-<li><p>链接的定义可以放在文件中的任何一个地方，比较常见的做法就是直接放在链接出现段落的后面，你也可以把它放在文件最后面，就像是注解一样。</p>
-</li>
-<li><p><strong>示例：</strong></p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我们可以在 [02.Markdown中文文档][link1]这个网站查看MD语法样式。</span><br><span class="line"></span><br><span class="line">[link1]:https:&#x2F;&#x2F;markdown-zh.readthedocs.io&#x2F;en&#x2F;latest&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p>我们可以在 <a href="https://markdown-zh.readthedocs.io/en/latest/" target="_blank" rel="noopener">02.Markdown中文文档</a> 这个网站查看MD语法样式。</p>
-<h2 id="添加title"><a href="#添加title" class="headerlink" title="添加title"></a>添加title</h2><h3 id="内联式title"><a href="#内联式title" class="headerlink" title="内联式title"></a>内联式title</h3><p>在圆括号内链接后，双引号添加title文本，中间有空格。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我们可以在 [03.小书匠语法说明](http:&#x2F;&#x2F;soft.xiaoshujiang.com&#x2F;docs&#x2F;grammar&#x2F;common&#x2F;italic&#x2F; &quot;我使用小书匠编辑器&quot;) 这个网站查看MD语法样式。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p>我们可以在 <a href="http://soft.xiaoshujiang.com/docs/grammar/common/italic/" target="_blank" rel="noopener" title="我使用小书匠编辑器">03.小书匠语法说明</a> 这个网站查看MD语法样式。</p>
-<h3 id="引用式title"><a href="#引用式title" class="headerlink" title="引用式title"></a>引用式title</h3><p>在定义的链接后，用单引号, 双引号, 或者圆括号包围title。三种样式效果一致。</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我们可以在 [02.Markdown中文文档][link2] 这个网站查看MD语法样式。</span><br><span class="line"></span><br><span class="line">[link2]: https:&#x2F;&#x2F;markdown-zh.readthedocs.io&#x2F;en&#x2F;latest&#x2F; &quot;Markdown语法&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p>我们可以在 <a href="https://markdown-zh.readthedocs.io/en/latest/" target="_blank" rel="noopener" title="Markdown语法">02.Markdown中文文档</a> 这个网站查看MD语法样式。</p>
-<h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><p>在超链接的写法前加一个<code>!</code>，就是引用图片的方法</p>
-<p>插入图片有个问题，题注无法显示，图片大小也无法控制。单独一篇文章中解决这个问题。参考：</p>
-<h1 id="写语法符号–反斜线"><a href="#写语法符号–反斜线" class="headerlink" title="写语法符号–反斜线"></a>写语法符号–反斜线</h1><p>利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用 <code>&lt;em&gt;</code> 标签），你可以在星号的前面加上反斜杠：<br>(em标签需要加上反引号包围，防止格式化文本）</p>
-<ul>
-<li><strong>示例：</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\*文字星号\*</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>显示效果：</strong></li>
-</ul>
-<p>*文字星号*</p>
-<ul>
-<li>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</li>
-</ul>
-<pre><code>\   反斜线
-`   反引号
-*   星号
-_   底线
-{}  花括号
-[]  方括号
-()  括弧
-#   井字号
-+   加号
--   减号
-.   英文句点
-!   惊叹号</code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/03/Markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%8F%8A%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
