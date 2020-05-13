@@ -20,25 +20,25 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="更换主题之前，肯定已经安装了Hexo。如何创建hexo博客，看之前一篇教程：   更多主题样式参考：Hexo官网 https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;一些Hexo主题介绍 看有文章说NexT是应用最广泛的主题，最开始对博客还不熟悉，为尽快写文章，先选定NexT上手。熟悉之后，再看看其他主题样式，或许可以选定其他更喜欢的。">
+  <meta name="description" content="Hexo博客如何设置首页不显示全部，只显示部分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何更换Hexo_Blog博客主题样式——以NexT为例">
-<meta property="og:url" content="http://yoursite.com/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/index.html">
+<meta property="og:title" content="NexT主题如何设置首页只显示预览(不显示全部)">
+<meta property="og:url" content="http://yoursite.com/2020/05/13/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%85%A8%E6%96%87(%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%88)/index.html">
 <meta property="og:site_name" content="Pamarus">
-<meta property="og:description" content="更换主题之前，肯定已经安装了Hexo。如何创建hexo博客，看之前一篇教程：   更多主题样式参考：Hexo官网 https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;一些Hexo主题介绍 看有文章说NexT是应用最广泛的主题，最开始对博客还不熟悉，为尽快写文章，先选定NexT上手。熟悉之后，再看看其他主题样式，或许可以选定其他更喜欢的。">
-<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9801-%E5%85%8B%E9%9A%86%E4%B8%BB%E9%A2%98.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9802-%E4%B8%8B%E8%BD%BD%E5%AE%8C.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9803-%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2.jpg">
-<meta property="article:published_time" content="2020-05-04T13:36:45.000Z">
-<meta property="article:modified_time" content="2020-05-13T08:28:21.646Z">
+<meta property="og:description" content="Hexo博客如何设置首页不显示全部，只显示部分">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8801.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8802-%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%88.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8803.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8804.jpg">
+<meta property="article:published_time" content="2020-05-13T06:44:44.000Z">
+<meta property="article:modified_time" content="2020-05-13T09:30:52.004Z">
 <meta property="article:author" content="Pamarus">
 <meta property="article:tag" content="Hexo_Blog">
-<meta property="article:tag" content="博客教程">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E6%9B%B4%E6%8D%A2%E5%8F%8A%E9%85%8D%E7%BD%AEHexo_Blog%E4%B8%BB%E9%A2%9801-%E5%85%8B%E9%9A%86%E4%B8%BB%E9%A2%98.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8801.jpg">
 
-<link rel="canonical" href="http://yoursite.com/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/">
+<link rel="canonical" href="http://yoursite.com/2020/05/13/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%85%A8%E6%96%87(%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%88)/">
 
 
 <script id="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>如何更换Hexo_Blog博客主题样式——以NexT为例 | Pamarus</title>
+  <title>NexT主题如何设置首页只显示预览(不显示全部) | Pamarus</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo_Blog%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/13/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%85%A8%E6%96%87(%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%88)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          如何更换Hexo_Blog博客主题样式——以NexT为例
+          NexT主题如何设置首页只显示预览(不显示全部)
         </h1>
 
         <div class="post-meta">
@@ -188,16 +188,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建于：2020-05-04 21:36:45" itemprop="dateCreated datePublished" datetime="2020-05-04T21:36:45+08:00">2020-05-04</time>
+              <time title="创建于：2020-05-13 14:44:44 / 更新于：17:30:52" itemprop="dateCreated datePublished" datetime="2020-05-13T14:44:44+08:00">2020-05-13</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-13 16:28:21" itemprop="dateModified" datetime="2020-05-13T16:28:21+08:00">2020-05-13</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -209,6 +203,7 @@
             </span>
 
           
+            <div class="post-description">Hexo博客如何设置首页不显示全部，只显示部分</div>
 
         </div>
       </header>
@@ -220,74 +215,44 @@
 
       
         <blockquote>
-<p>更换主题之前，肯定已经安装了Hexo。如何创建hexo博客，看之前一篇教程：</p>
-</blockquote>
-<blockquote>
-<p>更多主题样式参考：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网 https://hexo.io/themes/</a><br><a href="https://easyhexo.com/2-Theme-use-and-config/" target="_blank" rel="noopener">一些Hexo主题介绍</a></p>
-<p>看有文章说NexT是应用最广泛的主题，最开始对博客还不熟悉，为尽快写文章，先选定NexT上手。熟悉之后，再看看其他主题样式，或许可以选定其他更喜欢的。</p>
+<p>Next主题的基本配置都差不多了，现在还有一个问题。<br>就是首页默认显示文章的全部内容，而不是预览，如何设置只显示部分呢？</p>
 </blockquote>
 <a id="more"></a>
 
-<h1 id="克隆下载主题"><a href="#克隆下载主题" class="headerlink" title="克隆下载主题"></a>克隆下载主题</h1><ul>
-<li>cd到博客本地文件夹，</li>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8801.jpg" alt="NexT主题如何设置首页只显示预览01"></p>
+<p>一般有以下三种方法</p>
+<h1 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h1><p>这种方式是 Hexo 提供的方式</p>
+<p>在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，显示效果如下：</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8802-%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%88.jpg" alt="NexT主题如何设置首页只显示预览02-显示预览"></p>
+<p>明显可以看见，显示的内容不会被格式化。也可以根据 <code>&lt;!-- more --&gt;</code> 放置的位置，来控制要显示的预览内容。</p>
+<h1 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h1><p>自动形成摘要，在<code>主题配置文件</code>中查找如下这段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
+
+<p>如果没有则添加这段代码，可能不同的主题会不支持这种方法。、<br><code>length</code> ：设定文章预览的文本长度。默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定。</p>
+<p>这种方法的问题是：会格式化你文章的样式，直接把文字挤在一起显示，最后会有 <code>…</code>。</p>
+<p>而第一种方法，展示出来的就是你原本文章的样式。</p>
+<h1 id="第三种方法"><a href="#第三种方法" class="headerlink" title="第三种方法"></a>第三种方法</h1><ul>
+<li>在文章的 <code>front-matter</code> 中添加 <code>description</code>字段，并填写要展示的预览信息</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: NexT主题基本属性的配置</span><br><span class="line">date: 2020-05-08 12:15:32</span><br><span class="line">tags: [Hexo_Blog,NexT,博客教程]</span><br><span class="line">comments: true</span><br><span class="line">categories: 博客教程</span><br><span class="line">description: 如何配置样式、语言、菜单、侧栏等</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在主题配置文件中将 <code>excerpt_description</code> 设置为<code>true</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Automatically excerpt description in homepage as preamble text.</span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8803.jpg" alt="NexT主题如何设置首页只显示预览03"></p>
+<p>这种方式的缺点在于，生成的预览信息在文章的详情页是不显示的。</p>
+<ul>
+<li>这种方法，可以写文章的副标题。只要将<code>excerpt_description</code> 设置为<code>false</code>，如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Automatically excerpt description in homepage as preamble text.</span><br><span class="line">excerpt_description: false</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%8804.jpg" alt="NexT主题如何设置首页只显示预览04"></p>
 <blockquote>
-<p>cd方法：<br>终端界面输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，就能自动填充文件路径，点击回车就OK了</p>
+<p>综上，根据需要选择相应的方式。</p>
 </blockquote>
-<ul>
-<li>再输入以下命令：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>格式：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 主题的GitHub链接 themes&#x2F;主题名</span><br></pre></td></tr></table></figure>
-<p>  （themes是本地博客文件夹名，<code>主题名</code>是将要保存到本地的主题文件夹名称。这个是NexT主题，本地文件夹名为next）</p>
-</blockquote>
-<ul>
-<li>等待下载完成:</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题01-克隆主题.jpg" width="80%" height="80%" />
-
-<p>01-克隆主题</p>
-</center>
-
-
-
-<ul>
-<li>最后本地 <code>themes</code> 文件夹下载成功next文件。</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题02-下载完.jpg" width="15%" height="15%" />
-
-<p>02-下载成功</p>
-</center>
-
-
-
-<h1 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h1><ul>
-<li>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，最终显示如下图。</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及配置Hexo_Blog主题03-主题页面.jpg" width="80%" height="80%" />
-
-<p>03-切换成功-主题页面</p>
-</center>
-
-
-<ul>
-<li>若博客关联了GitHub，终端界面输入<code>hexo g -d</code>命令，next主题便成功部署到GitHub上了。</li>
-</ul>
-<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT GitHub项目页</a></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md" target="_blank" rel="noopener">NexT GitHub——detailed installation instructions</a></p>
+<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="http://theme-next.iissnan.com/faqs.html" target="_blank" rel="noopener">如何设置「阅读全文」？</a><br><a href="http://blog.smallerpig.com/set-hexo-show-more-button-on-indexpage.html" target="_blank" rel="noopener">让hexo的首页只显示文章的部分内容而不是全部</a></p>
 
     </div>
 
@@ -299,7 +264,6 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
           
           <div class="post-tags">
               <a href="/tags/Hexo-Blog/" rel="tag"><i class="fa fa-tag"></i> Hexo_Blog</a>
-              <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 博客教程</a>
               <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
           </div>
 
@@ -309,13 +273,10 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/04/Mac%E7%AB%AF%E4%BD%BF%E7%94%A8Hexo+GitHub%20Pages%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" rel="prev" title="Mac端使用Hexo+GitHub Pages搭建免费个人博客教程">
-      <i class="fa fa-chevron-left"></i> Mac端使用Hexo+GitHub Pages搭建免费个人博客教程
+    <a href="/2020/05/08/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE/" rel="prev" title="NexT主题基本属性的配置">
+      <i class="fa fa-chevron-left"></i> NexT主题基本属性的配置
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/05/05/Markdown%E4%B8%AD%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AAtags/" rel="next" title="Markdown中如何添加多个tags">
-      Markdown中如何添加多个tags <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -374,7 +335,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/更换及�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#克隆下载主题"><span class="nav-number">1.</span> <span class="nav-text">克隆下载主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启用主题"><span class="nav-number">2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢"><span class="nav-number">3.</span> <span class="nav-text">致谢</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一种方法"><span class="nav-number">1.</span> <span class="nav-text">第一种方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二种方法"><span class="nav-number">2.</span> <span class="nav-text">第二种方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三种方法"><span class="nav-number">3.</span> <span class="nav-text">第三种方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢"><span class="nav-number">4.</span> <span class="nav-text">致谢</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
