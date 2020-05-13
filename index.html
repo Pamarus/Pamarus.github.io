@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
 
   </li>
   </ul>
@@ -187,7 +187,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="更新于：2020-05-13 14:00:21" itemprop="dateModified" datetime="2020-05-13T14:00:21+08:00">2020-05-13</time>
+                <time title="更新于：2020-05-13 15:25:20" itemprop="dateModified" datetime="2020-05-13T15:25:20+08:00">2020-05-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,67 +222,14 @@
 </ul>
 </li>
 </ul>
-<p>可以自己切换一下，看看线上效果。喜欢哪一种就选哪个。</p>
-<ul>
-<li>如何配置<ul>
-<li>打开next文件夹内的配置文件<code>_config.yml</code>，搜索 scheme 关键字。 你会看到有四行 scheme 的配置，将需启用的 scheme 前面注释<code>#</code>去除即可。</li>
-<li>下面我选中的是<code>Gemini</code>风格。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="修改基本属性"><a href="#修改基本属性" class="headerlink" title="修改基本属性"></a>修改基本属性</h1><p>其次我们就要修改标题、副标题、描述、作者、语言这些基本属性了，这是博客页面最直观的一些个人信息的展示。</p>
-<p>打开博客文件夹内的配置文件<code>_config.yml</code>，找到<code>Site</code>，修改以下属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: &#39;&#39;</span><br><span class="line">description: &#39;&#39;</span><br><span class="line">keywords:</span><br><span class="line">author: John Doe</span><br><span class="line">language: en</span><br><span class="line">timezone: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>语言默认为<code>en</code>，中文简体为<code>zh-Hans</code>，中文繁體为<code>zh-hk</code> 或者 <code>zh-tw</code></p>
-<h1 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h1><h2 id="开启–网页显示菜单"><a href="#开启–网页显示菜单" class="headerlink" title="开启–网页显示菜单"></a>开启–网页显示菜单</h2><p>打开next文件夹内的配置文件<code>_config.yml</code>，找到<code>menu</code>。配置项如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>同scheme一致，将需启用的菜单前面的注释 <code>#</code> 删去即可。也可以上下移动位置，改变网页上显示的上下位置。<br>如上，启用了home/about/tags/categories/archives</li>
-</ul>
-<blockquote>
-<p>格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item name: link || icon name</span><br></pre></td></tr></table></figure>
-<p>item name 这个名称并不直接显示在页面上，它将用于<code>匹配图标以及翻译</code>。<br> <code>||</code> 之前的是目标链接，之后的是 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" title="https://fontawesome.com/icons">Font Awesome</a> 图标的名字。<br>你可以再代码中找到图标引用的网址。</p>
-</blockquote>
-<h2 id="自定义菜单项的显示文本"><a href="#自定义菜单项的显示文本" class="headerlink" title="自定义菜单项的显示文本"></a>自定义菜单项的显示文本</h2><p>在上一步中设置的菜单的名称并不直接用于界面上的展示。</p>
-<p>Hexo 在生成的时候将使用<code>item name</code>查找对应的<code>翻译文本</code>，并提取显示。<br>这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。打开<code>zh-Hans.yml</code>，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  archives: 归档</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  schedule: 日程表</span><br><span class="line">  sitemap: 站点地图</span><br><span class="line">  commonweal: 公益404</span><br></pre></td></tr></table></figure>
-
-<p>如果不喜欢默认的，可以自定义修改这些汉字。</p>
-<h3 id="开启–关闭图标"><a href="#开启–关闭图标" class="headerlink" title="开启–关闭图标"></a>开启–关闭图标</h3><p>menu下面有如下设置项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  # Enable &#x2F; Disable menu icons &#x2F; item badges.</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br></pre></td></tr></table></figure>
-
-<p><code>icons: true</code>控制显不显示图标。可以设置成 false 不显示图标。</p>
-<blockquote>
-<p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（<code>没有设置</code>或者<code>无效的 Font Awesome 图标名字</code>） 的情况下，NexT 将会使用<code>?</code>作为图标。<br>不显示的话，将上面的代码复制到配置文件menu下面。</p>
-</blockquote>
-<h2 id="badges-设定菜单项的数额展示"><a href="#badges-设定菜单项的数额展示" class="headerlink" title="badges-设定菜单项的数额展示"></a>badges-设定菜单项的数额展示</h2><p>在上面的设置项下方，还有一个<code>badges</code>的设置，这个具体有什么效果呢，试一试。<br>修改为<code>true</code>。效果如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE01-%E5%BE%BD%E7%AB%A0.jpg" alt="01-徽章"></p>
-<p>在分类、标签、归档后面会显示对应的统计数额。我现在有1个分类、5个标签、5篇文章归档。</p>
-<h2 id="如何添加菜单项"><a href="#如何添加菜单项" class="headerlink" title="如何添加菜单项"></a>如何添加菜单项</h2><p>以简体中文为例，若你需要添加一个菜单项，在比如 something。那么就需要：</p>
-<ul>
-<li>在next文件夹内的配置文件<code>_config.yml</code>的menu中增加：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">something: &#x2F;something&#x2F; ||</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在 menu 字段下添加一项：</p>
-<p>  something: 有料</p>
-</li>
-<li><p>配置图标</p>
-</li>
-</ul>
-<p>在 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" title="https://fontawesome.com/icons">Font Awesome</a> 上找到一个图标，将相应的名称填入上面代码 <code>||</code>的后面，即可生效。比如名称为<code>coffee</code>的图标，上面的代码补充完整：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">something: &#x2F;something&#x2F; || fa fa-coffee</span><br></pre></td></tr></table></figure>
-
-<p>效果如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE02-%E6%B7%BB%E5%8A%A0%E8%8F%9C%E5%8D%95.jpg" alt="02-添加菜单"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/08/NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E7%9A%84%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E6%A0%B7%E5%BC%8F%E3%80%81%E8%AF%AD%E8%A8%80%E3%80%81%E8%8F%9C%E5%8D%95%E7%AD%89/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1355,7 +1302,7 @@ _   底线
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
