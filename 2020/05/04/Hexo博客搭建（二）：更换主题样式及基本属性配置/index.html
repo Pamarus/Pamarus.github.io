@@ -241,11 +241,11 @@
 <ul>
 <li>再输入以下命令：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/theme-<span class="hljs-keyword">next</span>/hexo-theme-<span class="hljs-keyword">next</span> themes/<span class="hljs-keyword">next</span><br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p><strong>格式：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 主题的GitHub链接 themes&#x2F;主题名</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">主题的GitHub</span>链接 themes/主题名<br></code></pre></td></tr></table></figure>
 <p>  （themes是本地博客文件夹名，<code>主题名</code>是将要保存到本地的主题文件夹名称。这个是NexT主题，本地文件夹名为next）</p>
 </blockquote>
 <ul>
@@ -275,7 +275,7 @@
 <h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><ul>
 <li>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs clean"># Extensions<br>## Plugins: https:<span class="hljs-comment">//hexo.io/plugins/</span><br>## Themes: https:<span class="hljs-comment">//hexo.io/themes/</span><br>theme: next<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>此时即可使用浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，最终显示如下图。</li>
@@ -313,32 +313,32 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># ---------------------------------------------------------------</span><br><span class="hljs-meta"># Scheme Settings</span><br><span class="hljs-meta"># ---------------------------------------------------------------</span><br><br><span class="hljs-meta"># Schemes</span><br><span class="hljs-meta">#scheme: Muse</span><br><span class="hljs-meta">#scheme: Mist</span><br><span class="hljs-meta">#scheme: Pisces</span><br>scheme: Gemini<br></code></pre></td></tr></table></figure>
 
 
 <h1 id="修改基本属性"><a href="#修改基本属性" class="headerlink" title="修改基本属性"></a>修改基本属性</h1><p>其次我们就要修改标题、副标题、描述、作者、语言这些基本属性了，这是博客页面最直观的一些个人信息的展示。</p>
 <p>打开博客文件夹内的配置文件<code>_config.yml</code>，找到<code>Site</code>，修改以下属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: &#39;&#39;</span><br><span class="line">description: &#39;&#39;</span><br><span class="line">keywords:</span><br><span class="line">author: John Doe</span><br><span class="line">language: en</span><br><span class="line">timezone: &#39;&#39;</span><br></pre></td></tr></table></figure>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-comment"># Site</span><br><span class="hljs-section">title: Hexo</span><br><span class="hljs-section">subtitle: ''</span><br><span class="hljs-section">description: ''</span><br><span class="hljs-section">keywords:</span><br><span class="hljs-section">author: John Doe</span><br><span class="hljs-section">language: en</span><br><span class="hljs-section">timezone: ''</span><br></code></pre></td></tr></table></figure>
 
 <p>语言默认为<code>en</code>，中文简体为<code>zh-Hans</code>，中文繁體为<code>zh-hk</code> 或者 <code>zh-tw</code></p>
 <h1 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h1><h2 id="开启–网页显示菜单"><a href="#开启–网页显示菜单" class="headerlink" title="开启–网页显示菜单"></a>开启–网页显示菜单</h2><p>打开next文件夹内的配置文件<code>_config.yml</code>，找到<code>menu</code>。配置项如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || fa fa-calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">menu:</span><br><span class="hljs-symbol">  home:</span> / || fa fa-home<br><span class="hljs-symbol">  categories:</span> <span class="hljs-meta-keyword">/categories/</span> || fa fa-th<br><span class="hljs-symbol">  tags:</span> <span class="hljs-meta-keyword">/tags/</span> || fa fa-tags<br><span class="hljs-symbol">  archives:</span> <span class="hljs-meta-keyword">/archives/</span> || fa fa-archive<br><span class="hljs-symbol">  about:</span> <span class="hljs-meta-keyword">/about/</span> || fa fa-user<br>  <span class="hljs-meta">#schedule: /schedule/ || fa fa-calendar</span><br>  <span class="hljs-meta">#sitemap: /sitemap.xml || fa fa-sitemap</span><br>  <span class="hljs-meta">#commonweal: /404/ || fa fa-heartbeat</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>同scheme一致，将需启用的菜单前面的注释 <code>#</code> 删去即可。也可以上下移动位置，改变网页上显示的上下位置。<br>如上，启用了home/about/tags/categories/archives</li>
 </ul>
 <blockquote>
 <p>格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">item name: link || icon name</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-built_in">item</span> <span class="hljs-built_in">name</span>: link || icon <span class="hljs-built_in">name</span><br></code></pre></td></tr></table></figure>
 <p>item name 这个名称并不直接显示在页面上，它将用于<code>匹配图标以及翻译</code>。<br> <code>||</code> 之前的是目标链接，之后的是 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" title="https://fontawesome.com/icons">Font Awesome</a> 图标的名字。<br>你可以再代码中找到图标引用的网址。</p>
 </blockquote>
 <h2 id="自定义菜单项的显示文本"><a href="#自定义菜单项的显示文本" class="headerlink" title="自定义菜单项的显示文本"></a>自定义菜单项的显示文本</h2><p>在上一步中设置的菜单的名称并不直接用于界面上的展示。</p>
 <p>Hexo 在生成的时候将使用<code>item name</code>查找对应的<code>翻译文本</code>，并提取显示。<br>这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。打开<code>zh-Hans.yml</code>，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  archives: 归档</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  schedule: 日程表</span><br><span class="line">  sitemap: 站点地图</span><br><span class="line">  commonweal: 公益404</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">menu:</span><br><span class="hljs-symbol">  home:</span> 首页<br><span class="hljs-symbol">  categories:</span> 分类<br><span class="hljs-symbol">  tags:</span> 标签<br><span class="hljs-symbol">  archives:</span> 归档<br><span class="hljs-symbol">  about:</span> 关于<br><span class="hljs-symbol">  search:</span> 搜索<br><span class="hljs-symbol">  schedule:</span> 日程表<br><span class="hljs-symbol">  sitemap:</span> 站点地图<br><span class="hljs-symbol">  commonweal:</span> 公益<span class="hljs-number">404</span><br></code></pre></td></tr></table></figure>
 
 <p>如果不喜欢默认的，可以自定义修改这些汉字。</p>
 <h3 id="开启–关闭图标"><a href="#开启–关闭图标" class="headerlink" title="开启–关闭图标"></a>开启–关闭图标</h3><p>menu下面有如下设置项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  # Enable &#x2F; Disable menu icons &#x2F; item badges.</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml">  <span class="hljs-comment"># Enable / Disable menu icons / item badges.</span><br><span class="hljs-attr">menu_settings:</span><br>  <span class="hljs-attr">icons:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">badges:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 <p><code>icons: true</code>控制显不显示图标。可以设置成 false 不显示图标。</p>
 <blockquote>
@@ -351,7 +351,7 @@
 <ul>
 <li>在next文件夹内的配置文件<code>_config.yml</code>的menu中增加：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">something: &#x2F;something&#x2F; ||</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">something:</span> <span class="hljs-meta-keyword">/something/</span> ||<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><p>修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在 menu 字段下添加一项：</p>
@@ -361,7 +361,7 @@
 </li>
 </ul>
 <p>在 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener" title="https://fontawesome.com/icons">Font Awesome</a> 上找到一个图标，将相应的名称填入上面代码 <code>||</code>的后面，即可生效。比如名称为<code>coffee</code>的图标，上面的代码补充完整：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">something: &#x2F;something&#x2F; || fa fa-coffee</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">something:</span> <span class="hljs-meta-keyword">/something/</span> || fa fa-coffee<br></code></pre></td></tr></table></figure>
 
 <p>效果如下：</p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F05-%E6%B7%BB%E5%8A%A0%E8%8F%9C%E5%8D%95.jpg" alt="更换主题样式05-添加菜单"></p>
@@ -369,7 +369,7 @@
 <p>以下2020年5月14日更新</p>
 </blockquote>
 <h1 id="配置侧栏"><a href="#配置侧栏" class="headerlink" title="配置侧栏"></a>配置侧栏</h1><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于左侧位置。<br>打开next文件夹内的配置文件<code>_config.yml</code>，找到 <code>sidebar</code> 字段。<br>侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
-<h2 id="左右位置"><a href="#左右位置" class="headerlink" title="左右位置"></a>左右位置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  # Sidebar Position.</span><br><span class="line">  #position: left</span><br><span class="line">  position: right</span><br></pre></td></tr></table></figure>
+<h2 id="左右位置"><a href="#左右位置" class="headerlink" title="左右位置"></a>左右位置</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">sidebar:</span><br>  <span class="hljs-meta"># Sidebar Position.</span><br>  <span class="hljs-meta">#position: left</span><br><span class="hljs-symbol">  position:</span> right<br></code></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F06-%E5%8F%B3%E4%BE%A7%E4%BE%A7%E6%A0%8F.jpg" alt="更换主题样式06-右侧侧栏"></p>
 <blockquote>
@@ -378,7 +378,7 @@
 <h2 id="设置侧栏显示的时机"><a href="#设置侧栏显示的时机" class="headerlink" title="设置侧栏显示的时机"></a>设置侧栏显示的时机</h2><p>修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
 <p>post - 默认行为，在文章页面（拥有目录列表）时显示<br>always - 在所有页面中都显示<br>hide - 在所有页面中都隐藏（可以手动展开）<br>remove - 完全移除</p>
 <p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Display (only for Muse | Mist), available values:</span><br><span class="line">#  - post    expand on posts automatically. Default.</span><br><span class="line">#  - always  expand for all pages automatically.</span><br><span class="line">#  - hide    expand only when click on the sidebar toggle icon.</span><br><span class="line">#  - remove  totally remove sidebar including sidebar toggle.</span><br><span class="line">display: post</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vim"># Sidebar Display (<span class="hljs-keyword">only</span> <span class="hljs-keyword">for</span> Muse | Mist), available value<span class="hljs-variable">s:</span><br>#  - post    <span class="hljs-built_in">expand</span> <span class="hljs-keyword">on</span> posts automatically. Default.<br>#  - always  <span class="hljs-built_in">expand</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">all</span> pages automatically.<br>#  - <span class="hljs-keyword">hide</span>    <span class="hljs-built_in">expand</span> <span class="hljs-keyword">only</span> when click <span class="hljs-keyword">on</span> the sidebar toggle icon.<br>#  - <span class="hljs-built_in">remove</span>  totally <span class="hljs-built_in">remove</span> sidebar including sidebar toggle.<br><span class="hljs-keyword">display</span>: post<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>最后别忘了hexo g -d命令，部署到github上。</p>

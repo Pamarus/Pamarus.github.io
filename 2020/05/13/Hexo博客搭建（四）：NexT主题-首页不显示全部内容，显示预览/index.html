@@ -244,7 +244,7 @@
 
 <p>明显可以看见，显示的内容不会被格式化。也可以根据 <code>&lt;!-- more --&gt;</code> 放置的位置，来控制要显示的预览内容。</p>
 <h1 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h1><p>自动形成摘要，在<code>主题配置文件</code>中查找如下这段代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"># Automatically Excerpt. Not recommend.<br># Please use <span class="hljs-comment">&lt;!-- more --&gt;</span> in the post to control excerpt accurately.<br>auto_excerpt:<br>  enable: true<br>  length: 150<br></code></pre></td></tr></table></figure>
 
 <p>如果没有则添加这段代码，可能不同的主题会不支持这种方法。、<br><code>length</code> ：设定文章预览的文本长度。默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定。</p>
 <p>这种方法的问题是：会格式化你文章的样式，直接把文字挤在一起显示，最后会有 <code>…</code>。</p>
@@ -252,12 +252,12 @@
 <h1 id="第三种方法"><a href="#第三种方法" class="headerlink" title="第三种方法"></a>第三种方法</h1><ul>
 <li>在文章的 <code>front-matter</code> 中添加 <code>description</code>字段，并填写要展示的预览信息</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: NexT主题基本属性的配置</span><br><span class="line">date: 2020-05-08 12:15:32</span><br><span class="line">tags: [Hexo_Blog,NexT,博客教程]</span><br><span class="line">comments: true</span><br><span class="line">categories: 博客教程</span><br><span class="line">description: 如何配置样式、语言、菜单、侧栏等</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">NexT主题基本属性的配置</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2020</span><span class="hljs-number">-05</span><span class="hljs-number">-08</span> <span class="hljs-number">12</span><span class="hljs-string">:15:32</span><br><span class="hljs-attr">tags:</span> <span class="hljs-string">[Hexo_Blog,NexT,博客教程]</span><br><span class="hljs-attr">comments:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">categories:</span> <span class="hljs-string">博客教程</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">如何配置样式、语言、菜单、侧栏等</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>在主题配置文件中将 <code>excerpt_description</code> 设置为<code>true</code></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Automatically excerpt description in homepage as preamble text.</span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Automatically excerpt description in homepage as preamble text.</span><br><span class="hljs-attr">excerpt_description:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <center>
   <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
@@ -270,7 +270,7 @@
 <ul>
 <li>这种方法，可以写文章的副标题。只要将<code>excerpt_description</code> 设置为<code>false</code>，如下：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Automatically excerpt description in homepage as preamble text.</span><br><span class="line">excerpt_description: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Automatically excerpt description in homepage as preamble text.</span><br><span class="hljs-attr">excerpt_description:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 <center>
   <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
