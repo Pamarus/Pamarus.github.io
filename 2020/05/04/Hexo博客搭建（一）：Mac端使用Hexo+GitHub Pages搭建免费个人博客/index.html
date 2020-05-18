@@ -60,8 +60,8 @@
 <meta property="article:modified_time" content="2020-05-14T11:18:42.630Z">
 <meta property="article:author" content="Pamarus">
 <meta property="article:tag" content="Hexo_Blog">
-<meta property="article:tag" content="GitHub">
 <meta property="article:tag" content="博客教程">
+<meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A201%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85node%E3%80%81git.jpg">
 
@@ -236,6 +236,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AMac%E7%AB%AF%E4%BD%BF%E7%94%A8Hexo+GitHub%20Pages%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AMac%E7%AB%AF%E4%BD%BF%E7%94%A8Hexo+GitHub%20Pages%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -462,8 +476,8 @@
           
           <div class="post-tags">
               <a href="/tags/Hexo-Blog/" rel="tag"><i class="fa fa-tag"></i> Hexo_Blog</a>
-              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
               <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 博客教程</a>
+              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
           </div>
 
         
@@ -491,6 +505,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -650,6 +665,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '2Ha3PzLpCI61yhpv80KPLASB-gzGzoHsz',
+      appKey     : 'b7n7JXE8GAIzX9cg0YSDnFYQ',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
