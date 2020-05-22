@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3bb62f;
+  background: #706f46;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2558,4 +2558,7 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+.vsys {
+  display: none !important;
 }
