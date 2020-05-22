@@ -440,20 +440,7 @@
 
           </div>
           
-      <div class="tabs tabs-comment">
-        <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
-            <li class="tab"><a href="#comment-valine">valine</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments" id="gitalk-container"></div>
-            </div>
-            <div class="tab-pane valine" id="comment-valine">
-              <div class="comments" id="valine-comments"></div>
-            </div>
-        </div>
-      </div>
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -613,26 +600,6 @@
   
 
   
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '',
-      clientSecret: '',
-      repo        : '',
-      owner       : '',
-      admin       : [''],
-      id          : '3080541148c7db8df3af409facf45b24',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
 
 <script>
