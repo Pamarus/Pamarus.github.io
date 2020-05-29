@@ -20,23 +20,23 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-bg-color: #282828;
-    --content-bg-color: #333;
-    --card-bg-color: #555;
-    --text-color: #ccc;
-    --blockquote-color: #bbb;
-    --link-color: #ccc;
-    --link-hover-color: #eee;
+    --body-bg-color: #151617;
+    --content-bg-color: #1d1f20;
+    --card-bg-color: #1d1f20;
+    --text-color: $white-light;
+    --blockquote-color: #383e44;
+    --link-color: #0169c9;
+    --link-hover-color: #2f68ff;
     --brand-color: #ddd;
     --brand-hover-color: #ddd;
     --table-row-odd-bg-color: #282828;
     --table-row-hover-bg-color: #363636;
     --menu-item-bg-color: #555;
     --btn-default-bg: #222;
-    --btn-default-color: #ccc;
+    --btn-default-color: $white-light;
     --btn-default-border-color: #555;
     --btn-default-hover-bg: #666;
-    --btn-default-hover-color: #ccc;
+    --btn-default-hover-color: $white-light;
     --btn-default-hover-border-color: #666;
   }
   img {
@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9effff;
+  background: #70d9fa;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
