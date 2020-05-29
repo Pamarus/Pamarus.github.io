@@ -25,7 +25,7 @@
     --card-bg-color: #555;
     --text-color: #f5f5f5;
     --blockquote-color: #bbb;
-    --link-color: #fff;
+    --link-color: #f5f5f5;
     --link-hover-color: #eee;
     --brand-color: #ddd;
     --brand-hover-color: #ddd;
@@ -1216,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff8f5b;
+  background: #cc52c3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1541,6 +1541,10 @@ pre .javascript .function {
 }
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
+}
+.post-body a {
+  color: #428bca;
+  font-weight: bold;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
