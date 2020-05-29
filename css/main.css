@@ -20,7 +20,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-bg-color: #151617;
+    --body-bg-color: #282828;
     --content-bg-color: #1d1f20;
     --card-bg-color: #555;
     --text-color: #f5f5f5;
@@ -1216,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cc52c3;
+  background: #091f57;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1543,8 +1543,7 @@ pre .javascript .function {
   opacity: 0.8;
 }
 .post-body a {
-  color: #428bca;
-  font-weight: bold;
+  color: #2d62f8;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
