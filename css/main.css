@@ -23,9 +23,9 @@
     --body-bg-color: #151617;
     --content-bg-color: #1d1f20;
     --card-bg-color: #1d1f20;
-    --text-color: $white-light;
+    --text-color: #fff;
     --blockquote-color: #383e44;
-    --link-color: #0169c9;
+    --link-color: #ccc;
     --link-hover-color: #2f68ff;
     --brand-color: #ddd;
     --brand-hover-color: #ddd;
@@ -33,10 +33,10 @@
     --table-row-hover-bg-color: #363636;
     --menu-item-bg-color: #555;
     --btn-default-bg: #222;
-    --btn-default-color: $white-light;
+    --btn-default-color: #fff;
     --btn-default-border-color: #555;
     --btn-default-hover-bg: #666;
-    --btn-default-hover-color: $white-light;
+    --btn-default-hover-color: #fff;
     --btn-default-hover-border-color: #666;
   }
   img {
@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #70d9fa;
+  background: #79d760;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
