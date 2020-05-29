@@ -1013,10 +1013,6 @@ pre .javascript .function {
   flex-shrink: 0;
   padding: 0 10px;
 }
-.headband {
-  background: #222;
-  height: 3px;
-}
 .site-meta {
   flex-grow: 1;
   text-align: center;
@@ -1220,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d20dd7;
+  background: #c9bd85;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
