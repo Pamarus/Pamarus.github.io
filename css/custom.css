@@ -2,12 +2,12 @@
   display: none !important;
 }
 .post-body p a {
+  color: #428bca;
+  border-bottom: none;
+  border-bottom: 1px solid #428bca;
+}
+.post-body p a:hover {
   color: #0684bd;
   border-bottom: none;
   border-bottom: 1px solid #0684bd;
-}
-.post-body p a:hover {
-  color: #87daff;
-  border-bottom: none;
-  border-bottom: 1px solid #87daff;
 }
