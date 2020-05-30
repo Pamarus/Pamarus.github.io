@@ -26,7 +26,7 @@
     --text-color: #f5f5f5;
     --blockquote-color: #b1b1c1;
     --link-color: #ccc;
-    --link-hover-color: #222;
+    --link-hover-color: #0684bd;
     --brand-color: #ddd;
     --brand-hover-color: #ddd;
     --table-row-odd-bg-color: #282828;
@@ -1216,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9fffde;
+  background: #ff6a2b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
