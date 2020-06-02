@@ -299,7 +299,7 @@ kbd {
   border: 1px solid #ccc;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
-  color: #669199;
+  color: #99cc98;
   font-family: inherit;
   padding: 0.1em 0.3em;
   white-space: nowrap;
@@ -447,9 +447,9 @@ code {
   font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
-  background: #292f33;
+  background: #2d2d2d;
   border-radius: 3px;
-  color: #669199;
+  color: #99cc98;
   padding: 2px 4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1216,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffc6ff;
+  background: #c24a46;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
