@@ -1216,7 +1216,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #62dfff;
+  background: #4b4659;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2590,6 +2590,10 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
+/*
+  [2020.06.04 创建]
+  文件位置：~/blog/source/_data/styles.styl
+*/
 .vsys {
   display: none !important;
 }
@@ -2604,10 +2608,11 @@ ul.breadcrumb li + li:last-child {
   border-bottom: 1px solid #0684bd;
 }
 blockquote.question {
-  color: #555;
-  border-left: 4px solid #1098ad;
-  background-color: #e3f2fd;
+  color: #bbb;
+  border-left: 5px solid #01a8c5;
+  background-color: #2d3636;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   margin-bottom: 20px;
+  padding: 10px 15px;
 }
