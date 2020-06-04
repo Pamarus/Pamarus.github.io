@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #40e8ff;
+  background: #490357;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2609,5 +2609,5 @@ ul.breadcrumb li + li:last-child {
   line-height: 2;
 }
 .container {
-  background-color: rgba(0,255,0,0.75);
+  background-color: #151617;
 }
