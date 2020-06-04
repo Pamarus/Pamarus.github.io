@@ -20,23 +20,23 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-bg-color: #151617;
-    --content-bg-color: #1d1f20;
+    --body-bg-color: #282828;
+    --content-bg-color: #333;
     --card-bg-color: #555;
-    --text-color: #fff;
-    --blockquote-color: #b1b1c1;
+    --text-color: #ccc;
+    --blockquote-color: #bbb;
     --link-color: #ccc;
-    --link-hover-color: #0684bd;
+    --link-hover-color: #eee;
     --brand-color: #ddd;
     --brand-hover-color: #ddd;
     --table-row-odd-bg-color: #282828;
     --table-row-hover-bg-color: #363636;
     --menu-item-bg-color: #555;
     --btn-default-bg: #222;
-    --btn-default-color: #fff;
+    --btn-default-color: #ccc;
     --btn-default-border-color: #555;
     --btn-default-hover-bg: #666;
-    --btn-default-hover-color: #fff;
+    --btn-default-hover-color: #ccc;
     --btn-default-hover-border-color: #666;
   }
   img {
@@ -299,7 +299,7 @@ kbd {
   border: 1px solid #ccc;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
-  color: #99cc98;
+  color: #555;
   font-family: inherit;
   padding: 0.1em 0.3em;
   white-space: nowrap;
@@ -447,9 +447,9 @@ code {
   font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
-  background: #262a30;
+  background: #eee;
   border-radius: 3px;
-  color: #99cc98;
+  color: #555;
   padding: 2px 4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1013,6 +1013,10 @@ pre .javascript .function {
   flex-shrink: 0;
   padding: 0 10px;
 }
+.headband {
+  background: #222;
+  height: 3px;
+}
 .site-meta {
   flex-grow: 1;
   text-align: center;
@@ -1216,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4b4659;
+  background: #527fb9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2597,6 +2601,16 @@ ul.breadcrumb li + li:last-child {
 .vsys {
   display: none !important;
 }
+.headband {
+  height: 1.5px;
+  background-image: linear-gradient(90deg, #f79533 0%, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
+}
+.header {
+  line-height: 2;
+}
+.container {
+  background-color: rgba(0,255,0,0.75);
+}
 .post-body p a {
   color: #428bca;
   border-bottom: none;
@@ -2608,8 +2622,8 @@ ul.breadcrumb li + li:last-child {
   border-bottom: 1px solid #0684bd;
 }
 blockquote.question {
-  color: #bbb;
-  border-left: 5px solid #01a8c5;
+  color: #ddd;
+  border-left: 6px solid #01a8c5;
   background-color: #2d3636;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
