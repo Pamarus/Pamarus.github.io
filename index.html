@@ -117,12 +117,12 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -149,6 +149,104 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%887%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E6%97%A0custom.styl%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pamarus">
+      <meta itemprop="description" content="Thinking Hacks">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pamarus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%887%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E6%97%A0custom.styl%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">Hexo博客搭建（7）：NexT主题无custom.styl文件，如何自定义样式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-04 12:36:45 / 修改时间：16:25:02" itemprop="dateCreated datePublished" datetime="2020-06-04T12:36:45+08:00">2020-06-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">博客教程</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="valine" href="/2020/06/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%887%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E6%97%A0custom.styl%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%887%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E6%97%A0custom.styl%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我的Hexo博客主题版本是 v4.2.0，NexT主题版本是 v7.8.0，没有 <code>next/source/css/_custom/</code> 文件夹和 <code>custom.styl</code> 文件，而网上很多教程都是在这个 <code>custom.styl</code> 文件中添加自定义CSS代码，针对这种情况，搜索查看了一些文章和官方issues，找到了新版本自定义CSS代码的方法。</p>
+<blockquote class="question">
+注：如何查看Hexo博客和NexT主题版本
+分别在博客文件夹和主题文件夹中，找到并打开 `package.json` 文件，即可看到版本信息，如下：
+<br />
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">"name"</span>: <span class="hljs-string">"hexo-theme-next"</span>,<br>  <span class="hljs-string">"version"</span>: <span class="hljs-string">"7.8.0"</span>,<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">"hexo"</span>: &#123;<br>    <span class="hljs-string">"version"</span>: <span class="hljs-string">"4.2.0"</span><br>  &#125;,<br></code></pre></td></tr></table></figure>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%887%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E6%97%A0custom.styl%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1004,108 +1102,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Pamarus">
-      <meta itemprop="description" content="Thinking Hacks">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pamarus">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Hexo博客搭建（2）：更换主题样式及基本属性配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-04 21:36:45" itemprop="dateCreated datePublished" datetime="2020-05-04T21:36:45+08:00">2020-05-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 11:26:47" itemprop="dateModified" datetime="2020-05-30T11:26:47+08:00">2020-05-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">Hexo博客</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <div class="post-description">——以NexT为例</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>博客搭建成功后，下一步进行主题选择及配置工作等。如何创建hexo博客，看之前一篇记录：</p>
-</blockquote>
-<blockquote>
-<p>更多主题样式参考：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网 https://hexo.io/themes/</a><br><a href="https://easyhexo.com/2-Theme-use-and-config/" target="_blank" rel="noopener">一些Hexo主题介绍</a></p>
-<p>看有文章说NexT是应用最广泛的主题，最开始对博客还不熟悉，为尽快写文章，先选定NexT上手。熟悉之后，再看看其他主题样式，或许可以选定其他更喜欢的。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1175,14 +1171,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
