@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff46;
+  background: #11130b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2423,45 +2423,4 @@ hr {
 */
 .vsys {
   display: none !important;
-}
-.container {
-  background-color: #151617;
-}
-.headband {
-  height: 2px;
-  background-image: linear-gradient(90deg, #f79533 0%, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
-}
-.header-inner {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.posts-expand {
-  padding-top: 0px;
-}
-.posts-expand .post-meta {
-  margin: 5px 0px 60px 0px;
-}
-.post-button {
-  margin-top: 40px;
-}
-.header {
-  line-height: 2;
-}
-.site-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 40px;
-  letter-spacing: 3px;
-}
-.site-subtitle {
-  margin: 0px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding-bottom: 3px;
-  font-weight: 400;
-  color: #fff;
-  border-bottom-width: 0px;
-  border-bottom-style: solid;
-  border-bottom-color: #a166ab;
 }
