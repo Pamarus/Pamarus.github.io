@@ -459,11 +459,11 @@
 注：如何查看Hexo博客和NexT主题版本
 
 <p>分别在博客文件夹和主题文件夹中，找到并打开 <code>package.json</code> 文件，即可看到版本信息，如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"hexo-theme-next"</span><span class="token punctuation">,</span>
-  <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"7.8.0"</span><span class="token punctuation">,</span></code></pre>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"hexo"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"hexo-theme-next"</span><span class="token punctuation">,</span>
+  <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"7.8.0"</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token string">"hexo"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
     <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"4.2.0"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </blockquote>
 
 <a id="more"></a>
@@ -473,7 +473,7 @@
 <ul>
 <li>在主题配置文件 <code>_config.yml</code>中找到 <code>custom_file_path</code>，如下</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"># Define custom file paths<span class="token punctuation">.</span>
+<pre class="line-numbers language-jsx"><code class="language-jsx"># Define custom file paths<span class="token punctuation">.</span>
 # Create your custom files <span class="token keyword">in</span> site directory <span class="token template-string"><span class="token string">`source/_data`</span></span> and uncomment needed files below<span class="token punctuation">.</span>
 custom_file_path<span class="token punctuation">:</span>
   #head<span class="token punctuation">:</span> source<span class="token operator">/</span>_data<span class="token operator">/</span>head<span class="token punctuation">.</span>swig
@@ -485,7 +485,7 @@ custom_file_path<span class="token punctuation">:</span>
   #bodyEnd<span class="token punctuation">:</span> source<span class="token operator">/</span>_data<span class="token operator">/</span>body<span class="token operator">-</span>end<span class="token punctuation">.</span>swig
   #variable<span class="token punctuation">:</span> source<span class="token operator">/</span>_data<span class="token operator">/</span>variables<span class="token punctuation">.</span>styl
   #mixin<span class="token punctuation">:</span> source<span class="token operator">/</span>_data<span class="token operator">/</span>mixins<span class="token punctuation">.</span>styl
-  style<span class="token punctuation">:</span> source<span class="token operator">/</span>_data<span class="token operator">/</span>styles<span class="token punctuation">.</span>styl</code></pre>
+  style<span class="token punctuation">:</span> source<span class="token operator">/</span>_data<span class="token operator">/</span>styles<span class="token punctuation">.</span>styl<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>按照提示，新建 <code>~blog/source/_data</code> 文件夹，再在文件夹内新建 <code>styles.styl</code> 文件。</li>
 <li>将 <code>style: source/_data/styles.styl</code> 前的#号删掉，使其生效。</li>
