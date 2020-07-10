@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo博客搭建（2）：更换主题样式及基本属性配置, Pamarus">
+    <meta name="keywords" content="Hexo博客搭建（6）：Valine评论系统优化, Pamarus">
     <meta name="description" content="Thinking Hacks">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo博客搭建（2）：更换主题样式及基本属性配置 | Pamarus</title>
+    <title>Hexo博客搭建（6）：Valine评论系统优化 | Pamarus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo博客搭建（2）：更换主题样式及基本属性配置</h1>
+                    <h1 class="description center-align post-title">Hexo博客搭建（6）：Valine评论系统优化</h1>
                 </div>
             </div>
         </div>
@@ -417,8 +417,8 @@
                                 <span class="chip bg-color">NexT</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                                <span class="chip bg-color">博客教程</span>
+                            <a href="/tags/Valine/">
+                                <span class="chip bg-color">Valine</span>
                             </a>
                         
                     </div>
@@ -442,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-04
+                    2020-05-19
                 </div>
                 
 
@@ -458,204 +458,59 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>博客搭建成功后，下一步进行主题选择及配置工作等。如何创建hexo博客，看之前一篇记录：</p>
+                <blockquote class="question">
+上一篇安装好valine评论系统，但是还要一些细节需要优化。
 </blockquote>
-<blockquote>
-<p>更多主题样式参考：<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网 https://hexo.io/themes/</a><br><a href="https://easyhexo.com/2-Theme-use-and-config/" target="_blank" rel="noopener">一些Hexo主题介绍</a></p>
-<p>看有文章说NexT是应用最广泛的主题，最开始对博客还不熟悉，为尽快写文章，先选定NexT上手。熟悉之后，再看看其他主题样式，或许可以选定其他更喜欢的。</p>
-</blockquote>
+
 <a id="more"></a>
 
-<h1 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h1><h2 id="克隆下载主题"><a href="#克隆下载主题" class="headerlink" title="克隆下载主题"></a>克隆下载主题</h2><ul>
-<li>cd到博客本地文件夹，</li>
+<h1 id="统计数字小标题处如何显示中文“评论数”，而不是valine"><a href="#统计数字小标题处如何显示中文“评论数”，而不是valine" class="headerlink" title="统计数字小标题处如何显示中文“评论数”，而不是valine"></a>统计数字小标题处如何显示中文“评论数”，而不是valine</h1><h2 id="实际显示"><a href="#实际显示" class="headerlink" title="实际显示"></a>实际显示</h2><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9601-%E9%97%AE%E9%A2%981.jpg" alt="Valine评论系统优化01-问题1"></p>
+<p>这是默认行为。因为NexT允许同时开启多个评论系统（例如同时启用valine和gitalk），这时显示「评论数」文字会造成混乱。</p>
+<h2 id="期望效果"><a href="#期望效果" class="headerlink" title="期望效果"></a>期望效果</h2><pre class="line-numbers language-javascript"><code class="language-javascript">发表于 <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">18</span>   分类于 博客教程  评论数： <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>打开<code>themes -&gt; next -&gt; languages -&gt; zh-CN.yml</code></p>
+<p>在<code>post:</code>标签下添加:</p>
+<p><code>comments.valine: 评论数</code> (显示的汉字自定义，最好和其他评论系统有所区分）</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">post<span class="token punctuation">:</span>
+  comments<span class="token punctuation">.</span>valine<span class="token punctuation">:</span> 评论数
+  posted<span class="token punctuation">:</span> 发表于
+  edited<span class="token punctuation">:</span> 更新于<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9602-%E9%97%AE%E9%A2%981.jpg" alt="Valine评论系统优化02-问题1"></p>
+<p>如 <a href="https://pamarus.github.io/" target="_blank" rel="noopener">此博客：https://pamarus.github.io/</a> 所示，正常显示中文<code>评论数</code>。</p>
+<h1 id="如何隐藏浏览器版本和操作系统版本"><a href="#如何隐藏浏览器版本和操作系统版本" class="headerlink" title="如何隐藏浏览器版本和操作系统版本"></a>如何隐藏浏览器版本和操作系统版本</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>评论数据的用户名右侧显示了浏览器版本和操作系统版本，我认为这是多余的，目标是隐藏不显示</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9603-%E9%97%AE%E9%A2%982.jpg" alt="Valine评论系统优化03-问题2"></p>
+<h2 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h2><ul>
+<li>进入theme目录下面的<code>source/css</code>文件夹，新建一个文件 <code>custom.styl</code>，如下图</li>
 </ul>
-<blockquote>
-<p>cd方法：<br>终端界面输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，就能自动填充文件路径，点击回车就OK了</p>
-</blockquote>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9604-%E9%97%AE%E9%A2%982.jpg" alt="Valine评论系统优化04-问题2"></p>
 <ul>
-<li>再输入以下命令：</li>
+<li>复制下面这段代码，粘贴到 <code>custom.styl</code> 文件中</li>
 </ul>
-<pre class="line-numbers language-jsx"><code class="language-jsx">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>theme<span class="token operator">-</span>next<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>next themes<span class="token operator">/</span>next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p><strong>格式：</strong></p>
-<pre><code>git clone 主题的GitHub链接 themes/主题名</code></pre><p>  （themes是本地博客文件夹名，<code>主题名</code>是将要保存到本地的主题文件夹名称。这个是NexT主题，本地文件夹名为next）</p>
-</blockquote>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token punctuation">.</span>vsys<span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span>none <span class="token operator">!</span>important<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>等待下载完成:</li>
+<li>引入刚刚新建的样式文件</li>
 </ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-<img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-     src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/更换主题样式01-克隆主题.jpg" width="80%" height="80%" />
-
-<p>01-克隆主题</p>
-</center>
-
-
-
+<p>在custom.styl同级的<code>main.styl</code> 中的最后添加以下代码，引入刚刚新建的样式文件</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// custom</span>
+@<span class="token keyword">import</span> <span class="token string">"custom.styl"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
-<li>最后本地 <code>themes</code> 文件夹下载成功next文件。</li>
+<li>hexo g -d部署完成</li>
 </ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-  <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-       src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/更换主题样式02-本地文件.jpg" width="15%" height="15%" />
-
-<p>02-下载成功</p>
-</center>
-
-
-
-<h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><ul>
-<li>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 landscape 更改为 next。</li>
-</ul>
-<blockquote>
-<p>注：Hexo中有两份主要的配置文件，其名称都是<code>_config.yml</code>。<br>一份位于<code>博客根目录里</code>，包含Hexo本身的配置。<br>另一份位于<code>主题目录里</code>，包含主题相关的一些配置。<br>为描述方便，以下说明中将前者称为 <code>站点配置文件</code>，后者称为<code>主题配置文件</code>。</p>
-</blockquote>
-<pre class="line-numbers language-javascript"><code class="language-javascript"># Extensions
-## Plugins<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>hexo<span class="token punctuation">.</span>io<span class="token regex">/plugins/</span>
-## Themes<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>hexo<span class="token punctuation">.</span>io<span class="token regex">/themes/</span>
-theme<span class="token punctuation">:</span> next<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>此时即可使用浏览器访问 <code>http://localhost:4000</code>，最终显示如下图。</li>
-</ul>
-<center style="font-size:14px;color:#C0C0C0;text-decoration:underline;">
-  <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
-       src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/更换主题样式03-主题页面.jpg" width="70%" height="70%" />
-
-<p>03-切换成功-主题页面</p>
-</center>
-
-
-<ul>
-<li>若博客关联了GitHub，终端界面输入<code>hexo g -d</code>命令，next主题便成功部署到GitHub上了。</li>
-</ul>
-<blockquote>
-<p>主题安装之后，需要进行一些基础属性的配置，这样才能更美观，更方便使用。</p>
-</blockquote>
-<h1 id="选择主题风格"><a href="#选择主题风格" class="headerlink" title="选择主题风格"></a>选择主题风格</h1><ul>
-<li>Scheme 是 NexT 提供的一种特性，几乎所有的配置都可以 在 Scheme 之间共用。它提供了四种不同的外观风格：<ul>
-<li>Muse</li>
-<li>Mist</li>
-<li>Pisces</li>
-<li>Gemini</li>
-</ul>
-</li>
-</ul>
-<!-- more -->
-
-<ul>
-<li>如何配置<ul>
-<li>打开主题配置文件，搜索 scheme 关键字。 你会看到有四行 scheme 的配置，将需启用的 scheme 前面注释<code>#</code>去除即可。</li>
-<li>可以自己切换一下，看看线上效果。喜欢哪一种就选哪个。</li>
-<li>下面我选中的是<code>Gemini</code>风格。</li>
-</ul>
-</li>
-</ul>
-<pre class="line-numbers language-javascript"><code class="language-javascript"># <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
-# Scheme Settings
-# <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
-
-# Schemes
-#scheme<span class="token punctuation">:</span> Muse
-#scheme<span class="token punctuation">:</span> Mist
-#scheme<span class="token punctuation">:</span> Pisces
-scheme<span class="token punctuation">:</span> Gemini<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="修改基本属性"><a href="#修改基本属性" class="headerlink" title="修改基本属性"></a>修改基本属性</h1><p>其次我们就要修改标题、副标题、描述、作者、语言这些基本属性了，这是博客页面最直观的一些个人信息的展示。</p>
-<p>打开站点配置文件，找到<code>Site</code>，修改以下属性值</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"># Site
-title<span class="token punctuation">:</span> Hexo
-subtitle<span class="token punctuation">:</span> <span class="token string">''</span>
-description<span class="token punctuation">:</span> <span class="token string">''</span>
-keywords<span class="token punctuation">:</span>
-author<span class="token punctuation">:</span> John Doe
-language<span class="token punctuation">:</span> en
-timezone<span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>语言默认为<code>en</code>，中文简体为<code>zh-CN</code>，中文繁體为<code>zh-hk</code> 或者 <code>zh-tw</code></p>
-<h1 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h1><h2 id="开启–网页显示菜单"><a href="#开启–网页显示菜单" class="headerlink" title="开启–网页显示菜单"></a>开启–网页显示菜单</h2><p>打开主题配置文件，找到<code>menu</code>。配置项如下：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">menu<span class="token punctuation">:</span>
-  home<span class="token punctuation">:</span> <span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>home
-  categories<span class="token punctuation">:</span> <span class="token operator">/</span>categories<span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>th
-  tags<span class="token punctuation">:</span> <span class="token operator">/</span>tags<span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>tags
-  archives<span class="token punctuation">:</span> <span class="token operator">/</span>archives<span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>archive
-  about<span class="token punctuation">:</span> <span class="token operator">/</span>about<span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>user
-  #schedule<span class="token punctuation">:</span> <span class="token operator">/</span>schedule<span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>calendar
-  #sitemap<span class="token punctuation">:</span> <span class="token operator">/</span>sitemap<span class="token punctuation">.</span>xml <span class="token operator">||</span> fa fa<span class="token operator">-</span>sitemap
-  #commonweal<span class="token punctuation">:</span> <span class="token operator">/</span><span class="token number">404</span><span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>heartbeat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>同scheme一致，将需启用的菜单前面的注释 <code>#</code> 删去即可。也可以上下移动位置，改变网页上显示的上下位置。<br>如上，启用了home/about/tags/categories/archives</li>
-</ul>
-<blockquote>
-<p>格式：</p>
-<pre><code>item name: link || icon name</code></pre><p>item name 这个名称并不直接显示在页面上，它将用于<code>匹配图标以及翻译</code>。<br> <code>||</code> 之前的是目标链接，之后的是 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener">Font Awesome</a> 图标的名字。<br>你可以再代码中找到图标引用的网址。</p>
-</blockquote>
-<h2 id="自定义菜单项的显示文本"><a href="#自定义菜单项的显示文本" class="headerlink" title="自定义菜单项的显示文本"></a>自定义菜单项的显示文本</h2><p>在上一步中设置的菜单的名称并不直接用于界面上的展示。</p>
-<p>Hexo 在生成的时候将使用<code>item name</code>查找对应的<code>翻译文本</code>，并提取显示。<br>这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。打开<code>zh-CN.yml</code>，如下：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">menu<span class="token punctuation">:</span>
-  home<span class="token punctuation">:</span> 首页
-  categories<span class="token punctuation">:</span> 分类
-  tags<span class="token punctuation">:</span> 标签
-  archives<span class="token punctuation">:</span> 归档
-  about<span class="token punctuation">:</span> 关于
-  search<span class="token punctuation">:</span> 搜索
-  schedule<span class="token punctuation">:</span> 日程表
-  sitemap<span class="token punctuation">:</span> 站点地图
-  commonweal<span class="token punctuation">:</span> 公益<span class="token number">404</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果不喜欢默认的，可以自定义修改这些汉字。</p>
-<h3 id="开启–关闭图标"><a href="#开启–关闭图标" class="headerlink" title="开启–关闭图标"></a>开启–关闭图标</h3><p>menu下面有如下设置项：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">  # Enable <span class="token operator">/</span> Disable menu icons <span class="token operator">/</span> item badges<span class="token punctuation">.</span>
-menu_settings<span class="token punctuation">:</span>
-  icons<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  badges<span class="token punctuation">:</span> <span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>icons: true</code>控制显不显示图标。可以设置成 false 不显示图标。</p>
-<blockquote>
-<p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（<code>没有设置</code>或者<code>无效的 Font Awesome 图标名字</code>） 的情况下，NexT 将会使用<code>?</code>作为图标。<br>不显示的话，将上面的代码复制到配置文件menu下面。</p>
-</blockquote>
-<h2 id="badges-设定菜单项的数额展示"><a href="#badges-设定菜单项的数额展示" class="headerlink" title="badges-设定菜单项的数额展示"></a>badges-设定菜单项的数额展示</h2><p>在上面的设置项下方，还有一个<code>badges</code>的设置，这个具体有什么效果呢，试一试。<br>修改为<code>true</code>。效果如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F04-%E5%BE%BD%E7%AB%A0.jpg" alt="更换主题样式04-徽章"></p>
-<p>在分类、标签、归档后面会显示对应的统计数额。我现在有1个分类、5个标签、5篇文章归档。</p>
-<h2 id="如何添加菜单项"><a href="#如何添加菜单项" class="headerlink" title="如何添加菜单项"></a>如何添加菜单项</h2><p>以简体中文为例，若你需要添加一个菜单项，在比如 something。那么就需要：</p>
-<ul>
-<li>在主题配置文件的menu中增加：</li>
-</ul>
-<pre class="line-numbers language-javascript"><code class="language-javascript">something<span class="token punctuation">:</span> <span class="token operator">/</span>something<span class="token operator">/</span> <span class="token operator">||</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li><p>修改简体中文对应的翻译文件 <code>languages/zh-CN.yml</code>，在 menu 字段下添加一项：</p>
-<p>  something: 有料</p>
-</li>
-<li><p>配置图标</p>
-</li>
-</ul>
-<p>在 <a href="https://fontawesome.com/icons" target="_blank" rel="noopener">Font Awesome</a> 上找到一个图标，将相应的名称填入上面代码 <code>||</code>的后面，即可生效。比如名称为<code>coffee</code>的图标，上面的代码补充完整：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">something<span class="token punctuation">:</span> <span class="token operator">/</span>something<span class="token operator">/</span> <span class="token operator">||</span> fa fa<span class="token operator">-</span>coffee<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果如下：</p>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F05-%E6%B7%BB%E5%8A%A0%E8%8F%9C%E5%8D%95.jpg" alt="更换主题样式05-添加菜单"></p>
-<blockquote>
-<p>以下2020年5月14日更新</p>
-</blockquote>
-<h1 id="配置侧栏"><a href="#配置侧栏" class="headerlink" title="配置侧栏"></a>配置侧栏</h1><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于左侧位置。<br>打开主题配置文件，找到 <code>sidebar</code> 字段。<br>侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
-<h2 id="左右位置"><a href="#左右位置" class="headerlink" title="左右位置"></a>左右位置</h2><pre class="line-numbers language-javascript"><code class="language-javascript">sidebar<span class="token punctuation">:</span>
-  # Sidebar Position<span class="token punctuation">.</span>
-  #position<span class="token punctuation">:</span> left
-  position<span class="token punctuation">:</span> right<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F06-%E5%8F%B3%E4%BE%A7%E4%BE%A7%E6%A0%8F.jpg" alt="更换主题样式06-右侧侧栏"></p>
-<blockquote>
-<p>放在右侧有点奇怪，根据喜好设置。</p>
-</blockquote>
-<h2 id="设置侧栏显示的时机"><a href="#设置侧栏显示的时机" class="headerlink" title="设置侧栏显示的时机"></a>设置侧栏显示的时机</h2><p>修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
-<p>post - 默认行为，在文章页面（拥有目录列表）时显示<br>always - 在所有页面中都显示<br>hide - 在所有页面中都隐藏（可以手动展开）<br>remove - 完全移除</p>
-<p>代码如下：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">  # Sidebar Display <span class="token punctuation">(</span>only <span class="token keyword">for</span> Muse <span class="token operator">|</span> Mist<span class="token punctuation">)</span><span class="token punctuation">,</span> available values<span class="token punctuation">:</span>
-  #  <span class="token operator">-</span> post    expand on posts automatically<span class="token punctuation">.</span> Default<span class="token punctuation">.</span>
-  #  <span class="token operator">-</span> always  expand <span class="token keyword">for</span> all pages automatically<span class="token punctuation">.</span>
-  #  <span class="token operator">-</span> hide    expand only when click on the sidebar toggle icon<span class="token punctuation">.</span>
-  #  <span class="token operator">-</span> remove  totally remove sidebar including sidebar toggle<span class="token punctuation">.</span>
-  display<span class="token punctuation">:</span> post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>最后别忘了hexo g -d命令，部署到github上。</p>
-</blockquote>
-<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT GitHub项目页</a></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md" target="_blank" rel="noopener">NexT GitHub——detailed installation instructions</a></p>
-<p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9605-%E9%97%AE%E9%A2%982.jpg" alt="Valine评论系统优化05-问题2"></p>
+<h1 id="分类、标签、关于页关闭评论功能"><a href="#分类、标签、关于页关闭评论功能" class="headerlink" title="分类、标签、关于页关闭评论功能"></a>分类、标签、关于页关闭评论功能</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>在NexT主题中，Valine配置之后，默认所有页面都开启评论功能。在部分页面不想或不需要显示评论功能。那么如何隐藏呢？</p>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>在 分类、标签、关于页面的本地md文件中，添加comments属性，属性值设置为true或false，来控制打开或关闭该页面的评论功能。</p>
+<p>比如分类页，这样设置：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">--</span><span class="token operator">-</span>
+title<span class="token punctuation">:</span> 分类
+date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">50</span>
+type<span class="token punctuation">:</span> categories
+comments<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>标签页和关于页等同理。</p>
+<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://blog.csdn.net/a1059526327/article/details/104266761" target="_blank" rel="noopener">hexo博客next主题使用valine评论标题部分无法显示中文评论数</a></p>
+<p><a href="https://github.com/theme-next/hexo-theme-next/issues/1267" target="_blank" rel="noopener">使用 valine 不显示“评论数“文字 #1267</a></p>
+<p><a href="https://hjxlog.com/posts/20191203a1.html" target="_blank" rel="noopener">hexo-Next主题valine评论系统不显示浏览器版本和操作系统版本</a></p>
 
             </div>
             <hr/>
@@ -681,7 +536,7 @@ menu_settings<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/">http://yoursite.com/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%882%EF%BC%89%EF%BC%9A%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE/</a>
+                    <a href="http://yoursite.com/2020/05/19/hexo-bo-ke-da-jian-6-valine-ping-lun-xi-tong-you-hua/">http://yoursite.com/2020/05/19/hexo-bo-ke-da-jian-6-valine-ping-lun-xi-tong-you-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,8 +582,8 @@ menu_settings<span class="token punctuation">:</span>
                                     <span class="chip bg-color">NexT</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">博客教程</span>
+                                <a href="/tags/Valine/">
+                                    <span class="chip bg-color">Valine</span>
                                 </a>
                             
                         </div>
@@ -900,44 +755,36 @@ menu_settings<span class="token punctuation">:</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/05/Markdown%EF%BC%882%EF%BC%89%EF%BC%9A%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AAtags/">
+                <a href="/2020/05/24/processing-xue-xi-ji-lu-1-chu-xiang-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Markdown（2）：如何添加多个tags">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Processing学习记录（1）：初相识">
                         
-                        <span class="card-title">Markdown（2）：如何添加多个tags</span>
+                        <span class="card-title">Processing学习记录（1）：初相识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            显示问题当添加多个标签时，小书匠编辑器默认是这样的：
-tags: 新建,模板,小书匠
-此时网页端显示就会有问题，三个标签识别为一个:
-
-#新建,模板,小书匠
-
-解决方法
-
-如果要添加多个标签，有两种方法书写，都有效：
-
-中括号包围
+                            第一篇，初相识
 
 
-ta
+下载安装这一步不需要详细介绍，作为个人学习记录，在此备注一下：
+访问 Processing官网 https://processing.org，根据自己的操作系统，下载对应的版本。我的是mac系统。
+初识界面之前接触ecl
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    Hexo博客
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    编程学习
                                 </a>
                             
                             
@@ -947,12 +794,8 @@ ta
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo-Blog/">
-                        <span class="chip bg-color">Hexo_Blog</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/Processing/">
+                        <span class="chip bg-color">Processing</span>
                     </a>
                     
                 </div>
@@ -966,33 +809,25 @@ ta
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/04/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89%EF%BC%9AMac%E7%AB%AF%E4%BD%BF%E7%94%A8Hexo+GitHub%20Pages%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                <a href="/2020/05/18/valine-ping-lun-ce-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Hexo博客搭建（1）：Mac端使用Hexo+GitHub Pages搭建免费个人博客">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="valine评论测试">
                         
-                        <span class="card-title">Hexo博客搭建（1）：Mac端使用Hexo+GitHub Pages搭建免费个人博客</span>
+                        <span class="card-title">valine评论测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-自己创建博客的过程整理，供日后查阅。本人Mac端，使用Hexo和GitHub搭建的博客。一步一步操作就可以。
-废话不多说了，下面开始。
+                            valine评论测试
 
-
-
-基本介绍
-选择哪种方案搭建博客
-
-参考这篇文章，免费搭建个人博客的几种高效方案，最终选定+hex
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
                             </span>
                         <span class="publish-author">
                             
@@ -1013,12 +848,8 @@ ta
                         <span class="chip bg-color">Hexo_Blog</span>
                     </a>
                     
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">博客教程</span>
+                    <a href="/tags/NexT/">
+                        <span class="chip bg-color">NexT</span>
                     </a>
                     
                 </div>

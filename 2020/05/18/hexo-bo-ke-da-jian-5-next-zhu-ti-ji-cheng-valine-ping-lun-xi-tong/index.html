@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo博客搭建（3）：NexT主题-跳转分类、标签、关于页报错，无法打开怎么办, Pamarus">
+    <meta name="keywords" content="Hexo博客搭建（5）：NexT主题-集成valine评论系统, Pamarus">
     <meta name="description" content="Thinking Hacks">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo博客搭建（3）：NexT主题-跳转分类、标签、关于页报错，无法打开怎么办 | Pamarus</title>
+    <title>Hexo博客搭建（5）：NexT主题-集成valine评论系统 | Pamarus</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo博客搭建（3）：NexT主题-跳转分类、标签、关于页报错，无法打开怎么办</h1>
+                    <h1 class="description center-align post-title">Hexo博客搭建（5）：NexT主题-集成valine评论系统</h1>
                 </div>
             </div>
         </div>
@@ -417,8 +417,8 @@
                                 <span class="chip bg-color">NexT</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                                <span class="chip bg-color">博客教程</span>
+                            <a href="/tags/Valine/">
+                                <span class="chip bg-color">Valine</span>
                             </a>
                         
                     </div>
@@ -442,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-05
+                    2020-05-18
                 </div>
                 
 
@@ -458,106 +458,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>上一步我们成功安装主题，打开博客地址，操作之后会发现，点击首页、归档菜单是正常打开的。但是点击分类、标签、关于页时，跳转404，报错无法打开。如下图：</p>
-</blockquote>
+                <p>打开next文件夹内的配置文件<code>_config.yml</code>，找到 <code>Comments Settings</code>，选择一个评论系统，设置为<code>true</code>。可选的有：<code>changyan</code>，<code>disqus</code>，<code>disqusjs</code>，<code>gitalk</code>，<code>livere</code>，<code>valine</code>，这几个都是方便配置的。</p>
 <a id="more"></a>
 
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9901-%E8%B7%B3%E8%BD%AC%E6%8A%A5%E9%94%99.jpg" alt="01-跳转报错"></p>
-<h2 id="第1种方法：删除配置文件中空格"><a href="#第1种方法：删除配置文件中空格" class="headerlink" title="第1种方法：删除配置文件中空格"></a>第1种方法：删除配置文件中空格</h2><blockquote>
-<p>关于链接显示<code>20%</code>的问题</p>
-</blockquote>
-<p>这个问题更多发生在，点击首页和归档菜单，显示404，查看链接地址，结尾显示<code>20%</code>。比如：<code>https://xxx.github.io/%20</code></p>
-<p><code>20%</code>代表空格，而这个空格来自NexT主题的配置文件中。<br>配置文件中代码如下：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">menu<span class="token punctuation">:</span>
-  home<span class="token punctuation">:</span> <span class="token operator">/</span> <span class="token operator">||</span> home
-  #about<span class="token punctuation">:</span> <span class="token operator">/</span>about<span class="token operator">/</span> <span class="token operator">||</span> user
-  #tags<span class="token punctuation">:</span> <span class="token operator">/</span>tags<span class="token operator">/</span> <span class="token operator">||</span> tags
-  #categories<span class="token punctuation">:</span> <span class="token operator">/</span>categories<span class="token operator">/</span> <span class="token operator">||</span> th
-  archives<span class="token punctuation">:</span> <span class="token operator">/</span>archives<span class="token operator">/</span> <span class="token operator">||</span> archive
-  #schedule<span class="token punctuation">:</span> <span class="token operator">/</span>schedule<span class="token operator">/</span> <span class="token operator">||</span> calendar
-  #sitemap<span class="token punctuation">:</span> <span class="token operator">/</span>sitemap<span class="token punctuation">.</span>xml <span class="token operator">||</span> sitemap
-  #commonweal<span class="token punctuation">:</span> <span class="token operator">/</span><span class="token number">404</span><span class="token operator">/</span> <span class="token operator">||</span> heartbeat<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>将配置文件里<code>||</code>之前所有的空格删掉，重新<code>hexo g -d</code>部署，解决问题。</p>
-<p>如果你是这种问题，可以尝试一下。</p>
-<blockquote>
-<p>建议参阅第3种方法，检查一下是不是第3种方法中说明的问题。</p>
-</blockquote>
-<h2 id="第2种方法：重新clone安装主题"><a href="#第2种方法：重新clone安装主题" class="headerlink" title="第2种方法：重新clone安装主题"></a>第2种方法：重新clone安装主题</h2><blockquote>
-<p><code>20%</code>这种问题如何发生的：</p>
-</blockquote>
+<h1 id="选择哪种评论系统"><a href="#选择哪种评论系统" class="headerlink" title="选择哪种评论系统"></a>选择哪种评论系统</h1><p>参考以下文章，选择适合自己的：<br><a href="https://www.zhihu.com/question/267598518" target="_blank" rel="noopener">Hexo（NexT 主题）评论系统哪个好？</a><br><a href="https://3mile.github.io/archives/128/" target="_blank" rel="noopener">第三方评论系统推荐</a></p>
 <ul>
-<li>我当时是因为clone主题出现的问题。<br>在这个网站 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a> clone主题。clone之后，点击首页、归档跳转的链接都带<code>20%</code>，如下图：</li>
+<li><a href="http://changyan.kuaizhan.com/" target="_blank" rel="noopener">changyan（畅言）</a> ，原搜狐畅言，安装 <a href="http://changyan.kuaizhan.com/static/help/o-beian.html" target="_blank" rel="noopener">需要备案号</a>。</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9902-%E8%B7%B3%E8%BD%AC%E6%8A%A5%E9%94%99.jpg" alt="02-跳转报错"></p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F01-%E7%95%85%E8%A8%80%E9%9C%80%E5%A4%87%E6%A1%88.jpg" alt="集成valine评论系统01-畅言需备案"></p>
 <ul>
-<li><p>出现问题之后，参阅 <a href="https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md" target="_blank" rel="noopener">GitHub仓库页</a>，会明显看见不再维护的提示。</p>
-</li>
-<li><p>查阅issues找问题，也有issuus报此问题：<a href="https://github.com/iissnan/hexo-theme-next/issues/2233" target="_blank" rel="noopener">生成URL存在空格%20，导致github pages无法访问 #2233</a> ， <a href="https://github.com/iissnan/hexo-theme-next/issues/2209" target="_blank" rel="noopener">分类无法正常使用 #2209</a> ，等等，可知此问题已在新版中解决。</p>
-</li>
-<li><p>所以，建议在 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">这个仓库</a> clone安装最新版本NexT主题。大概率解决这个问题。</p>
-</li>
+<li><a href="https://disqus.com/" target="_blank" rel="noopener">disqus</a> 需要科学上网才能使用。</li>
+<li><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener">gitalk</a> 尝试了一下，需要登录GitHub，且只能使用GitHub登录。</li>
+<li><a href="https://livere.com/" target="_blank" rel="noopener">livere（来必力）</a> 来自韩国的产品，中国本土化做的不错，支持微信、QQ、豆瓣等多种登录方式。</li>
+<li><a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a>，无后端，无需登录，轻量，看了一下别的博客，样式也蛮喜欢，最终决定用这个。</li>
 </ul>
-<blockquote>
-<p>如果安装最新版本后，仍出现问题，比如首页、归档也可以正常打开，但是分类标签页报错404，参见下面的方法。</p>
-</blockquote>
-<h2 id="第3种方法：创建分类、标签等页面"><a href="#第3种方法：创建分类、标签等页面" class="headerlink" title="第3种方法：创建分类、标签等页面"></a>第3种方法：创建分类、标签等页面</h2><blockquote>
-<p>安装最新主题（v7.8.0），启用并点击分类、标签、关于页面，404报错。并且，侧边栏<code>分类</code>、<code>标签</code>都无法点击。</p>
-</blockquote>
-<h3 id="找问题"><a href="#找问题" class="headerlink" title="找问题"></a>找问题</h3><p>看一下404的英文提示文字，大概是没有链接对应的文件的意思。</p>
-<p>查阅一些文章，之后检查<code>public/</code>文件夹和对比其他博客的GitHub仓库文件，发现：<br><code>public/categories/</code>、<code>public/tags/</code> 文件夹下没有<code>index.html</code>文件，<code>public/</code>文件夹下没有<code>about</code>文件夹。所以初步判定问题是，菜单项没有根文件，不能链接到对应页面。</p>
-<p>所以设想的解决方法就是创建分类、标签、关于页面。</p>
-<h3 id="创建-分类-页面"><a href="#创建-分类-页面" class="headerlink" title="创建 [分类] 页面"></a>创建 [分类] 页面</h3><ul>
-<li>（1）终端窗口下，cd 到你的博客目录。</li>
+<h1 id="获取APP-ID-和-APP-Key"><a href="#获取APP-ID-和-APP-Key" class="headerlink" title="获取APP ID 和 APP Key"></a>获取APP ID 和 APP Key</h1><h2 id="注册登录LeanCloud"><a href="#注册登录LeanCloud" class="headerlink" title="注册登录LeanCloud"></a>注册登录LeanCloud</h2><p>评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号</p>
+<p><a href="https://tab.leancloud.cn/login.html#/signup" target="_blank" rel="noopener">Leancloud官网，点我注册</a></p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F02-%E6%B3%A8%E5%86%8CLeanCould.jpg" alt="集成valine评论系统02-注册LeanCould"></p>
+<h2 id="实名认证和邮箱认证"><a href="#实名认证和邮箱认证" class="headerlink" title="实名认证和邮箱认证"></a>实名认证和邮箱认证</h2><p>注册成功后，根据提示，需要分别完成实名认证和邮箱验证</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F03.jpg" alt="集成valine评论系统03"></p>
+<ul>
+<li>实名认证——选择个人认证</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F04.jpg" alt="集成valine评论系统04"></p>
+<ul>
+<li>输入姓名、身份证号</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F05.jpg" alt="集成valine评论系统05"></p>
+<ul>
+<li>支付宝认证</li>
+<li>感觉还蛮麻烦，介意的选择其他的</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F06.jpg" alt="集成valine评论系统06"></p>
+<ul>
+<li>认证成功<br><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F07.jpg" alt="集成valine评论系统07"></li>
+</ul>
+<h2 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h2><ul>
+<li>进入控制台后点击左下角创建应用：</li>
 </ul>
 <blockquote>
-<p>CD方法：<br>输入<code>cd</code>+<code>空格</code><br>将想要定位的文件夹拖进终端，将会自动填充文件路径，再点击回车</p>
+<p>关于节点：<br>LeanCloud 有三个节点可供选择，分别是华北节点，华东节点以及国际节点。<br>如果用户主体在国内，建议使用华北节点与华东节点，如果用户主体在国外建议使用 国际节点。根据国家《网络安全法》的要求，使用 LeanCloud 国内节点服务的用户必须进行 实名认证6（个人或者企业认证）。在 LeanCloud 控制台新建应用以后不再支持更换节点。</p>
 </blockquote>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F09.jpg" alt="集成valine评论系统09"></p>
 <ul>
-<li>（2）输入命令，生成文件：</li>
+<li>选择开发版，名称自定义</li>
 </ul>
-<pre class="line-numbers language-jsx"><code class="language-jsx">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"categories"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9903-%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2.jpg" alt="03-创建分类页面"></p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F10.jpg" alt="集成valine评论系统10"></p>
 <ul>
-<li>（3）找到本地文件<ul>
-<li>你会发现你的<code>source/</code>文件夹下有了<code>categories/index.md</code>文件</li>
+<li>创建成功</li>
 </ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%9904-%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.jpg" alt="04-本地文件"></p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F11.jpg" alt="集成valine评论系统11"></p>
 <ul>
-<li><p>（4）修改<code>title</code>（可选），添加页面类型<code>type</code></p>
-<ul>
-<li><p>打开<code>index.md</code>文件将 title 设置为title: 分类。<code>分类</code>将是网页显示的标题，按照自己喜好修改或者不修改。</p>
-</li>
-<li><p>新增属性<code>type</code>，设置为<code>categories</code>，将自动为这个页面显示分类。页面内容如下：</p>
-</li>
+<li>点击名称，进入刚刚创建的应用，选择左下角的<code>设置</code> &gt; <code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了：</li>
 </ul>
-</li>
-</ul>
-<pre class="line-numbers language-javascript"><code class="language-javascript">title<span class="token punctuation">:</span> 分类
-date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">50</span>
-type<span class="token punctuation">:</span> categories
-<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><p>（5）<code>hexo g -d</code>，生成部署即可。</p>
-</li>
-<li><p>（6）把文章归入分类只需在文章的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中。</p>
-</li>
-</ul>
-<h3 id="创建-标签-页面"><a href="#创建-标签-页面" class="headerlink" title="创建 [标签] 页面"></a>创建 [标签] 页面</h3><p>过程同上。</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"tags"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-javascript"><code class="language-javascript">title<span class="token punctuation">:</span> 标签
-date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token punctuation">:</span><span class="token number">54</span><span class="token punctuation">:</span><span class="token number">11</span>
-type<span class="token punctuation">:</span> tags
-<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="创建-关于-页面"><a href="#创建-关于-页面" class="headerlink" title="创建 [关于] 页面"></a>创建 [关于] 页面</h3><p>过程同上。</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"about"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-javascript"><code class="language-javascript">title<span class="token punctuation">:</span> 关于
-date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token punctuation">:</span><span class="token number">58</span><span class="token punctuation">:</span><span class="token number">44</span>
-type<span class="token punctuation">:</span> about
-<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p><a href="https://blog.csdn.net/weixin_43790779/article/details/104854588" target="_blank" rel="noopener">1.Hexo+next主题下，点击首页，分类等导航时出现404错误</a><br><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">2.NexT仓库</a><br><a href="https://blog.csdn.net/Wonz5130/article/details/84666519" target="_blank" rel="noopener">3.解决 Hexo 搭建博客显示不出分类、标签问题</a><br><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">4.NexT使用文档</a></p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F12.jpg" alt="集成valine评论系统12"></p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="填写appid-和-appkey"><a href="#填写appid-和-appkey" class="headerlink" title="填写appid 和 appkey"></a>填写<code>appid</code> 和 <code>appkey</code></h2><p>打开next文件夹内的配置文件<code>_config.yml</code>，找到<code>Valine</code>配置项，设置为<code>true</code>，填入<code>appid</code> 和 <code>appkey</code></p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"># Valine
+# For more information<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>valine<span class="token punctuation">.</span>js<span class="token punctuation">.</span>org<span class="token punctuation">,</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>xCss<span class="token operator">/</span>Valine
+valine<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  appid<span class="token punctuation">:</span> # Your leancloud application appid
+  appkey<span class="token punctuation">:</span> # Your leancloud application appkey<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="添加-Web-安全域名"><a href="#添加-Web-安全域名" class="headerlink" title="添加 Web 安全域名"></a>添加 Web 安全域名</h2><p>在<code>Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名</code> 把你的域名加进去</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F13-%E6%B7%BB%E5%8A%A0web%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D.jpg" alt="集成valine评论系统13-添加web安全域名"></p>
+<p>最后，<code>hexo g -d</code>命令部署，文章页面底部显示评论文本框。无需登录就可以进行评论，还支持Emoji。</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F14-%E6%88%90%E5%8A%9F.jpg" alt="集成valine评论系统14-成功"></p>
+<h1 id="评论数据管理"><a href="#评论数据管理" class="headerlink" title="评论数据管理"></a>评论数据管理</h1><p>由于Valine 是无后端评论系统，所以也就没有开发评论数据管理功能。请自行登录Leancloud应用管理。</p>
+<p>具体步骤：<code>登录 -&gt; 选择你创建的应用 -&gt; 存储 -&gt; 选择Class Comment</code>，就可以看见评论数据了。</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F15-%E6%9F%A5%E7%9C%8B%E8%AF%84%E8%AE%BA%E6%95%B0%E6%8D%AE.jpg" alt="集成valine评论系统15-查看评论数据"></p>
+<h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">valine文档-快速开始</a></p>
 
             </div>
             <hr/>
@@ -583,7 +552,7 @@ type<span class="token punctuation">:</span> about
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/05/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%883%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98-%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%99%EF%BC%8C%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%80%8E%E4%B9%88%E5%8A%9E/">http://yoursite.com/2020/05/05/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%883%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98-%E8%B7%B3%E8%BD%AC%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%8A%A5%E9%94%99%EF%BC%8C%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%80%8E%E4%B9%88%E5%8A%9E/</a>
+                    <a href="http://yoursite.com/2020/05/18/hexo-bo-ke-da-jian-5-next-zhu-ti-ji-cheng-valine-ping-lun-xi-tong/">http://yoursite.com/2020/05/18/hexo-bo-ke-da-jian-5-next-zhu-ti-ji-cheng-valine-ping-lun-xi-tong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,8 +598,8 @@ type<span class="token punctuation">:</span> about
                                     <span class="chip bg-color">NexT</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">博客教程</span>
+                                <a href="/tags/Valine/">
+                                    <span class="chip bg-color">Valine</span>
                                 </a>
                             
                         </div>
@@ -802,38 +771,25 @@ type<span class="token punctuation">:</span> about
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/13/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%884%EF%BC%89%EF%BC%9ANexT%E4%B8%BB%E9%A2%98-%E9%A6%96%E9%A1%B5%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%85%A8%E9%83%A8%E5%86%85%E5%AE%B9%EF%BC%8C%E6%98%BE%E7%A4%BA%E9%A2%84%E8%A7%88/">
+                <a href="/2020/05/18/valine-ping-lun-ce-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo博客搭建（4）：NexT主题-首页不显示全部内容，显示预览">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="valine评论测试">
                         
-                        <span class="card-title">Hexo博客搭建（4）：NexT主题-首页不显示全部内容，显示预览</span>
+                        <span class="card-title">valine评论测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-Next主题的基本配置都差不多了，现在还有一个问题。就是首页默认显示文章的全部内容，而不是预览，如何设置只显示部分呢？
+                            valine评论测试
 
-
-
-
-
-
-01-默认显示全部
-
-
-
-一般有以下三种方法
-第一种方法这种方式是 Hexo 提供的方式
-在文章中使用 &
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
                         </span>
                         <span class="publish-author">
                             
@@ -869,37 +825,38 @@ Next主题的基本配置都差不多了，现在还有一个问题。就是首�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/05/Markdown%EF%BC%882%EF%BC%89%EF%BC%9A%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A4%9A%E4%B8%AAtags/">
+                <a href="/2020/05/13/hexo-bo-ke-da-jian-4-next-zhu-ti-shou-ye-bu-xian-shi-quan-bu-nei-rong-xian-shi-yu-lan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Markdown（2）：如何添加多个tags">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo博客搭建（4）：NexT主题-首页不显示全部内容，显示预览">
                         
-                        <span class="card-title">Markdown（2）：如何添加多个tags</span>
+                        <span class="card-title">Hexo博客搭建（4）：NexT主题-首页不显示全部内容，显示预览</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            显示问题当添加多个标签时，小书匠编辑器默认是这样的：
-tags: 新建,模板,小书匠
-此时网页端显示就会有问题，三个标签识别为一个:
-
-#新建,模板,小书匠
-
-解决方法
-
-如果要添加多个标签，有两种方法书写，都有效：
-
-中括号包围
+                            
+Next主题的基本配置都差不多了，现在还有一个问题。就是首页默认显示文章的全部内容，而不是预览，如何设置只显示部分呢？
 
 
-ta
+
+
+
+
+01-默认显示全部
+
+
+
+一般有以下三种方法
+第一种方法这种方式是 Hexo 提供的方式
+在文章中使用 &
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
                             </span>
                         <span class="publish-author">
                             
@@ -920,8 +877,8 @@ ta
                         <span class="chip bg-color">Hexo_Blog</span>
                     </a>
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/NexT/">
+                        <span class="chip bg-color">NexT</span>
                     </a>
                     
                 </div>
