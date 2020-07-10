@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -485,8 +485,8 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-strong">**双星号加粗**</span><br><span class="hljs-strong">__双下划线加粗__</span><br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">**</span>双星号加粗<span class="token operator">**</span>
+__双下划线加粗__</code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -498,8 +498,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <h2 id="单行引用"><a href="#单行引用" class="headerlink" title="单行引用"></a>单行引用</h2><ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 单行引用文字</span><br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">></span> 单行引用文字</code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -508,10 +507,12 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 </blockquote>
 <h2 id="多行引用"><a href="#多行引用" class="headerlink" title="多行引用"></a>多行引用</h2><ul>
 <li><strong>示例：</strong></li>
-<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">&gt;</span><span class="bash"> 引用文字</span><br><span class="hljs-meta">&gt;</span><span class="bash"> 引用文字</span><br><span class="hljs-meta">&gt;</span><span class="bash"> 引用文字</span><br><span class="hljs-meta">&gt;</span><span class="bash"> </span><br><span class="hljs-meta">&gt;</span><span class="bash"> 引用文字</span><br></code></pre></td></tr></table></figure>
-
-</li>
 </ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">></span> 引用文字
+<span class="token operator">></span> 引用文字
+<span class="token operator">></span> 引用文字
+<span class="token operator">></span> 
+<span class="token operator">></span> 引用文字</code></pre>
 <p><strong>显示效果：</strong></p>
 <blockquote>
 <p>引用文字<br>引用文字<br>引用文字</p>
@@ -521,8 +522,9 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 引用文字</span><br>引用文字<br>引用文字<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">></span> 引用文字
+引用文字
+引用文字</code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -531,12 +533,14 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 </blockquote>
 <h2 id="多级引用"><a href="#多级引用" class="headerlink" title="多级引用"></a>多级引用</h2><p>连续书写多个 <code>&gt;</code>符号，就可以实现多级引用。</p>
 <ul>
-<li><p><strong>示例：</strong></p>
-</li>
-<li><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ruby">&gt; 层级<span class="hljs-number">1</span><br>&gt;<br><span class="hljs-meta">&gt;&gt;</span> 层级<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;</span>&gt; 层级<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示效果：</strong></p>
-</li>
+<li><strong>示例：</strong></li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">></span> 层级<span class="token number">1</span>
+<span class="token operator">></span>
+<span class="token operator">></span><span class="token operator">></span> 层级<span class="token number">2</span>
+<span class="token operator">></span><span class="token operator">></span><span class="token operator">></span> 层级<span class="token number">3</span></code></pre>
+<ul>
+<li><strong>显示效果：</strong></li>
 </ul>
 <blockquote>
 <p>层级1</p>
@@ -551,8 +555,12 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">&gt;</span><span class="bash"> 1.引用列表项，第一行列表项。</span><br><span class="hljs-meta">&gt;</span><span class="bash"> 2.引用列表项，是第二行列表项。</span><br><span class="hljs-meta">&gt;</span><span class="bash"> </span><br><span class="hljs-meta">&gt;</span><span class="bash"> 引用代码区块：</span><br><span class="hljs-meta">&gt;</span><span class="bash"> </span><br><span class="hljs-meta">&gt;</span><span class="bash">     <span class="hljs-built_in">return</span> shell_exec(<span class="hljs-string">"echo <span class="hljs-variable">$input</span> | <span class="hljs-variable">$markdown_script</span>"</span>);</span><br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">.</span>引用列表项，第一行列表项。
+<span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">.</span>引用列表项，是第二行列表项。
+<span class="token operator">></span> 
+<span class="token operator">></span> 引用代码区块：
+<span class="token operator">></span> 
+<span class="token operator">></span>     <span class="token keyword">return</span> <span class="token function">shell_exec</span><span class="token punctuation">(</span><span class="token string">"echo $input | $markdown_script"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><strong>显示效果：</strong></p>
 <blockquote>
 <p>1.引用列表项，第一行列表项。<br>2.引用列表项，是第二行列表项。</p>
@@ -562,8 +570,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey">这是一个段落内的 `one line of code` 是的，就这样用<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript">这是一个段落内的 <span class="token template-string"><span class="token string">`one line of code`</span></span> 是的，就这样用</code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -572,8 +579,7 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey">这是一个段落内的 `one line of code` 是的，我要显示 `` ` `` 符号<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript">这是一个段落内的 <span class="token template-string"><span class="token string">`one line of code`</span></span> 是的，我要显示 <span class="token template-string"><span class="token string">``</span></span> <span class="token template-string"><span class="token string">` `</span></span>` 符号</code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -583,9 +589,9 @@ src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/MD语法学
 <li><strong>示例：</strong></li>
 </ul>
 <blockquote>
-<pre><code>var x = 1; 
-var y = 2; 
-var z = 3; </code></pre></blockquote>
+<pre><code> var x = 1; 
+ var y = 2; 
+ var z = 3; </code></pre></blockquote>
 <ul>
 <li><p><strong>显示效果：</strong></p>
 <p>  var x = 1;<br>  var y = 2;<br>  var z = 3; </p>
@@ -604,18 +610,19 @@ var z = 3; </code></pre></blockquote>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">var x</span> = 1; <br><span class="hljs-attribute">var y</span> = 2; <br><span class="hljs-attribute">var z</span> = 3;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>; <br><span class="hljs-keyword">var</span> y = <span class="hljs-number">2</span>; <br><span class="hljs-keyword">var</span> z = <span class="hljs-number">3</span>;<br></code></pre></td></tr></table></figure>
-
+<pre><code>var x = 1; 
+var y = 2; 
+var z = 3; </code></pre><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> 
+<span class="token keyword">var</span> z <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> </code></pre>
 <h1 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h1><p>Markdown 支持两种形式的链接语法： 内联式和引用式两种形式。</p>
 <h2 id="内联式"><a href="#内联式" class="headerlink" title="内联式"></a>内联式</h2><p>中括号内为显示文本，后面紧接一对圆括号. 圆括号里面放所需的 URL 链接,</p>
 <ul>
-<li><p><strong>示例：</strong></p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[<span class="hljs-string">01.Markdown语法说明</span>](<span class="hljs-link">https://github.com/appinncom/Markdown-Syntax-CN/blob/master/syntax.md</span>)<br></code></pre></td></tr></table></figure>
-</li>
-<li><p><strong>显示效果：</strong></p>
-</li>
+<li><strong>示例：</strong></li>
+</ul>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">[</span><span class="token number">01</span><span class="token punctuation">.</span>Markdown语法说明<span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>appinncom<span class="token operator">/</span>Markdown<span class="token operator">-</span>Syntax<span class="token operator">-</span>CN<span class="token operator">/</span>blob<span class="token operator">/</span>master<span class="token operator">/</span>syntax<span class="token punctuation">.</span>md<span class="token punctuation">)</span></code></pre>
+<ul>
+<li><strong>显示效果：</strong></li>
 </ul>
 <p><a href="https://github.com/appinncom/Markdown-Syntax-CN/blob/master/syntax.md" target="_blank" rel="noopener">01.Markdown语法说明</a></p>
 <h2 id="引用式"><a href="#引用式" class="headerlink" title="引用式"></a>引用式</h2><ul>
@@ -631,8 +638,9 @@ var z = 3; </code></pre></blockquote>
 <li><p><strong>示例：</strong></p>
 </li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">我们可以在 [<span class="hljs-string">02.Markdown中文文档</span>][<span class="hljs-symbol">link1</span>]这个网站查看MD语法样式。<br><br>[<span class="hljs-symbol">link1</span>]:<span class="hljs-link">https://markdown-zh.readthedocs.io/en/latest/</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-javascript"><code class="language-javascript">我们可以在 <span class="token punctuation">[</span><span class="token number">02</span><span class="token punctuation">.</span>Markdown中文文档<span class="token punctuation">]</span><span class="token punctuation">[</span>link1<span class="token punctuation">]</span>这个网站查看MD语法样式。
 
+<span class="token punctuation">[</span>link1<span class="token punctuation">]</span><span class="token punctuation">:</span>https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>markdown<span class="token operator">-</span>zh<span class="token punctuation">.</span>readthedocs<span class="token punctuation">.</span>io<span class="token operator">/</span>en<span class="token regex">/latest/</span></code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -641,8 +649,7 @@ var z = 3; </code></pre></blockquote>
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">我们可以在 [<span class="hljs-string">03.小书匠语法说明</span>](<span class="hljs-link">http://soft.xiaoshujiang.com/docs/grammar/common/italic/ "我使用小书匠编辑器"</span>) 这个网站查看MD语法样式。<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript">我们可以在 <span class="token punctuation">[</span><span class="token number">03</span><span class="token punctuation">.</span>小书匠语法说明<span class="token punctuation">]</span><span class="token punctuation">(</span>http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>soft<span class="token punctuation">.</span>xiaoshujiang<span class="token punctuation">.</span>com<span class="token operator">/</span>docs<span class="token operator">/</span>grammar<span class="token operator">/</span>common<span class="token regex">/italic/</span> <span class="token string">"我使用小书匠编辑器"</span><span class="token punctuation">)</span> 这个网站查看MD语法样式。</code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -651,8 +658,9 @@ var z = 3; </code></pre></blockquote>
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">我们可以在 [<span class="hljs-string">02.Markdown中文文档</span>][<span class="hljs-symbol">link2</span>] 这个网站查看MD语法样式。<br><br>[<span class="hljs-symbol">link2</span>]: <span class="hljs-link">https://markdown-zh.readthedocs.io/en/latest/ "Markdown语法"</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-javascript"><code class="language-javascript">我们可以在 <span class="token punctuation">[</span><span class="token number">02</span><span class="token punctuation">.</span>Markdown中文文档<span class="token punctuation">]</span><span class="token punctuation">[</span>link2<span class="token punctuation">]</span> 这个网站查看MD语法样式。
 
+<span class="token punctuation">[</span>link2<span class="token punctuation">]</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>markdown<span class="token operator">-</span>zh<span class="token punctuation">.</span>readthedocs<span class="token punctuation">.</span>io<span class="token operator">/</span>en<span class="token regex">/latest/</span> <span class="token string">"Markdown语法"</span></code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -663,8 +671,7 @@ var z = 3; </code></pre></blockquote>
 <ul>
 <li><strong>示例：</strong></li>
 </ul>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript"><span class="hljs-symbol">\*</span>文字星号<span class="hljs-symbol">\*</span><br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript">\<span class="token operator">*</span>文字星号\<span class="token operator">*</span></code></pre>
 <ul>
 <li><strong>显示效果：</strong></li>
 </ul>
@@ -672,18 +679,19 @@ var z = 3; </code></pre></blockquote>
 <ul>
 <li>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</li>
 </ul>
-<pre><code>\   反斜线
+<pre class=" language-javascript"><code class="language-javascript">\   反斜线
 `   反引号
-*   星号
+<span class="token operator">*</span>   星号
 _   底线
-{}  花括号
-[]  方括号
-()  括弧
+<span class="token punctuation">{</span><span class="token punctuation">}</span>  花括号
+<span class="token punctuation">[</span><span class="token punctuation">]</span>  方括号
+<span class="token punctuation">(</span><span class="token punctuation">)</span>  括弧
 #   井字号
-+   加号
--   减号
-.   英文句点
-!   惊叹号</code></pre>
+<span class="token operator">+</span>   加号
+<span class="token operator">-</span>   减号
+<span class="token punctuation">.</span>   英文句点
+<span class="token operator">!</span>   惊叹号</code></pre>
+
             </div>
             <hr/>
 

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -465,13 +465,14 @@
 
 <h1 id="统计数字小标题处如何显示中文“评论数”，而不是valine"><a href="#统计数字小标题处如何显示中文“评论数”，而不是valine" class="headerlink" title="统计数字小标题处如何显示中文“评论数”，而不是valine"></a>统计数字小标题处如何显示中文“评论数”，而不是valine</h1><h2 id="实际显示"><a href="#实际显示" class="headerlink" title="实际显示"></a>实际显示</h2><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9601-%E9%97%AE%E9%A2%981.jpg" alt="Valine评论系统优化01-问题1"></p>
 <p>这是默认行为。因为NexT允许同时开启多个评论系统（例如同时启用valine和gitalk），这时显示「评论数」文字会造成混乱。</p>
-<h2 id="期望效果"><a href="#期望效果" class="headerlink" title="期望效果"></a>期望效果</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">发表于 <span class="hljs-number">2020</span><span class="hljs-number">-05</span><span class="hljs-number">-18</span>   分类于 博客教程  评论数： <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
+<h2 id="期望效果"><a href="#期望效果" class="headerlink" title="期望效果"></a>期望效果</h2><pre class=" language-javascript"><code class="language-javascript">发表于 <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">18</span>   分类于 博客教程  评论数： <span class="token number">1</span></code></pre>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>打开<code>themes -&gt; next -&gt; languages -&gt; zh-CN.yml</code></p>
 <p>在<code>post:</code>标签下添加:</p>
 <p><code>comments.valine: 评论数</code> (显示的汉字自定义，最好和其他评论系统有所区分）</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql">post:<br>  comments.valine: 评论数<br>  posted: 发表于<br>  edited: 更新于<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript">post<span class="token punctuation">:</span>
+  comments<span class="token punctuation">.</span>valine<span class="token punctuation">:</span> 评论数
+  posted<span class="token punctuation">:</span> 发表于
+  edited<span class="token punctuation">:</span> 更新于</code></pre>
 <h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%9602-%E9%97%AE%E9%A2%981.jpg" alt="Valine评论系统优化02-问题1"></p>
 <p>如 <a href="https://pamarus.github.io/" target="_blank" rel="noopener">此博客：https://pamarus.github.io/</a> 所示，正常显示中文<code>评论数</code>。</p>
 <h1 id="如何隐藏浏览器版本和操作系统版本"><a href="#如何隐藏浏览器版本和操作系统版本" class="headerlink" title="如何隐藏浏览器版本和操作系统版本"></a>如何隐藏浏览器版本和操作系统版本</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>评论数据的用户名右侧显示了浏览器版本和操作系统版本，我认为这是多余的，目标是隐藏不显示</p>
@@ -483,14 +484,15 @@
 <ul>
 <li>复制下面这段代码，粘贴到 <code>custom.styl</code> 文件中</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">.vsys&#123;<br>    display:none !important;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">.</span>vsys<span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span>none <span class="token operator">!</span>important<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>引入刚刚新建的样式文件</li>
 </ul>
 <p>在custom.styl同级的<code>main.styl</code> 中的最后添加以下代码，引入刚刚新建的样式文件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// custom</span><br>@<span class="hljs-keyword">import</span> <span class="hljs-string">"custom.styl"</span>;<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// custom</span>
+@<span class="token keyword">import</span> <span class="token string">"custom.styl"</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>hexo g -d部署完成</li>
 </ul>
@@ -498,8 +500,12 @@
 <h1 id="分类、标签、关于页关闭评论功能"><a href="#分类、标签、关于页关闭评论功能" class="headerlink" title="分类、标签、关于页关闭评论功能"></a>分类、标签、关于页关闭评论功能</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>在NexT主题中，Valine配置之后，默认所有页面都开启评论功能。在部分页面不想或不需要显示评论功能。那么如何隐藏呢？</p>
 <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>在 分类、标签、关于页面的本地md文件中，添加comments属性，属性值设置为true或false，来控制打开或关闭该页面的评论功能。</p>
 <p>比如分类页，这样设置：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">---<br>title: 分类<br>date: <span class="hljs-number">2020</span><span class="hljs-number">-05</span><span class="hljs-number">-05</span> <span class="hljs-number">16</span>:<span class="hljs-number">38</span>:<span class="hljs-number">50</span><br>type: categories<br>comments: <span class="hljs-literal">false</span><br>---<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">--</span><span class="token operator">-</span>
+title<span class="token punctuation">:</span> 分类
+date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">50</span>
+type<span class="token punctuation">:</span> categories
+comments<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token operator">--</span><span class="token operator">-</span></code></pre>
 <p>标签页和关于页等同理。</p>
 <h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://blog.csdn.net/a1059526327/article/details/104266761" target="_blank" rel="noopener">hexo博客next主题使用valine评论标题部分无法显示中文评论数</a></p>
 <p><a href="https://github.com/theme-next/hexo-theme-next/issues/1267" target="_blank" rel="noopener">使用 valine 不显示“评论数“文字 #1267</a></p>

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -454,8 +454,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="显示问题"><a href="#显示问题" class="headerlink" title="显示问题"></a>显示问题</h2><p>当添加多个标签时，小书匠编辑器默认是这样的：</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">tags:</span> 新建,模板,小书匠<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript">tags<span class="token punctuation">:</span> 新建<span class="token punctuation">,</span>模板<span class="token punctuation">,</span>小书匠</code></pre>
 <p>此时网页端显示就会有问题，三个标签识别为一个:</p>
 <blockquote>
 <p>#新建,模板,小书匠</p>
@@ -467,16 +466,16 @@
 <li>中括号包围</li>
 </ul>
 <blockquote>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">tags:</span> [新建,模板,小书匠]<br></code></pre></td></tr></table></figure>
-
-<p>需要将标签以英文逗号隔开，并在最外层用中括号包围。</p>
+<pre><code>tags: [新建,模板,小书匠]</code></pre><p>需要将标签以英文逗号隔开，并在最外层用中括号包围。</p>
 </blockquote>
 <ul>
 <li>换行书写</li>
 </ul>
 <blockquote>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">tags:</span> <br>  - 新建<br>  - 模板<br>  - 小书匠<br></code></pre></td></tr></table></figure>
-</blockquote>
+<pre><code>tags: 
+  - 新建
+  - 模板
+  - 小书匠</code></pre></blockquote>
 <ul>
 <li>实际显示效果：</li>
 </ul>

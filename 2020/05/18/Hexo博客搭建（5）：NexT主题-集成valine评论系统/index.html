@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -512,8 +512,12 @@
 </ul>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F12.jpg" alt="集成valine评论系统12"></p>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="填写appid-和-appkey"><a href="#填写appid-和-appkey" class="headerlink" title="填写appid 和 appkey"></a>填写<code>appid</code> 和 <code>appkey</code></h2><p>打开next文件夹内的配置文件<code>_config.yml</code>，找到<code>Valine</code>配置项，设置为<code>true</code>，填入<code>appid</code> 和 <code>appkey</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"># Valine<br># For more information: https://valine.js.org, https://github.com/xCss/Valine<br>valine:<br>  enable: <span class="hljs-literal">false</span><br>  appid: # Your leancloud application appid<br>  appkey: # Your leancloud application appkey<br></code></pre></td></tr></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"># Valine
+# For more information<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>valine<span class="token punctuation">.</span>js<span class="token punctuation">.</span>org<span class="token punctuation">,</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>xCss<span class="token operator">/</span>Valine
+valine<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  appid<span class="token punctuation">:</span> # Your leancloud application appid
+  appkey<span class="token punctuation">:</span> # Your leancloud application appkey</code></pre>
 <h2 id="添加-Web-安全域名"><a href="#添加-Web-安全域名" class="headerlink" title="添加 Web 安全域名"></a>添加 Web 安全域名</h2><p>在<code>Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名</code> 把你的域名加进去</p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E9%9B%86%E6%88%90valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F13-%E6%B7%BB%E5%8A%A0web%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D.jpg" alt="集成valine评论系统13-添加web安全域名"></p>
 <p>最后，<code>hexo g -d</code>命令部署，文章页面底部显示评论文本框。无需登录就可以进行评论，还支持Emoji。</p>
