@@ -102,8 +102,9 @@ blockquote {
     border-right-width: 0px !important;
 }
 
+/*修改上边距*/
 .line-numbers {
-    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
+    padding: 2.5rem 1.5rem 1.5rem 3.5rem !important;
     margin: 1rem 0 !important;
     background: #272822;
     overflow: auto;
@@ -111,7 +112,6 @@ blockquote {
     tab-size: 4;
 }
 
-/*修改pre代码*/
 pre {
     padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
     margin: 1rem 0 !important;

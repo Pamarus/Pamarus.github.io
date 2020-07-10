@@ -479,30 +479,30 @@
 
 <p>明显可以看见，显示的内容不会被格式化。也可以根据 <code>&lt;!-- more --&gt;</code> 放置的位置，来控制要显示的预览内容。</p>
 <h1 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h1><p>自动形成摘要，在<code>主题配置文件</code>中查找如下这段代码：</p>
-<pre class=" language-javascript"><code class="language-javascript"># Automatically Excerpt<span class="token punctuation">.</span> Not recommend<span class="token punctuation">.</span>
+<pre class="line-numbers language-jsx"><code class="language-jsx"># Automatically Excerpt<span class="token punctuation">.</span> Not recommend<span class="token punctuation">.</span>
 # Please use <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> more <span class="token operator">--</span><span class="token operator">></span> <span class="token keyword">in</span> the post to control excerpt accurately<span class="token punctuation">.</span>
 auto_excerpt<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  length<span class="token punctuation">:</span> <span class="token number">150</span></code></pre>
+  length<span class="token punctuation">:</span> <span class="token number">150</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>如果没有则添加这段代码，可能不同的主题会不支持这种方法。、<br><code>length</code> ：设定文章预览的文本长度。默认截取的长度为 <code>150</code> 字符，可以根据需要自行设定。</p>
 <p>这种方法的问题是：会格式化你文章的样式，直接把文字挤在一起显示，最后会有 <code>…</code>。</p>
 <p>而第一种方法，展示出来的就是你原本文章的样式。</p>
 <h1 id="第三种方法"><a href="#第三种方法" class="headerlink" title="第三种方法"></a>第三种方法</h1><ul>
 <li>在文章的 <code>front-matter</code> 中添加 <code>description</code>字段，并填写要展示的预览信息</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">--</span><span class="token operator">-</span>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">--</span><span class="token operator">-</span>
 title<span class="token punctuation">:</span> NexT主题基本属性的配置
 date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">08</span> <span class="token number">12</span><span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">:</span><span class="token number">32</span>
 tags<span class="token punctuation">:</span> <span class="token punctuation">[</span>Hexo_Blog<span class="token punctuation">,</span>NexT<span class="token punctuation">,</span>博客教程<span class="token punctuation">]</span>
 comments<span class="token punctuation">:</span> <span class="token boolean">true</span>
 categories<span class="token punctuation">:</span> 博客教程
 description<span class="token punctuation">:</span> 如何配置样式、语言、菜单、侧栏等
-<span class="token operator">--</span><span class="token operator">-</span></code></pre>
+<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>在主题配置文件中将 <code>excerpt_description</code> 设置为<code>true</code></li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"># Automatically excerpt description <span class="token keyword">in</span> homepage <span class="token keyword">as</span> preamble text<span class="token punctuation">.</span>
-excerpt_description<span class="token punctuation">:</span> <span class="token boolean">true</span></code></pre>
+<pre class="line-numbers language-javascript"><code class="language-javascript"># Automatically excerpt description <span class="token keyword">in</span> homepage <span class="token keyword">as</span> preamble text<span class="token punctuation">.</span>
+excerpt_description<span class="token punctuation">:</span> <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <center>
   <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
        src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT主题如何设置首页只显示预览03.jpg" width="70%" height="70%"
@@ -514,8 +514,8 @@ excerpt_description<span class="token punctuation">:</span> <span class="token b
 <ul>
 <li>这种方法，可以写文章的副标题。只要将<code>excerpt_description</code> 设置为<code>false</code>，如下：</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"># Automatically excerpt description <span class="token keyword">in</span> homepage <span class="token keyword">as</span> preamble text<span class="token punctuation">.</span>
-excerpt_description<span class="token punctuation">:</span> <span class="token boolean">false</span></code></pre>
+<pre class="line-numbers language-javascript"><code class="language-javascript"># Automatically excerpt description <span class="token keyword">in</span> homepage <span class="token keyword">as</span> preamble text<span class="token punctuation">.</span>
+excerpt_description<span class="token punctuation">:</span> <span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <center>
   <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
        src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/05/NexT主题如何设置首页只显示预览04.jpg" width="70%" height="70%"
