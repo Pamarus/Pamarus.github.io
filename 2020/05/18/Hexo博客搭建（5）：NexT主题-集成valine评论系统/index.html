@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 <body>
@@ -903,8 +903,6 @@ Next主题的基本配置都差不多了，现在还有一个问题。就是首�
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
 
 <!-- 代码块折行 -->
 
@@ -934,8 +932,8 @@ Next主题的基本配置都差不多了，现在还有一个问题。就是首�
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            collapseDepth: Number('6'),
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -947,7 +945,7 @@ Next主题的基本配置都差不多了，现在还有一个问题。就是首�
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
