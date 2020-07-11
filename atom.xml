@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pamarus</title>
+  <icon>http://yoursite.com/icon.png</icon>
+  <subtitle>Thinking Hacks</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-07-10T11:29:05.312Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Pamarus</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客搭建（7）：NexT主题无custom.styl文件，如何自定义样式</title>
+    <link href="http://yoursite.com/2020/06/04/hexo-bo-ke-da-jian-7-next-zhu-ti-wu-custom.styl-wen-jian-ru-he-zi-ding-yi-yang-shi/"/>
+    <id>http://yoursite.com/2020/06/04/hexo-bo-ke-da-jian-7-next-zhu-ti-wu-custom.styl-wen-jian-ru-he-zi-ding-yi-yang-shi/</id>
+    <published>2020-06-04T04:36:45.000Z</published>
+    <updated>2020-07-10T11:29:05.312Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我的Hexo博客主题版本是 v4.2.0，NexT主题版本是 v7.8.0，没有 &lt;code&gt;next/source/css/_custom/&lt;/code&gt; 文件夹和 &lt;code&gt;custom.styl&lt;/code&gt; 文件，而网上很多教程都是在这个 &lt;code&gt;custom.styl&lt;/code&gt; 文件中添加自定义CSS代码，针对这种情况，搜索查看了一些文章和官方issues，找到了新版本自定义CSS代码的方法。&lt;/p&gt;
+&lt;blockquote class=&quot;question&quot;&gt;
+注：如何查看Hexo博客和NexT主题版本
+
+&lt;p&gt;分别在博客文件夹和主题文件夹中，找到并打开 &lt;code&gt;package.json&lt;/code&gt; 文件，即可看到版本信息，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&amp;quot;name&amp;quot;: &amp;quot;hexo-theme-next&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;7.8.0&amp;quot;,&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&amp;quot;hexo&amp;quot;: {
+    &amp;quot;version&amp;quot;: &amp;quot;4.2.0&amp;quot;
+  },&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="博客教程" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Processing学习记录（3）：2D几何图形绘制</title>
+    <link href="http://yoursite.com/2020/05/25/processing-xue-xi-ji-lu-3-2d-ji-he-tu-xing-hui-zhi/"/>
+    <id>http://yoursite.com/2020/05/25/processing-xue-xi-ji-lu-3-2d-ji-he-tu-xing-hui-zhi/</id>
+    <published>2020-05-25T12:36:45.000Z</published>
+    <updated>2020-07-10T11:20:14.674Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这一篇介绍Processing基本的2D几何图标的绘制。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="编程学习" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Processing" scheme="http://yoursite.com/tags/Processing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Processing学习记录（2）：使用问题及解决方法汇总</title>
+    <link href="http://yoursite.com/2020/05/25/processing-xue-xi-ji-lu-2-shi-yong-wen-ti-ji-jie-jue-fang-fa-hui-zong/"/>
+    <id>http://yoursite.com/2020/05/25/processing-xue-xi-ji-lu-2-shi-yong-wen-ti-ji-jie-jue-fang-fa-hui-zong/</id>
+    <published>2020-05-25T04:36:45.000Z</published>
+    <updated>2020-05-25T08:42:41.952Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇集中记录Processing学习及使用过程中遇到的一些问题，解决方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程学习" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Processing" scheme="http://yoursite.com/tags/Processing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Processing学习记录（1）：初相识</title>
+    <link href="http://yoursite.com/2020/05/24/processing-xue-xi-ji-lu-1-chu-xiang-shi/"/>
+    <id>http://yoursite.com/2020/05/24/processing-xue-xi-ji-lu-1-chu-xiang-shi/</id>
+    <published>2020-05-24T11:36:45.000Z</published>
+    <updated>2020-07-10T11:20:11.659Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一篇，初相识&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="编程学习" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Processing" scheme="http://yoursite.com/tags/Processing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建（6）：Valine评论系统优化</title>
+    <link href="http://yoursite.com/2020/05/19/hexo-bo-ke-da-jian-6-valine-ping-lun-xi-tong-you-hua/"/>
+    <id>http://yoursite.com/2020/05/19/hexo-bo-ke-da-jian-6-valine-ping-lun-xi-tong-you-hua/</id>
+    <published>2020-05-19T06:52:45.000Z</published>
+    <updated>2020-07-10T11:30:25.881Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;question&quot;&gt;
+上一篇安装好valine评论系统，但是还要一些细节需要优化。
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+      <category term="Valine" scheme="http://yoursite.com/tags/Valine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>valine评论测试</title>
+    <link href="http://yoursite.com/2020/05/18/valine-ping-lun-ce-shi/"/>
+    <id>http://yoursite.com/2020/05/18/valine-ping-lun-ce-shi/</id>
+    <published>2020-05-18T09:36:45.000Z</published>
+    <updated>2020-07-11T09:15:11.376Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;valine评论测试  &lt;span class=&quot;github-emoji&quot; style=&quot;color: transparent;background:no-repeat
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建（5）：NexT主题-集成valine评论系统</title>
+    <link href="http://yoursite.com/2020/05/18/hexo-bo-ke-da-jian-5-next-zhu-ti-ji-cheng-valine-ping-lun-xi-tong/"/>
+    <id>http://yoursite.com/2020/05/18/hexo-bo-ke-da-jian-5-next-zhu-ti-ji-cheng-valine-ping-lun-xi-tong/</id>
+    <published>2020-05-18T03:36:45.000Z</published>
+    <updated>2020-07-10T11:30:19.782Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;打开next文件夹内的配置文件&lt;code&gt;_config.yml&lt;/code&gt;，找到 &lt;code&gt;Comments Settings&lt;/code&gt;，选择一个评论系统，设置为&lt;code&gt;true&lt;/code&gt;。可选的有：&lt;code&gt;changyan&lt;/code&gt;，&lt;code&gt;disqus&lt;/code&gt;，&lt;code&gt;disqusjs&lt;/code&gt;，&lt;code&gt;gitalk&lt;/code&gt;，&lt;code&gt;livere&lt;/code&gt;，&lt;code&gt;valine&lt;/code&gt;，这几个都是方便配置的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+      <category term="Valine" scheme="http://yoursite.com/tags/Valine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建（4）：NexT主题-首页不显示全部内容，显示预览</title>
+    <link href="http://yoursite.com/2020/05/13/hexo-bo-ke-da-jian-4-next-zhu-ti-shou-ye-bu-xian-shi-quan-bu-nei-rong-xian-shi-yu-lan/"/>
+    <id>http://yoursite.com/2020/05/13/hexo-bo-ke-da-jian-4-next-zhu-ti-shou-ye-bu-xian-shi-quan-bu-nei-rong-xian-shi-yu-lan/</id>
+    <published>2020-05-13T06:44:44.000Z</published>
+    <updated>2020-07-10T11:30:02.607Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Next主题的基本配置都差不多了，现在还有一个问题。&lt;br&gt;就是首页默认显示文章的全部内容，而不是预览，如何设置只显示部分呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建（3）：NexT主题-跳转分类、标签、关于页报错，无法打开怎么办</title>
+    <link href="http://yoursite.com/2020/05/05/hexo-bo-ke-da-jian-3-next-zhu-ti-tiao-zhuan-fen-lei-biao-qian-guan-yu-ye-bao-cuo-wu-fa-da-kai-zen-me-ban/"/>
+    <id>http://yoursite.com/2020/05/05/hexo-bo-ke-da-jian-3-next-zhu-ti-tiao-zhuan-fen-lei-biao-qian-guan-yu-ye-bao-cuo-wu-fa-da-kai-zen-me-ban/</id>
+    <published>2020-05-05T06:32:25.000Z</published>
+    <updated>2020-07-10T11:29:47.092Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;上一步我们成功安装主题，打开博客地址，操作之后会发现，点击首页、归档菜单是正常打开的。但是点击分类、标签、关于页时，跳转404，报错无法打开。如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+      <category term="博客教程" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown（2）：如何添加多个tags</title>
+    <link href="http://yoursite.com/2020/05/05/markdown-2-ru-he-tian-jia-duo-ge-tags/"/>
+    <id>http://yoursite.com/2020/05/05/markdown-2-ru-he-tian-jia-duo-ge-tags/</id>
+    <published>2020-05-04T16:30:27.000Z</published>
+    <updated>2020-07-10T11:30:58.860Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;显示问题&quot;&gt;&lt;a href=&quot;#显示问题&quot; class=&quot;headerlink&quot; title=&quot;显示问题&quot;&gt;&lt;/a&gt;显示问题&lt;/h2&gt;&lt;p&gt;当添加多个标签时，小书匠编辑器默认是这样的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;jsx&quot;&gt;tags: 新建,模板,小书匠&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;此时网页端显示就会有问题，三个标签识别为一个:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#新建,模板,小书匠&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;解决方法&quot;&gt;&lt;a href=&quot;#解决方法&quot; class=&quot;headerlink&quot; title=&quot;解决方法&quot;&gt;&lt;/a&gt;解决方法&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建（2）：更换主题样式及基本属性配置</title>
+    <link href="http://yoursite.com/2020/05/04/hexo-bo-ke-da-jian-2-geng-huan-zhu-ti-yang-shi-ji-ji-ben-shu-xing-pei-zhi/"/>
+    <id>http://yoursite.com/2020/05/04/hexo-bo-ke-da-jian-2-geng-huan-zhu-ti-yang-shi-ji-ji-ben-shu-xing-pei-zhi/</id>
+    <published>2020-05-04T13:36:45.000Z</published>
+    <updated>2020-07-10T11:29:25.708Z</updated>
+    
+    <summary type="html">
+    
+      ——以NexT为例
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+      <category term="博客教程" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建（1）：Mac端使用Hexo+GitHub Pages搭建免费个人博客</title>
+    <link href="http://yoursite.com/2020/05/04/hexo-bo-ke-da-jian-1-mac-duan-shi-yong-hexo-github-pages-da-jian-mian-fei-ge-ren-bo-ke/"/>
+    <id>http://yoursite.com/2020/05/04/hexo-bo-ke-da-jian-1-mac-duan-shi-yong-hexo-github-pages-da-jian-mian-fei-ge-ren-bo-ke/</id>
+    <published>2020-05-04T10:54:48.000Z</published>
+    <updated>2020-07-10T11:29:28.055Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;自己创建博客的过程整理，供日后查阅。本人Mac端，使用Hexo和GitHub搭建的博客。一步一步操作就可以。&lt;/p&gt;
+&lt;p&gt;废话不多说了，下面开始。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+      <category term="博客教程" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown（1）：基础语法学习及快速入门</title>
+    <link href="http://yoursite.com/2020/05/03/markdown-1-ji-chu-yu-fa-xue-xi-ji-kuai-su-ru-men/"/>
+    <id>http://yoursite.com/2020/05/03/markdown-1-ji-chu-yu-fa-xue-xi-ji-kuai-su-ru-men/</id>
+    <published>2020-05-03T03:12:43.000Z</published>
+    <updated>2020-07-10T11:31:01.298Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;零到1新手，花了两天时间，4月30日把自己的第一个博客搭建成功。5.1放假除了上课做作业，空闲时间学习了博客主题配置、GitHub图床、Markdown语法、小书匠Markdown一些操作等基础知识。陆续整合到博客上，方便以后查阅，也作为最初的文章。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo博客" scheme="http://yoursite.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo_Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+</feed>
