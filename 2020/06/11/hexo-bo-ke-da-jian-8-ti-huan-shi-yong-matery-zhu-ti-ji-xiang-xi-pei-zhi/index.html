@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Pamarus" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Pamarus" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -448,7 +448,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4k
+                    4.1k
                 </div>
                 
 
@@ -496,7 +496,7 @@
 </ul>
 <h1 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h1><p>cd 到 themes 文件夹下，输入以下命令行，clone下载主题文件到本地的 <code>~blog/themes</code> 文件夹中:</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>blinkfox<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>matery<span class="token punctuation">.</span>git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="config-yml-文件配置"><a href="#config-yml-文件配置" class="headerlink" title="_config.yml 文件配置"></a><code>_config.yml</code> 文件配置</h1><h2 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h2><p>下载完成后，查看本地文件夹名称为：<code>hexo-theme-matery</code>，打开主题文件夹下的 <code>_config.yml</code> 文件，修改 <code>theme</code> 的值为文件夹名称。</p>
+<h1 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h1><p>下载完成后，查看本地文件夹名称为：<code>hexo-theme-matery</code>，打开主题文件夹下的 <code>_config.yml</code> 文件，修改 <code>theme</code> 的值为文件夹名称。</p>
 <ul>
 <li>打开博客本地文件夹的配置文件 <code>_config.yml</code>， 找到<code>theme</code>字段，并将其值从默认的 <code>landscape</code> 更改为 <code>hexo-theme-matery</code>。</li>
 </ul>
@@ -504,18 +504,18 @@
 <blockquote>
 <p>注：Hexo中有两份主要的配置文件，其名称都是<code>_config.yml</code>。<br>一份位于<code>博客根目录里</code>，包含Hexo本身的配置。<br>另一份位于<code>主题目录里</code>，包含主题相关的一些配置。<br>为描述方便，以下说明中将前者称为 <code>站点配置文件</code>，后者称为<code>主题配置文件</code>。</p>
 </blockquote>
-<h2 id="url-的值"><a href="#url-的值" class="headerlink" title="url 的值"></a>url 的值</h2><p>请修改 <code>主题配置文件</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code> （如： <a href="http://xxx.github.io" target="_blank" rel="noopener">http://xxx.github.io</a> ）。</p>
-<h3 id="首页-banner-中的右侧第二个按钮的配置"><a href="#首页-banner-中的右侧第二个按钮的配置" class="headerlink" title="首页 banner 中的右侧第二个按钮的配置"></a>首页 banner 中的右侧第二个按钮的配置</h3><pre class="line-numbers language-jsx"><code class="language-jsx">indexbtn<span class="token punctuation">:</span>
+<h1 id="修改url-的值"><a href="#修改url-的值" class="headerlink" title="修改url 的值"></a>修改url 的值</h1><p>修改 <code>主题配置文件</code> 的 <code>url</code> 的值为自己的网站主 <code>URL</code> （如： <a href="http://xxx.github.io" target="_blank" rel="noopener">http://xxx.github.io</a> ）。</p>
+<h2 id="首页-banner-中的右侧第二个按钮的配置"><a href="#首页-banner-中的右侧第二个按钮的配置" class="headerlink" title="首页 banner 中的右侧第二个按钮的配置"></a>首页 banner 中的右侧第二个按钮的配置</h2><pre class="line-numbers language-jsx"><code class="language-jsx">indexbtn<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
   name<span class="token punctuation">:</span> Github
   icon<span class="token punctuation">:</span> fab fa<span class="token operator">-</span>github<span class="token operator">-</span>alt
   url<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token regex">/Pamarus/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="header-中的-fork-me-on-github-的图标"><a href="#header-中的-fork-me-on-github-的图标" class="headerlink" title="header 中的 fork me on github 的图标"></a>header 中的 fork me on github 的图标</h3><p>配置是否在 <code>header</code> 中显示 <code>fork me on github</code> 的图标，默认为true，你可以修改为你的仓库地址。<br>我保留为默认项，可以快速跳转主题的GitHub页。</p>
+<h2 id="header-中的-fork-me-on-github-的图标"><a href="#header-中的-fork-me-on-github-的图标" class="headerlink" title="header 中的 fork me on github 的图标"></a>header 中的 fork me on github 的图标</h2><p>配置是否在 <code>header</code> 中显示 <code>fork me on github</code> 的图标，默认为true，你可以修改为你的仓库地址。<br>我保留为默认项，可以快速跳转主题的GitHub页。</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">githubLink<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
   url<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>blinkfox<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>matery
   title<span class="token punctuation">:</span> Fork Me<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="修改分页文章条数"><a href="#修改分页文章条数" class="headerlink" title="修改分页文章条数"></a>修改分页文章条数</h2><p>打开站点配置文件，找到以下配置项：</p>
+<h1 id="修改分页文章条数"><a href="#修改分页文章条数" class="headerlink" title="修改分页文章条数"></a>修改分页文章条数</h1><p>打开站点配置文件，找到以下配置项：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">index_generator<span class="token punctuation">:</span>
   path<span class="token punctuation">:</span> <span class="token string">''</span>
   per_page<span class="token punctuation">:</span> <span class="token number">12</span>
@@ -523,6 +523,12 @@
 <pre class="line-numbers language-jsx"><code class="language-jsx">per_page<span class="token punctuation">:</span> <span class="token number">12</span>
 pagination_dir<span class="token punctuation">:</span> page<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>建议修改两个 <code>per_page</code> 的分页条数值为 6 的倍数，如： 12 、 18 等，这样响应式布局在各个屏幕下适配得更好，文章列表能较好的显示。</p>
+<h1 id="修改目录显示效果"><a href="#修改目录显示效果" class="headerlink" title="修改目录显示效果"></a>修改目录显示效果</h1><p>在 <code>主题配置文件</code> 中找到一下代码块，配置是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型，以及默认展开几层，这些是全局配置。另外可以在某篇文章的 Front-matter 中再加上<code>toc: false</code>，使该篇文章关闭TOC目录功能</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">toc<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  heading<span class="token punctuation">:</span> h1<span class="token punctuation">,</span> h2<span class="token punctuation">,</span> h3<span class="token punctuation">,</span> h4<span class="token punctuation">,</span> h5<span class="token punctuation">,</span> h6
+  collapseDepth<span class="token punctuation">:</span> <span class="token number">1</span> # 目录默认展开层级
+  showToggleBtn<span class="token punctuation">:</span> <span class="token boolean">true</span> # 是否显示切换TOC目录展开收缩的按钮<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="文章-Front-matter"><a href="#文章-Front-matter" class="headerlink" title="文章 Front-matter"></a>文章 Front-matter</h1><h2 id="Front-matter属性介绍"><a href="#Front-matter属性介绍" class="headerlink" title="Front-matter属性介绍"></a>Front-matter属性介绍</h2><p>选项中的所有内容均为非必填的。但我仍然建议至少填写 title 和 date 的值。</p>
 <ul>
 <li>title<ul>
@@ -1752,7 +1758,7 @@ permalink_pinyin<span class="token punctuation">:</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.3k</span>&nbsp;字
+                class="white-color">15.4k</span>&nbsp;字
             
             
             
