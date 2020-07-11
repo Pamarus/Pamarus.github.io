@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pamarus.github.io/"/>
-  <updated>2020-07-11T11:57:19.612Z</updated>
+  <updated>2020-07-11T12:07:37.728Z</updated>
   <id>https://pamarus.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://pamarus.github.io/2020/06/11/hexo-bo-ke-da-jian-8-ti-huan-shi-yong-matery-zhu-ti-ji-xiang-xi-pei-zhi/"/>
     <id>https://pamarus.github.io/2020/06/11/hexo-bo-ke-da-jian-8-ti-huan-shi-yong-matery-zhu-ti-ji-xiang-xi-pei-zhi/</id>
     <published>2020-06-11T13:36:45.000Z</published>
-    <updated>2020-07-11T11:57:19.612Z</updated>
+    <updated>2020-07-11T12:07:37.728Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
     </summary>
     
     
-      <category term="博客教程" scheme="https://pamarus.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+      <category term="Hexo博客" scheme="https://pamarus.github.io/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
     
     
       <category term="Hexo_Blog" scheme="https://pamarus.github.io/tags/Hexo-Blog/"/>
@@ -44,7 +44,7 @@
     <link href="https://pamarus.github.io/2020/06/04/hexo-bo-ke-da-jian-7-next-zhu-ti-wu-custom.styl-wen-jian-ru-he-zi-ding-yi-yang-shi/"/>
     <id>https://pamarus.github.io/2020/06/04/hexo-bo-ke-da-jian-7-next-zhu-ti-wu-custom.styl-wen-jian-ru-he-zi-ding-yi-yang-shi/</id>
     <published>2020-06-04T04:36:45.000Z</published>
-    <updated>2020-07-10T11:29:05.312Z</updated>
+    <updated>2020-07-11T12:07:32.449Z</updated>
     
     <summary type="html">
     
@@ -53,17 +53,17 @@
 注：如何查看Hexo博客和NexT主题版本
 
 &lt;p&gt;分别在博客文件夹和主题文件夹中，找到并打开 &lt;code&gt;package.json&lt;/code&gt; 文件，即可看到版本信息，如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&amp;quot;name&amp;quot;: &amp;quot;hexo-theme-next&amp;quot;,
-  &amp;quot;version&amp;quot;: &amp;quot;7.8.0&amp;quot;,&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&amp;quot;hexo&amp;quot;: {
-    &amp;quot;version&amp;quot;: &amp;quot;4.2.0&amp;quot;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&quot;name&quot;: &quot;hexo-theme-next&quot;,
+  &quot;version&quot;: &quot;7.8.0&quot;,&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&quot;hexo&quot;: {
+    &quot;version&quot;: &quot;4.2.0&quot;
   },&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
     
     </summary>
     
     
-      <category term="博客教程" scheme="https://pamarus.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+      <category term="Hexo博客" scheme="https://pamarus.github.io/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
     
     
       <category term="Hexo_Blog" scheme="https://pamarus.github.io/tags/Hexo-Blog/"/>

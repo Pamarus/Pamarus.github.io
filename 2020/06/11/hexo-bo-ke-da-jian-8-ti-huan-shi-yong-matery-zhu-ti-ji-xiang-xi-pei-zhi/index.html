@@ -426,8 +426,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="post-category">
-                                博客教程
+                            <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                Hexo博客
                             </a>
                         
                     </div>
@@ -530,11 +530,11 @@
   zhihu<span class="token punctuation">:</span> # https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>zhihu<span class="token punctuation">.</span>com<span class="token operator">/</span>xxx
   rss<span class="token punctuation">:</span> <span class="token boolean">true</span> # <span class="token boolean">true</span>、<span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="新增或删除社交链接"><a href="#新增或删除社交链接" class="headerlink" title="新增或删除社交链接"></a>新增或删除社交链接</h3><p>可以在主题文件夹的 <code>~/layout/_partial/social-link.ejs</code> 文件中，新增需要的社交链接地址，增加链接可参考如下代码：</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>socialLink<span class="token punctuation">.</span>github<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">theme.socialLink.github</span> <span class="token attr-name">%</span><span class="token punctuation">&gt;</span><span class="token attr-name">"</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>访问我的GitHub<span class="token punctuation">"</span></span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fab</span> <span class="token attr-name">fa-github"</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>socialLink<span class="token punctuation">.</span>github<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">theme.socialLink.github</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>访问我的GitHub<span class="token punctuation">"</span></span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fab</span> <span class="token attr-name">fa-github"</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中，社交图标（如：fa-github）你可以在 Font Awesome 中搜索找到。以下是常用社交图标的标识，供你参考：</p>
 <ul>
 <li>Facebook: <code>fab fa-facebook</code></li>
@@ -654,9 +654,12 @@ layout<span class="token punctuation">:</span> <span class="token string">"conta
 <p>注：本留言板功能依赖于第三方评论系统，激活评论系统才有效果。并且在主题配置文件中，第 19 至 21 行的“菜单”配置，取消关于留言板的注释即可。</p>
 </blockquote>
 <h3 id="新建友情连接-friends-页"><a href="#新建友情连接-friends-页" class="headerlink" title="新建友情连接 friends 页"></a>新建友情连接 friends 页</h3><p>暂时关闭了。在主题配置文件中配置以下选项，不想显示的在配置项前面加<code>#</code>号。</p>
-<h3 id="新建-404-页"><a href="#新建-404-页" class="headerlink" title="新建 404 页"></a>新建 404 页</h3><p>如果博客 source 目录下还没有 <code>404.md</code> 文件，那么你就需要新建一个</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"404"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>编辑你刚刚新建的页面文件 <code>/source/404.md</code>，至少需要以下内容：</p>
+<h3 id="新建-404-页"><a href="#新建-404-页" class="headerlink" title="新建 404 页"></a>新建 404 页</h3><ul>
+<li><p>如果博客 source 目录下还没有 <code>404.md</code> 文件，那么你就需要新建一个</p>
+</li>
+<li><p>编辑你刚刚新建的页面文件 <code>/source/404.md</code>，至少需要以下内容：</p>
+</li>
+</ul>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
 title<span class="token punctuation">:</span> <span class="token number">404</span>
 date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">10</span> <span class="token number">12</span><span class="token punctuation">:</span><span class="token number">55</span><span class="token punctuation">:</span><span class="token number">14</span>
@@ -677,7 +680,7 @@ search<span class="token punctuation">:</span>
   path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml
   field<span class="token punctuation">:</span> all
   content<span class="token punctuation">:</span> <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h1><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。看了一下，我使用的是默认状态，没有什么特殊要修改的。</p>
+<h2 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h2><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。看了一下，我使用的是默认状态，没有什么特殊要修改的。</p>
 <h2 id="配置音乐播放器"><a href="#配置音乐播放器" class="headerlink" title="配置音乐播放器"></a>配置音乐播放器</h2><p>在 <code>主题配置文件</code> 中激活music配置即可：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">music<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
@@ -1468,8 +1471,8 @@ permalink_pinyin<span class="token punctuation">:</span>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="post-category">
-                                    博客教程
+                            <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    Hexo博客
                                 </a>
                             
                             
@@ -1522,8 +1525,8 @@ permalink_pinyin<span class="token punctuation">:</span>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="post-category">
-                                    博客教程
+                            <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    Hexo博客
                                 </a>
                             
                             
@@ -1772,7 +1775,7 @@ permalink_pinyin<span class="token punctuation">:</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.5k</span>&nbsp;字
+                class="white-color">15.6k</span>&nbsp;字
             
             
             

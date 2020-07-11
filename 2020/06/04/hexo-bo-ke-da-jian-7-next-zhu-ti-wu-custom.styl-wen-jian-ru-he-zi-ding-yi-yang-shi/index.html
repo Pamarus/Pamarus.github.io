@@ -426,8 +426,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="post-category">
-                                博客教程
+                            <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                Hexo博客
                             </a>
                         
                     </div>
@@ -448,14 +448,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    444
+                    496
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -515,7 +515,25 @@ custom_file_path<span class="token punctuation">:</span>
 
 <h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p><a href="https://github.com/theme-next/hexo-theme-next/issues/973" target="_blank" rel="noopener">NexT V7.2.0:How to change blog background？如何更改博客背景？ #973</a></p>
 <p><a href="https://blog.csdn.net/chrishly3/article/details/103992492" target="_blank" rel="noopener">hexo个人博客 next主题添加背景图片(无custom.styl情况)</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1043,8 +1061,8 @@ custom_file_path<span class="token punctuation">:</span>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="post-category">
-                                    博客教程
+                            <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    Hexo博客
                                 </a>
                             
                             
@@ -1355,7 +1373,7 @@ void setup() {
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.5k</span>&nbsp;字
+                class="white-color">15.6k</span>&nbsp;字
             
             
             
