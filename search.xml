@@ -139,7 +139,7 @@
       <link href="/2020/05/18/valine-ping-lun-ce-shi/"/>
       <url>/2020/05/18/valine-ping-lun-ce-shi/</url>
       
-        <content type="html"><![CDATA[<p>valine评论测试</p>]]></content>
+        <content type="html"><![CDATA[<p>valine评论测试  <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
