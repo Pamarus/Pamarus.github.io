@@ -1842,7 +1842,8 @@ thead {
 
 /*尾部样式*/
 footer {
-    padding-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 footer .social-statis {
