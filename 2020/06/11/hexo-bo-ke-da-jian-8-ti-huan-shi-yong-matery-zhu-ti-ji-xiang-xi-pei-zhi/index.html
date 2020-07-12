@@ -448,14 +448,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.3k
+                    4.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    19 分
                 </div>
                 
 
@@ -508,17 +508,28 @@
 <p>切换成功之后，第一步进行首页的显示效果优化。</p>
 </blockquote>
 <h2 id="修改主要-url-的值"><a href="#修改主要-url-的值" class="headerlink" title="修改主要 url 的值"></a>修改主要 url 的值</h2><p>修改 <code>主题配置文件</code> 的 <code>url</code> 的值为自己的网站主 <code>URL</code> （如： <a href="http://xxx.github.io" target="_blank" rel="noopener">http://xxx.github.io</a> ）。</p>
-<h3 id="首页-banner-中的右侧第二个按钮的配置"><a href="#首页-banner-中的右侧第二个按钮的配置" class="headerlink" title="首页 banner 中的右侧第二个按钮的配置"></a>首页 banner 中的右侧第二个按钮的配置</h3><pre class="line-numbers language-jsx"><code class="language-jsx">indexbtn<span class="token punctuation">:</span>
+<h3 id="首页-banner-中的右侧第二个按钮的配置"><a href="#首页-banner-中的右侧第二个按钮的配置" class="headerlink" title="首页 banner 中的右侧第二个按钮的配置"></a>首页 banner 中的右侧第二个按钮的配置</h3><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%BF%E6%8D%A2%E4%BD%BF%E7%94%A8matery%E4%B8%BB%E9%A2%98%E5%8F%8A%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE01.jpg" alt="替换使用matery主题及详细配置01"></p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">indexbtn<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  name<span class="token punctuation">:</span> Github
+  name<span class="token punctuation">:</span> GitHub
   icon<span class="token punctuation">:</span> fab fa<span class="token operator">-</span>github<span class="token operator">-</span>alt
   url<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token regex">/Pamarus/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="header-中的-fork-me-on-github-的图标"><a href="#header-中的-fork-me-on-github-的图标" class="headerlink" title="header 中的 fork me on github 的图标"></a>header 中的 fork me on github 的图标</h3><p>配置是否在 <code>header</code> 中显示 <code>fork me on github</code> 的图标，默认为true，url可以修改为自己的仓库地址。<br>我保留为默认项，可以快速跳转主题的GitHub页。</p>
+<ul>
+<li>若关闭不显示，可以将<code>enable</code>值修改为<code>false</code></li>
+<li>name为显示文字</li>
+<li>url为跳转到的链接</li>
+</ul>
+<h3 id="header-中的-fork-me-on-github-的图标"><a href="#header-中的-fork-me-on-github-的图标" class="headerlink" title="header 中的 fork me on github 的图标"></a>header 中的 fork me on github 的图标</h3><p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%BF%E6%8D%A2%E4%BD%BF%E7%94%A8matery%E4%B8%BB%E9%A2%98%E5%8F%8A%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE02.jpg" alt="替换使用matery主题及详细配置02"></p>
+<p>配置是否在顶部的导航栏中显示 <code>fork me on github</code> 的图标，默认为true，url可以修改为自己的仓库地址。<br>我保留为默认项，可以快速跳转主题的GitHub页。</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">githubLink<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
   url<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>blinkfox<span class="token operator">/</span>hexo<span class="token operator">-</span>theme<span class="token operator">-</span>matery
   title<span class="token punctuation">:</span> Fork Me<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="修改社交链接"><a href="#修改社交链接" class="headerlink" title="修改社交链接"></a>修改社交链接</h2><p>网站上展示位置位于首页 banner 中的下方个人信息配置。</p>
+<ul>
+<li>title为鼠标悬浮显示的文字</li>
+</ul>
+<h2 id="修改社交链接"><a href="#修改社交链接" class="headerlink" title="修改社交链接"></a>修改社交链接</h2><p>网站上的位置位于首页 banner 中的下方个人信息配置。</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%BF%E6%8D%A2%E4%BD%BF%E7%94%A8matery%E4%B8%BB%E9%A2%98%E5%8F%8A%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE03.jpg" alt="替换使用matery主题及详细配置03"></p>
 <h3 id="开启与关闭"><a href="#开启与关闭" class="headerlink" title="开启与关闭"></a>开启与关闭</h3><p>在 <code>主题配置文件</code> 中找到 <code>socialLink</code>，去掉注释符号 <code>#</code>即启用，添加注释符号 <code>#</code> 即不启用。同时可以修改社交链接地址或者属性值。</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">socialLink<span class="token punctuation">:</span>
   github<span class="token punctuation">:</span>  https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token regex">/Pamarus/</span>
@@ -530,12 +541,14 @@
   zhihu<span class="token punctuation">:</span> # https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>zhihu<span class="token punctuation">.</span>com<span class="token operator">/</span>xxx
   rss<span class="token punctuation">:</span> <span class="token boolean">true</span> # <span class="token boolean">true</span>、<span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="新增或删除社交链接"><a href="#新增或删除社交链接" class="headerlink" title="新增或删除社交链接"></a>新增或删除社交链接</h3><p>可以在主题文件夹的 <code>~/layout/_partial/social-link.ejs</code> 文件中，新增需要的社交链接地址，增加链接可参考如下代码：</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>socialLink<span class="token punctuation">.</span>github<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">theme.socialLink.github</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>访问我的GitHub<span class="token punctuation">"</span></span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fab</span> <span class="token attr-name">fa-github"</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>socialLink<span class="token punctuation">.</span>email<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mailto:&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">theme.socialLink.email</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>email：&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">theme.socialLink.email</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fas</span> <span class="token attr-name">fa-envelope-open"</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>其中，社交图标（如：fa-github）你可以在 Font Awesome 中搜索找到。以下是常用社交图标的标识，供你参考：</p>
+<p>其中，<code>data-tooltip=</code>表示鼠标悬浮后显示的内容，这其中，<code>email:</code> 是显示内容的前半部分标题，<code>&lt;%= theme.socialLink.email %</code> 代表主题配置文件 <code>socialLink</code>中的 <code>email</code> 的属性值。<br>所以鼠标悬浮时的显示效果如下：</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%BF%E6%8D%A2%E4%BD%BF%E7%94%A8matery%E4%B8%BB%E9%A2%98%E5%8F%8A%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE04-email%E5%9B%BE%E6%A0%87%E5%B1%95%E7%A4%BA%E6%95%88%E6%9E%9C.jpg" alt="替换使用matery主题及详细配置04-email图标展示效果"></p>
+<p>其中，社交图标（如：fa–envelope-open）可以在 Font Awesome 中搜索找到。以下是常用社交图标的标识，供参考：</p>
 <ul>
 <li>Facebook: <code>fab fa-facebook</code></li>
 <li>Twitter: <code>fab fa-twitter</code></li>
@@ -573,7 +586,7 @@
   autodiscovery<span class="token punctuation">:</span> <span class="token boolean">true</span>
   template<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>执行 <code>hexo c &amp;&amp; hexo g</code> 重新生成博客文件，然后在 <code>~/blog/public</code> 文件夹中即可看到 <code>atom.xml</code> 文件，说明你已经安装成功了。</li>
+<li>执行 <code>hexo c &amp;&amp; hexo g</code> 重新生成博客文件，然后在 <code>~/blog/public</code> 文件夹中即可看到 <code>atom.xml</code> 文件，说明已经安装成功了。</li>
 </ul>
 <h2 id="菜单导航开启和关闭"><a href="#菜单导航开启和关闭" class="headerlink" title="菜单导航开启和关闭"></a>菜单导航开启和关闭</h2><p>1.菜单导航名称可以是中文也可以是英文(如：Index或主页)<br>2.图标icon 可以在Font Awesome 中查找</p>
 <p>在 <code>站点配置文件</code> 中找到以下配置项</p>
@@ -600,9 +613,9 @@
     # url<span class="token punctuation">:</span> <span class="token operator">/</span>friends
     # icon<span class="token punctuation">:</span> fas fa<span class="token operator">-</span>address<span class="token operator">-</span>book<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>无需启用某菜单，前面加上注释 <code>#</code> 即可。<br>也可以上下移动位置，改变网页上显示的相对位置。<br>如上，启用了Index/Tags/Categories/Aarchives/About/Contact菜单</p>
-<h2 id="新建一级菜单页面"><a href="#新建一级菜单页面" class="headerlink" title="新建一级菜单页面"></a>新建一级菜单页面</h2><h3 id="新建分类-categories-页"><a href="#新建分类-categories-页" class="headerlink" title="新建分类 categories 页"></a>新建分类 categories 页</h3><p>categories 页是用来展示所有分类的页面，如果博客 source 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<h2 id="新建一级菜单页面"><a href="#新建一级菜单页面" class="headerlink" title="新建一级菜单页面"></a>新建一级菜单页面</h2><h3 id="新建分类-categories-页"><a href="#新建分类-categories-页" class="headerlink" title="新建分类 categories 页"></a>新建分类 categories 页</h3><p>categories 页是用来展示所有分类的页面，如果博客 source 目录下还没有 <code>categories/index.md</code> 文件，那么网页端会显示不正常，就需要新建一个，命令如下：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"categories"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>之前NexT主题已经新建分类页，但没有 <code>layout: "categories"</code> ，页面显示有问题，添加<code>layout</code>属性后，显示正常</p>
+<p>之前NexT主题已经新建分类页，但没有 <code>layout: "categories"</code> ，页面显示仍有问题，添加<code>layout</code>属性后，显示正常</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
 title<span class="token punctuation">:</span> 分类
 date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">05</span><span class="token operator">-</span><span class="token number">05</span> <span class="token number">16</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">50</span>
@@ -610,7 +623,7 @@ type<span class="token punctuation">:</span> <span class="token string">"categor
 layout<span class="token punctuation">:</span> <span class="token string">"categories"</span>
 comments<span class="token punctuation">:</span> <span class="token boolean">false</span>
 <span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="新建标签-tags-页"><a href="#新建标签-tags-页" class="headerlink" title="新建标签 tags 页"></a>新建标签 tags 页</h3><p>tags 页是用来展示所有标签的页面，如果博客 source 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<h3 id="新建标签-tags-页"><a href="#新建标签-tags-页" class="headerlink" title="新建标签 tags 页"></a>新建标签 tags 页</h3><p>tags 页是用来展示所有标签的页面，如果博客 source 目录下还没有 <code>tags/index.md</code> 文件，那么就需要新建一个，命令如下：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"tags"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>之前NexT主题已经新建标签页，和分类页一样，添加<code>layout</code>属性后，显示正常</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
@@ -620,7 +633,7 @@ type<span class="token punctuation">:</span> <span class="token string">"tags"</
 layout<span class="token punctuation">:</span> <span class="token string">"tags"</span>
 comments<span class="token punctuation">:</span> <span class="token boolean">false</span>
 <span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="新建关于我-about-页"><a href="#新建关于我-about-页" class="headerlink" title="新建关于我 about 页"></a>新建关于我 about 页</h3><h4 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h4><p>about 页是用来展示关于我和我的博客信息的页面，如果博客 source 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<h3 id="新建关于我-about-页"><a href="#新建关于我-about-页" class="headerlink" title="新建关于我 about 页"></a>新建关于我 about 页</h3><h4 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h4><p>about 页是用来展示关于我和我的博客信息的页面，如果博客 source 目录下还没有 <code>about/index.md</code> 文件，那么就需要新建一个，命令如下：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"about"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>之前NexT主题已经新建关于页，和分类页一样，添加<code>layout</code>属性后，显示正常</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
@@ -638,11 +651,11 @@ comments<span class="token punctuation">:</span> <span class="token boolean">fal
   introduction<span class="token punctuation">:</span> If you wish to succeed<span class="token punctuation">,</span> you should use persistence <span class="token keyword">as</span> your good friend<span class="token punctuation">,</span> experience <span class="token keyword">as</span> your reference<span class="token punctuation">,</span> prudence <span class="token keyword">as</span> your brother and hope <span class="token keyword">as</span> your sentry<span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="配置其他信息"><a href="#配置其他信息" class="headerlink" title="配置其他信息"></a>配置其他信息</h4><p>包括项目、技能、相册等内容。在 <code>主题配置文件</code> 中找到 <code>myProjects、mySkills、myGallery</code> ，进行相关的配置</p>
 <h3 id="新建留言板-contact-页"><a href="#新建留言板-contact-页" class="headerlink" title="新建留言板 contact 页"></a>新建留言板 contact 页</h3><ul>
-<li>contact 页是用来展示留言板信息的页面，如果博客 <code>source</code> 目录下还没有 <code>contact/index.md</code> 文件，那么你就需要新建一个，命令如下：</li>
+<li>contact 页是用来展示留言板信息的页面，如果博客 <code>source</code> 目录下还没有 <code>contact/index.md</code> 文件，那么就需要新建一个，命令如下：</li>
 </ul>
 <pre class="line-numbers language-jsx"><code class="language-jsx">hexo <span class="token keyword">new</span> <span class="token class-name">page</span> <span class="token string">"contact"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>编辑你刚刚新建的页面文件 <code>/source/contact/index.md</code>，至少需要以下内容：</li>
+<li>编辑刚刚新建的页面文件 <code>/source/contact/index.md</code>，至少需要以下内容：</li>
 </ul>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
 title<span class="token punctuation">:</span> 留言板
@@ -651,13 +664,13 @@ type<span class="token punctuation">:</span> <span class="token string">"contact
 layout<span class="token punctuation">:</span> <span class="token string">"contact"</span>
 <span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>注：本留言板功能依赖于第三方评论系统，激活评论系统才有效果。并且在主题配置文件中，第 19 至 21 行的“菜单”配置，取消关于留言板的注释即可。</p>
+<p>注：本留言板功能依赖于第三方评论系统，激活评论系统即可生效。</p>
 </blockquote>
 <h3 id="新建友情连接-friends-页"><a href="#新建友情连接-friends-页" class="headerlink" title="新建友情连接 friends 页"></a>新建友情连接 friends 页</h3><p>暂时关闭了。在主题配置文件中配置以下选项，不想显示的在配置项前面加<code>#</code>号。</p>
 <h3 id="新建-404-页"><a href="#新建-404-页" class="headerlink" title="新建 404 页"></a>新建 404 页</h3><ul>
-<li><p>如果博客 source 目录下还没有 <code>404.md</code> 文件，那么你就需要新建一个</p>
+<li><p>在博客 source 目录下新建 <code>404.md</code> 文件</p>
 </li>
-<li><p>编辑你刚刚新建的页面文件 <code>/source/404.md</code>，至少需要以下内容：</p>
+<li><p>编辑刚刚新建的页面文件 <code>/source/404.md</code>，写入以下信息：</p>
 </li>
 </ul>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
@@ -665,8 +678,43 @@ title<span class="token punctuation">:</span> <span class="token number">404</sp
 date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">07</span><span class="token operator">-</span><span class="token number">10</span> <span class="token number">12</span><span class="token punctuation">:</span><span class="token number">55</span><span class="token punctuation">:</span><span class="token number">14</span>
 type<span class="token punctuation">:</span> <span class="token string">"404"</span>
 layout<span class="token punctuation">:</span> <span class="token string">"404"</span>
-description<span class="token punctuation">:</span> <span class="token string">"Oops～，我崩溃了！稍后重试 :("</span>
+description<span class="token punctuation">:</span> <span class="token string">"Oops～，你来到了没有知识的荒原 :("</span>
 <span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>在 <code>~/themes/hexo-theme-matery/layout/</code> 目录下新建一个 <code>404.ejs</code> 文件，写入以下html，CSS和JS内容，也就是要在网页上进行显示的页面。代码如下：</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">/* don't remove. */</span>
+    <span class="token punctuation">.</span>about<span class="token operator">-</span>cover <span class="token punctuation">{</span>
+        height<span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/* bg-cover高度。vh是css3的自适应单位，1vh等于视口高度的1%，100vh即表示bg-cover是全屏高度。*/</span>
+    <span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bg-cover</span> <span class="token attr-name">pd-header</span> <span class="token attr-name">about-cover"</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col</span> <span class="token attr-name">s10</span> <span class="token attr-name">offset-s1</span> <span class="token attr-name">m8</span> <span class="token attr-name">offset-m2</span> <span class="token attr-name">l8</span> <span class="token attr-name">offset-l2"</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>brand<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title</span> <span class="token attr-name">center-align"</span><span class="token punctuation">></span></span>
+                        <span class="token number">404</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>description</span> <span class="token attr-name">center-align"</span><span class="token punctuation">></span></span>
+                        <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>description <span class="token operator">%</span><span class="token operator">></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">// 每天切换 banner 图.  Switch banner image every day.</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-image'</span><span class="token punctuation">,</span> <span class="token string">'url(/medias/banner/'</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>hexo g -d</code>部署后，输入错误的链接，即会显示404。</li>
+<li>不要在本地试验，本地的时候输入错误的页面不会显示404页面。</li>
+</ul>
 <h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><p>本主题使用Hexo 插件 <code>hexo-generator-search</code> 来做内容搜索。</p>
 <ul>
 <li>安装命令如下：</li>
@@ -680,7 +728,7 @@ search<span class="token punctuation">:</span>
   path<span class="token punctuation">:</span> search<span class="token punctuation">.</span>xml
   field<span class="token punctuation">:</span> all
   content<span class="token punctuation">:</span> <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h2><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。看了一下，我使用的是默认状态，没有什么特殊要修改的。</p>
+<h2 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h2><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。看了一下，我使用的是默认状态，没有什么特殊要修改的。</p>
 <h2 id="配置音乐播放器"><a href="#配置音乐播放器" class="headerlink" title="配置音乐播放器"></a>配置音乐播放器</h2><p>在 <code>主题配置文件</code> 中激活music配置即可：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx">music<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
@@ -714,11 +762,11 @@ search<span class="token punctuation">:</span>
   order_by<span class="token punctuation">:</span> <span class="token operator">-</span>date<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-jsx"><code class="language-jsx">per_page<span class="token punctuation">:</span> <span class="token number">12</span>
 pagination_dir<span class="token punctuation">:</span> page<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>建议修改两个 <code>per_page</code> 的分页条数值为 6 的倍数，如： 12 、 18 等，这样响应式布局在各个屏幕下适配得更好，文章列表能较好的显示。</p>
+<p>修改两个 <code>per_page</code> 的分页条数值为 6 的倍数，如： 12 、 18 等，这样响应式布局在各个屏幕下适配得更好，文章列表能较好的显示。</p>
 <h1 id="Post页面显示效果"><a href="#Post页面显示效果" class="headerlink" title="Post页面显示效果"></a>Post页面显示效果</h1><blockquote>
 <p>接下来可以设置Post页面的显示效果</p>
 </blockquote>
-<h2 id="显示文章字数统计"><a href="#显示文章字数统计" class="headerlink" title="显示文章字数统计"></a>显示文章字数统计</h2><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <code>hexo-wordcount</code> 插件。</p>
+<h2 id="显示文章字数统计"><a href="#显示文章字数统计" class="headerlink" title="显示文章字数统计"></a>显示文章字数统计</h2><p>如果想要在文章中显示文章字数、阅读时长信息，可以安装 <code>hexo-wordcount</code> 插件。</p>
 <ul>
 <li>安装命令如下：</li>
 </ul>
@@ -763,7 +811,7 @@ pretty_urls<span class="token punctuation">:</span>
   placeholder<span class="token punctuation">:</span> <span class="token string">'just go go'</span> # Comment Box placeholder
   background<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>comment_bg<span class="token punctuation">.</span>png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="修改打赏的二维码图片"><a href="#修改打赏的二维码图片" class="headerlink" title="修改打赏的二维码图片"></a>修改打赏的二维码图片</h2><ul>
-<li><p>在主题文件夹的 <code>source/medias/reward</code> 文件夹中，将突破替换成自己的微信和支付宝的收款二维码图片。</p>
+<li><p>在 <code>~/blog/themes/hexo-theme-matery/source/medias/reward</code> 文件夹中，将图片替换成自己的微信和支付宝的收款二维码图片。</p>
 </li>
 <li><p>若后缀名称不同，可能网页不显示，此时需要在 <code>主题配置文件</code> 中修改对应图片的后缀名</p>
 </li>
@@ -773,27 +821,7 @@ pretty_urls<span class="token punctuation">:</span>
   title<span class="token punctuation">:</span> 你的赏识是我前进的动力
   wechat<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>reward<span class="token operator">/</span>wechat<span class="token punctuation">.</span>png
   alipay<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>reward<span class="token operator">/</span>alipay<span class="token punctuation">.</span>png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="添加emoji表情支持"><a href="#添加emoji表情支持" class="headerlink" title="添加emoji表情支持"></a>添加emoji表情支持</h2><p>主题可以使用Hexo 插件 <code>hexo-filter-github-emojis</code> 来支持 emoji表情的生成，把对应的markdown emoji语法（例如：<code>:smile:</code>）转变成会跳跃的emoji表情。</p>
-<ul>
-<li>安装命令如下：</li>
-</ul>
-<pre class="line-numbers language-jsx"><code class="language-jsx">npm install hexo<span class="token operator">-</span>filter<span class="token operator">-</span>github<span class="token operator">-</span>emojis <span class="token operator">--</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>在 <code>站点配置文件</code> 中，新增以下的配置项：</li>
-</ul>
-<pre class="line-numbers language-jsx"><code class="language-jsx">githubEmojis<span class="token punctuation">:</span>
-  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  className<span class="token punctuation">:</span> github<span class="token operator">-</span>emoji
-  inject<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  styles<span class="token punctuation">:</span>
-  customEmojis<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>示例</li>
-</ul>
-<blockquote>
-<p>笑脸 :smile:</p>
-</blockquote>
-<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>由于 Hexo 自带的代码高亮主题显示有问题，NexT主题中也不显示。 所以主题中使用到了 <code>hexo-prism-plugin</code> 的 Hexo 插件来做代码高亮。</p>
+<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>由于 Hexo 自带的代码高亮主题显示有问题，不生效。 所以使用Hexo 插件 <code>hexo-prism-plugin</code> 来做代码高亮。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
 <li>安装命令如下：</li>
 </ul>
@@ -817,7 +845,8 @@ pretty_urls<span class="token punctuation">:</span>
   line_number<span class="token punctuation">:</span> <span class="token boolean">false</span>    # <span class="token keyword">default</span> <span class="token boolean">false</span>
   custom_css<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>若代码块不显示行号，则语言使用 <code>jsx</code> 即可</p>
+<p>若代码块不显示行号，则代码块语法后面的语言使用 <code>jsx</code> 即可，如下</p>
+<p>```jsx<br>```</p>
 </blockquote>
 <h3 id="设置上边距"><a href="#设置上边距" class="headerlink" title="设置上边距"></a>设置上边距</h3><p>代码块和背景色块的上边距比较小，修改 <code>themes/hexo-theme-matery/source/css/matery.css</code> 中 <code>line-numbers</code> 的 <code>padding</code> 值，第一个 <code>1.5rem</code> 修改为 <code>2.5rem</code></p>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/*修改上边距*/</span>
@@ -911,6 +940,26 @@ mathjax<span class="token punctuation">:</span> <span class="token boolean">true
 summary<span class="token punctuation">:</span> 
 comments<span class="token punctuation">:</span> <span class="token boolean">true</span>
 <span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="添加emoji表情支持"><a href="#添加emoji表情支持" class="headerlink" title="添加emoji表情支持"></a>添加emoji表情支持</h2><p>主题可以使用Hexo 插件 <code>hexo-filter-github-emojis</code> 来支持 emoji表情的生成，把对应的markdown emoji语法（例如：<code>:smile:</code>）转变成会跳跃的emoji表情。</p>
+<ul>
+<li>安装命令如下：</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx">npm install hexo<span class="token operator">-</span>filter<span class="token operator">-</span>github<span class="token operator">-</span>emojis <span class="token operator">--</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>在 <code>站点配置文件</code> 中，新增以下的配置项：</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx">githubEmojis<span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  className<span class="token punctuation">:</span> github<span class="token operator">-</span>emoji
+  inject<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  styles<span class="token punctuation">:</span>
+  customEmojis<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>示例</li>
+</ul>
+<blockquote>
+<p>笑脸 :smile:</p>
+</blockquote>
 <h2 id="中文链接转拼音"><a href="#中文链接转拼音" class="headerlink" title="中文链接转拼音"></a>中文链接转拼音</h2><p>如果文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 SEO，且 gitment 评论对中文链接也不支持。我们可以用 <code>hexo-permalink-pinyin</code> Hexo 插件使在生成文章时生成中文拼音的永久链接。</p>
 <ul>
 <li>安装命令如下：</li>
@@ -924,6 +973,16 @@ permalink_pinyin<span class="token punctuation">:</span>
   enable<span class="token punctuation">:</span> <span class="token boolean">true</span>             # Enable <span class="token keyword">this</span> plugin
   separator<span class="token punctuation">:</span> <span class="token string">'-'</span>           # Separator <span class="token keyword">of</span> the slug<span class="token punctuation">,</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'-'</span>  分割符号
   exclude<span class="token punctuation">:</span> <span class="token operator">/</span>ignore_post<span class="token operator">/</span>   # Regex <span class="token keyword">for</span> which post should skip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改首页-banner-图片"><a href="#修改首页-banner-图片" class="headerlink" title="修改首页 banner 图片"></a>修改首页 banner 图片</h2><p>在本地文件夹 <code>~/blog/themes/hexo-theme-matery/source/medias/banner</code>中替换banner图片，默认的切换逻辑是每天按序动态切换一张，星期天对应图片0，星期一对应1，一直到星期六对应6，总共7张。</p>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/%E6%9B%BF%E6%8D%A2%E4%BD%BF%E7%94%A8matery%E4%B8%BB%E9%A2%98%E5%8F%8A%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE05.jpg" alt="替换使用matery主题及详细配置05"></p>
+<h2 id="修改头像-avatar"><a href="#修改头像-avatar" class="headerlink" title="修改头像 avatar"></a>修改头像 avatar</h2><p>头像页在关于页会展示。<br>在本地文件夹 <code>~/blog/themes/hexo-theme-matery/source/medias</code> 中替换avatar图片。若后缀名有修改，在 <code>主题配置文件</code> 中修改avatar对应的属性值。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">profile<span class="token punctuation">:</span>
+  avatar<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>avatar<span class="token punctuation">.</span>png
+  career<span class="token punctuation">:</span> UX Designer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改-logo-图和-favicon-图"><a href="#修改-logo-图和-favicon-图" class="headerlink" title="修改 logo 图和 favicon 图"></a>修改 logo 图和 favicon 图</h2><p>logo图在首页左上角和导航栏左上角的站点名称左边展示。<br>在本地文件夹 <code>~/blog/themes/hexo-theme-matery/source/medias</code> 中替换logo图片。若后缀名有修改，在 <code>主题配置文件</code> 中修改logo对应的属性值。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">favicon<span class="token punctuation">:</span> <span class="token operator">/</span>favicon<span class="token punctuation">.</span>png
+logo<span class="token punctuation">:</span> <span class="token operator">/</span>medias<span class="token operator">/</span>logo<span class="token punctuation">.</span>png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="修改文章特色图-featureimages"><a href="#修改文章特色图-featureimages" class="headerlink" title="修改文章特色图 featureimages"></a>修改文章特色图 featureimages</h2><p>在 <code>~/blog/themes/hexo-theme-matery/source/medias/featureimages</code> 文件夹中默认有 24 张特色图片，可以再增加或者减少，并需要在 <code>主题配置文件</code> 中找到 <code>featureImages</code> 做同步修改。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1779,7 +1838,7 @@ permalink_pinyin<span class="token punctuation">:</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.6k</span>&nbsp;字
+                class="white-color">16.1k</span>&nbsp;字
             
             
             
