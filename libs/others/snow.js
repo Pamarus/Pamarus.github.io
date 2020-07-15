@@ -168,8 +168,3 @@ function drawSnow() {
 /* 调用及控制方法 */
 var snow = new snowFall({maxFlake:60});
 snow.start();
-
-来源: 韦阳的博客
-作者: 韦阳
-链接: https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-14
-本文章著作权归作者所有，任何形式的转载都请注明出处。
