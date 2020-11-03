@@ -462,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.3k
+                    6.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    27 分
+                    30 分
                 </div>
                 
 
@@ -484,7 +484,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a> 或 这个网站 <a href="https://easyhexo.com/2-Theme-use-and-config/" target="_blank" rel="noopener">Easy Hexo</a> 选择自己喜欢的主题。<br>经过对比，我选择了matery主题。喜欢他的MD风格设计和响应式设计，它的首页banner轮播、文章配图、时间轴的归档页、支持Valine评论系统等特性，也满足自己的需求。</p>
+                <p>在 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a> 或 这个网站 <a href="https://easyhexo.com/2-Theme-use-and-config/" target="_blank" rel="noopener">Easy Hexo</a> 选择自己喜欢的主题。<br>经过对比，我选择了matery主题。喜欢他的MD风格设计和响应式设计，它的首页banner轮播、文章配图、支持Valine评论系统等特性，也满足自己的需求。</p>
 <a id="more"></a>
 
 <h1>1. 特性</h1>
@@ -1003,6 +1003,7 @@ logo<span class="token punctuation">:</span> <span class="token operator">/</spa
 <h2 id="动态标签栏">5.8. 动态标签栏</h2><p>在 <code>~/blog/themes/hexo-theme-matery/layout/layout.ejs</code> 中 <code>body</code> 内添加如下代码：</p>
 <pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"> <span class="token keyword">var</span> OriginTitile <span class="token operator">=</span> document<span class="token punctuation">.</span>title<span class="token punctuation">,</span> st<span class="token punctuation">;</span> document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"visibilitychange"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> document<span class="token punctuation">.</span>hidden <span class="token operator">?</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"Σ(‐◔◡◔‐)っ回来看看哟!"</span><span class="token punctuation">,</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>st<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"φ(ˆ▽ˆ)♪你好啊"</span><span class="token punctuation">,</span> st <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> document<span class="token punctuation">.</span>title <span class="token operator">=</span> OriginTitile <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3e3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>浏览器窗口中，切换到其他标签时，博客标签显示为<code>Σ(‐◔◡◔‐)っ回来看看哟!</code>，当切换回来时，显示<code>φ(ˆ▽ˆ)♪你好啊</code>。</p>
 <h2 id="增加建站时间">5.9. 增加建站时间</h2><p><code>~/blog/themes/hexo-theme-matery/layout/footer.ejs</code> 文件中已经集成了建站时间代码。</p>
 <ul>
 <li>打开<code>主题配置文件</code>，找到以下代码，将<code>time--enable</code> 改为 <code>true</code>，开启字段显示</li>
@@ -1260,8 +1261,135 @@ snow<span class="token punctuation">:</span>
 <blockquote>
 <p>MD中标题需要以 <code>h1、h2...</code>这样的形式书写，否则不生效不显示数字编号。也不清楚为什么，百度谷歌都没找到解决方法。</p>
 </blockquote>
+<h2 id="归档页自定义">5.13. 归档页自定义</h2><p>默认的归档页是时间轴的，虽然样式好看，但是效率很低，每页有效信息太少，之前NexT主题的列表样式挺好。</p>
+<ul>
+<li>在 <code>~/blog/themes/hexo-theme-matery/source/css/my.css</code> 文件中添加以下样式代码：</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/*归档页自定义样式*/</span>
+<span class="token punctuation">.</span>archive<span class="token operator">-</span>container<span class="token punctuation">{</span>
+  padding<span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+  <span class="token operator">-</span>webkit<span class="token operator">-</span>border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  <span class="token operator">-</span>moz<span class="token operator">-</span>border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  background<span class="token operator">-</span>color<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>archive<span class="token punctuation">:</span><span class="token function">not</span><span class="token punctuation">(</span><span class="token punctuation">:</span>last<span class="token operator">-</span>child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  margin<span class="token operator">-</span>bottom<span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>articles <span class="token punctuation">{</span>
+  border<span class="token operator">-</span>left<span class="token punctuation">:</span> 1px solid #dbdbdb<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article <span class="token punctuation">{</span>
+  border<span class="token operator">-</span>top<span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  margin<span class="token operator">-</span>left<span class="token punctuation">:</span> <span class="token operator">-</span>1px<span class="token punctuation">;</span>
+  padding<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">.</span>4rem <span class="token number">1</span><span class="token punctuation">.</span>5rem<span class="token punctuation">;</span>
+  border<span class="token operator">-</span>left<span class="token punctuation">:</span> 2px solid transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+  border<span class="token operator">-</span>left<span class="token operator">-</span>color<span class="token punctuation">:</span> #0f9d58 <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article time <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token punctuation">.</span>9rem<span class="token punctuation">;</span>
+  color<span class="token punctuation">:</span> deeppink<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* color: darkgray; */</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article h6 <span class="token punctuation">{</span>
+  margin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article h6 a <span class="token punctuation">{</span>
+  line<span class="token operator">-</span>height<span class="token punctuation">:</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+  color<span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+  border<span class="token operator">-</span>bottom<span class="token punctuation">:</span> 1px dashed transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article h6 a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+  border<span class="token operator">-</span>bottom<span class="token operator">-</span>color<span class="token punctuation">:</span> #0f9d58<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token punctuation">.</span>hbe<span class="token operator">-</span>input<span class="token operator">-</span>container<span class="token punctuation">{</span>
+  width<span class="token punctuation">:</span> <span class="token number">80</span><span class="token operator">%</span><span class="token punctuation">;</span>
+  max<span class="token operator">-</span>width<span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+  position<span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  margin<span class="token punctuation">:</span> 100px auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>hbe<span class="token operator">-</span>input<span class="token operator">-</span>container  <span class="token punctuation">.</span>btn<span class="token operator">-</span>decrypt<span class="token punctuation">{</span>
+  display<span class="token punctuation">:</span> inline<span class="token operator">-</span>block<span class="token punctuation">;</span>
+  vertical<span class="token operator">-</span>align<span class="token punctuation">:</span> top<span class="token punctuation">;</span>
+  width<span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+  height<span class="token punctuation">:</span> 32px<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token punctuation">:</span> 32px<span class="token punctuation">;</span>
+  font<span class="token operator">-</span>size<span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  color<span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span>
+  background<span class="token operator">-</span>color<span class="token punctuation">:</span> #3f90ff<span class="token punctuation">;</span>
+  text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token operator">-</span>webkit<span class="token operator">-</span>border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+  <span class="token operator">-</span>moz<span class="token operator">-</span>border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+  border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>about<span class="token operator">-</span>cover <span class="token punctuation">{</span>
+  height<span class="token punctuation">:</span> 50vh<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>desc<span class="token operator">-</span>content<span class="token punctuation">{</span>
+  padding<span class="token punctuation">:</span> <span class="token number">0</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+@media only screen and <span class="token punctuation">(</span>max<span class="token operator">-</span>width<span class="token punctuation">:</span> 601px<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span>desc<span class="token operator">-</span>content <span class="token punctuation">{</span>
+    padding<span class="token punctuation">:</span> <span class="token number">0</span> 15px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>v <span class="token punctuation">.</span>vlist <span class="token punctuation">.</span>vcard <span class="token punctuation">{</span>
+  padding<span class="token operator">-</span>top<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">.</span>5em <span class="token operator">!</span>important<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>修改 <code>~/blog/themes/hexo-theme-matery/layout/archive.ejs</code> 为以下代码：</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/bg-cover'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_widget/post-calendar'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container</span> <span class="token attr-name">archive-container"</span><span class="token punctuation">></span></span>
+        <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">const</span> groups <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> years <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        page<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>post <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> year <span class="token operator">=</span> post<span class="token punctuation">.</span>date<span class="token punctuation">.</span><span class="token function">year</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>groups<span class="token punctuation">[</span>year<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                groups<span class="token punctuation">[</span>year<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                years<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>year<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            groups<span class="token punctuation">[</span>year<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>post<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        years<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> b <span class="token operator">-</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> year <span class="token keyword">of</span> years<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-year<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">year</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span><span class="token punctuation">></span></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> year <span class="token operator">%</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>articles<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> post <span class="token keyword">of</span> groups<span class="token punctuation">[</span>year<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> b<span class="token punctuation">.</span>date<span class="token punctuation">.</span><span class="token function">diff</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>article</span> <span class="token attr-name">content</span><span class="token punctuation">></span><span class="token attr-name">"</span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>is-text-small<span class="token punctuation">"</span></span> <span class="token attr-name">datetime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">date_xml(post.date)</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span> <span class="token attr-name">itemprop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>datePublished<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+                                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token function">date</span><span class="token punctuation">(</span>post<span class="token punctuation">.</span>date<span class="token punctuation">,</span> <span class="token string">'MM-D'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>is-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%<span class="token punctuation">=</span></span> <span class="token attr-name">url_for(post.link</span> <span class="token attr-name">?</span> <span class="token attr-name">post.link</span> <span class="token attr-name">:</span> <span class="token attr-name">post.path)</span> <span class="token attr-name">%</span><span class="token punctuation">></span><span class="token attr-name">"</span><span class="token punctuation">></span></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> post<span class="token punctuation">.</span>title <span class="token operator">%</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token entity" title="&nbsp;">&amp;nbsp;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>page<span class="token punctuation">.</span>total <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/paging'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="致谢">6. 致谢</h1><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">matery官方文档</a></p>
 <p><a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
+<p><a href="https://qvchuang.top/archives/d3c10307.html#toc-heading-21" target="_blank" rel="noopener">matery主题个性化定制</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -2122,7 +2250,7 @@ void s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.2k</span>&nbsp;字
+                class="white-color">19.6k</span>&nbsp;字
             
             
             
