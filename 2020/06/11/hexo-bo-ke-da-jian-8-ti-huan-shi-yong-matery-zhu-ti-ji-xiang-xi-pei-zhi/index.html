@@ -462,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.8k
+                    8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    35 分
                 </div>
                 
 
@@ -732,7 +732,7 @@ description<span class="token punctuation">:</span> <span class="token string">"
 <li><code>hexo g -d</code>部署后，输入错误的链接，即会显示404。</li>
 <li>不要在本地试验，本地的时候输入错误的页面不会显示404页面。</li>
 </ul>
-<h2 id="搜索">3.6. 搜索</h2><p>本主题使用Hexo 插件 <code>hexo-generator-search</code> 来做内容搜索。</p>
+<h2 id="增加搜索功能">3.6. 增加搜索功能</h2><p>本主题使用Hexo 插件 <code>hexo-generator-search</code> 来做内容搜索。</p>
 <ul>
 <li>安装命令如下：</li>
 </ul>
@@ -1387,7 +1387,181 @@ snow<span class="token punctuation">:</span>
         <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="致谢">6. 致谢</h1><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">matery官方文档</a></p>
+<p><br><br><br></p>
+<p>——————以下2020年11月03日更新——————</p>
+<h1 id="修改主题颜色">6. 修改主题颜色</h1><blockquote>
+<p>默认为绿色风格，优化为自己喜欢的主题色。</p>
+</blockquote>
+<h2 id="修改主色">6.1. 修改主色</h2><ul>
+<li>进入主题文件的<code>/source/css/matery.css</code>文件中，搜索 <code>.bg-color</code>来修改背景颜色：</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">/*整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色*/</span>
+<span class="token punctuation">.</span>bg<span class="token operator">-</span>color <span class="token punctuation">{</span>
+    background<span class="token operator">-</span>image<span class="token punctuation">:</span> linear<span class="token operator">-</span><span class="token function">gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #6358DC <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">,</span> #3C8CE7 <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>并将<code>#4cbf30</code>和<code>#0f9d58</code>分别修改为<code>#6358DC</code>、<code>#3C8CE7</code></p>
+</li>
+<li><p>做其他细节的修改，如下</p>
+</li>
+</ul>
+<h2 id="优化代码引用样式">6.2. 优化代码引用样式</h2><ul>
+<li>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>blockquote</code>，修改如下代码。</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx">blockquote <span class="token punctuation">{</span>
+    border<span class="token operator">-</span>left<span class="token punctuation">:</span> 5px solid #4F72E1<span class="token punctuation">;</span>
+    padding<span class="token punctuation">:</span> 1rem <span class="token number">0</span><span class="token punctuation">.</span>5rem 1rem <span class="token number">0</span><span class="token punctuation">.</span>5rem<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #<span class="token number">666</span><span class="token punctuation">;</span>
+    background<span class="token operator">-</span>color<span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">79</span><span class="token punctuation">,</span> <span class="token number">114</span><span class="token punctuation">,</span> <span class="token number">225</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>优化代码引用块的段落样式，优化上下左右边距，<code>text-indent</code>为首行缩进。设置为不缩进，<code>0.2em</code>修改为<code>0em</code></li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#articleContent p <span class="token punctuation">{</span>
+    margin<span class="token punctuation">:</span> 2px 10px 2px 10px<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>05rem<span class="token punctuation">;</span>
+    line<span class="token operator">-</span>height<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>85rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#articleContent blockquote p <span class="token punctuation">{</span>
+    text<span class="token operator">-</span>indent<span class="token punctuation">:</span> 0rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化文章页超链接颜色">6.3. 优化文章页超链接颜色</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>articleContent a</code>添加链接hover状态的代码，并对默认状态的代码做相应修改。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#articleContent a <span class="token punctuation">{</span>
+    padding<span class="token punctuation">:</span> <span class="token number">0</span> 2px<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>
+    word<span class="token operator">-</span>wrap<span class="token punctuation">:</span> <span class="token keyword">break</span><span class="token operator">-</span>word<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#articleContent a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    padding<span class="token punctuation">:</span> <span class="token number">0</span> 2px<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">;</span>
+    text<span class="token operator">-</span>decoration<span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
+    word<span class="token operator">-</span>wrap<span class="token punctuation">:</span> <span class="token keyword">break</span><span class="token operator">-</span>word<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化底部转载规则中超链接颜色">6.4. 优化底部转载规则中超链接颜色</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>artDetail .reprint a</code>,添加链接hover状态的代码，并对默认状态的代码做相应修改。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#artDetail <span class="token punctuation">.</span>reprint a <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>05rem<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">/*底部转载规则链接色*/</span>
+<span class="token punctuation">}</span>
+
+#artDetail <span class="token punctuation">.</span>reprint a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>05rem<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*底部转载规则链接hover色*/</span>
+    font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">;</span>
+    text<span class="token operator">-</span>decoration<span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化文章页标签样式">6.5. 优化文章页标签样式</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>artDetail .article-tag .chip</code>,添加链接hover状态的代码，并对默认状态的代码做相应修改。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#artDetail <span class="token punctuation">.</span>article<span class="token operator">-</span>tag <span class="token punctuation">.</span>chip <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+    line<span class="token operator">-</span>height<span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+    border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    margin<span class="token operator">-</span>right<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    margin<span class="token operator">-</span>bottom<span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">/*文章顶部标签,边框色、文字色*/</span>
+    background<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    border<span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+    transition<span class="token punctuation">:</span> all <span class="token number">0</span><span class="token punctuation">.</span>6s ease<span class="token operator">-</span><span class="token keyword">in</span><span class="token operator">-</span>out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#artDetail <span class="token punctuation">.</span>article<span class="token operator">-</span>tag <span class="token punctuation">.</span>chip<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    background<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*文章顶部标签,hover填充色*/</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>找到<code>artDetail .tag_share .article-tag .chip</code>,修改部分色值。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#artDetail <span class="token punctuation">.</span>tag_share <span class="token punctuation">.</span>article<span class="token operator">-</span>tag <span class="token punctuation">.</span>chip <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+    line<span class="token operator">-</span>height<span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+    border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    margin<span class="token operator">-</span>right<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    margin<span class="token operator">-</span>bottom<span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">/*文章底部标签,边框色、文字色*/</span>
+    background<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    border<span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+    transition<span class="token punctuation">:</span> all <span class="token number">0</span><span class="token punctuation">.</span>6s ease<span class="token operator">-</span><span class="token keyword">in</span><span class="token operator">-</span>out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#artDetail <span class="token punctuation">.</span>tag_share <span class="token punctuation">.</span>article<span class="token operator">-</span>tag <span class="token punctuation">.</span>chip<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    background<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*文章底部标签,hover填充色*/</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化文章页分类样式">6.6. 优化文章页分类样式</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>artDetail .post-cate a</code>,代码如下。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#artDetail <span class="token punctuation">.</span>post<span class="token operator">-</span>cate a <span class="token punctuation">{</span>
+    padding<span class="token operator">-</span>right<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#artDetail <span class="token punctuation">.</span>post<span class="token operator">-</span>cate a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">;</span>
+    text<span class="token operator">-</span>decoration<span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化归档页的hover状态样式">6.7. 优化归档页的hover状态样式</h2><p>打开<code>~/blog/themes/hexo-theme-matery/source/css/my.css</code> 文件，修改如下代码</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+  border<span class="token operator">-</span>left<span class="token operator">-</span>color<span class="token punctuation">:</span> #3C8CE7<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>archive <span class="token punctuation">.</span>article h6 a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+  color<span class="token punctuation">:</span> #3C8CE7<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">/*标题文字色*/</span>
+  font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">;</span>             <span class="token comment" spellcheck="true">/*标题文字加粗*/</span>
+  border<span class="token operator">-</span>bottom<span class="token operator">-</span>color<span class="token punctuation">:</span> #3C8CE7<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*标题hover下划线色*/</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化首页图标hover状态样式">6.8. 优化首页图标hover状态样式</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>cover-btns a:hover</code>,修改如下代码</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>cover<span class="token operator">-</span>btns a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    border<span class="token punctuation">:</span> 1px solid <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*修改描边色为不透明度10%的白色*/</span>
+    background<span class="token operator">-</span>color<span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/*修改填充色为不透明度10%的白色*/</span>
+    box<span class="token operator">-</span>shadow<span class="token punctuation">:</span> <span class="token number">0</span> 14px 26px <span class="token operator">-</span>12px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">99</span><span class="token punctuation">,</span> <span class="token number">0.42</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token number">0</span> 4px 23px <span class="token number">0</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.12</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token number">0</span> 8px 10px <span class="token operator">-</span>5px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">99</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化首页社交链接hover状态样式">6.9. 优化首页社交链接hover状态样式</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>cover-social-link a</code>,添加如下代码</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>cover<span class="token operator">-</span>social<span class="token operator">-</span>link a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>5rem<span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化关于页的数据样式">6.10. 优化关于页的数据样式</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>post-statis .statis .count</code>,修改如下代码</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>post<span class="token operator">-</span>statis <span class="token punctuation">.</span>statis <span class="token punctuation">.</span>count <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>3rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>post<span class="token operator">-</span>statis <span class="token punctuation">.</span>statis <span class="token punctuation">.</span>count a <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>post<span class="token operator">-</span>statis <span class="token punctuation">.</span>statis <span class="token punctuation">.</span>count a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> #4F72E1<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>weight<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">;</span>
+    text<span class="token operator">-</span>decoration<span class="token punctuation">:</span> underline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化关于页社交链接样式">6.11. 优化关于页社交链接样式</h2><p>进入主题文件的<code>/source/css/matery.css</code>文件中，找到<code>aboutme .social-link a</code>,修改如下代码</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">#aboutme <span class="token punctuation">.</span>social<span class="token operator">-</span>link a <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> inline<span class="token operator">-</span>block<span class="token punctuation">;</span>
+    width<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">.</span>3rem<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">.</span>3rem<span class="token punctuation">;</span>
+    line<span class="token operator">-</span>height<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">.</span>2rem<span class="token punctuation">;</span>
+    margin<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">.</span>5rem<span class="token punctuation">;</span>
+    padding<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    color<span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    border<span class="token punctuation">:</span> 1px solid #3C8CE7<span class="token punctuation">;</span>
+    background<span class="token punctuation">:</span> radial<span class="token operator">-</span><span class="token function">gradient</span><span class="token punctuation">(</span>#6358DC<span class="token punctuation">,</span> #3C8CE7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">.</span>9rem<span class="token punctuation">;</span>
+    border<span class="token operator">-</span>radius<span class="token punctuation">:</span> <span class="token number">50</span><span class="token operator">%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#aboutme <span class="token punctuation">.</span>social<span class="token operator">-</span>link a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span>
+    line<span class="token operator">-</span>height<span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span>
+    font<span class="token operator">-</span>size<span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+    box<span class="token operator">-</span>shadow<span class="token punctuation">:</span> <span class="token number">0</span> 4px 6px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">93</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span> 2px 3px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="优化标签页标签hover状态样式">6.12. 优化标签页标签hover状态样式</h2><p>打开<code>~/blog/themes/hexo-theme-matery/source/libs/jqcloud/jqcloud.css</code> 文件，修改如下代码，添加<code>text-decoration: underline;</code></p>
+<pre class="line-numbers language-jsx"><code class="language-jsx">div<span class="token punctuation">.</span>jqcloud a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span> color<span class="token punctuation">:</span> #0df<span class="token punctuation">;</span> text<span class="token operator">-</span>decoration<span class="token punctuation">:</span> underline<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+div<span class="token punctuation">.</span>jqcloud a<span class="token punctuation">:</span>hover <span class="token punctuation">{</span> color<span class="token punctuation">:</span> #0cf<span class="token punctuation">;</span> text<span class="token operator">-</span>decoration<span class="token punctuation">:</span> underline<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="致谢">7. 致谢</h1><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">matery官方文档</a></p>
 <p><a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
 <p><a href="https://qvchuang.top/archives/d3c10307.html#toc-heading-21" target="_blank" rel="noopener">matery主题个性化定制</a></p>
 <script>
@@ -2250,7 +2424,7 @@ void s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.7k</span>&nbsp;字
+                class="white-color">20.9k</span>&nbsp;字
             
             
             
