@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Processing学习记录（4）：描边属性, Pamarus">
+    <meta name="keywords" content="Processing,编程学习,描边属性">
     <meta name="description" content="Thinking Hacks">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -458,14 +458,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    668
+                    720
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -577,7 +577,25 @@
 </ul>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-08%E6%8F%8F%E8%BE%B9%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.jpg" alt="Processing学习记录（4）-08描边平滑处理"></p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-09%E6%8F%8F%E8%BE%B9%E4%B8%8D%E4%BD%9C%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.jpg" alt="Processing学习记录（4）-09描边不作平滑处理"></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1422,7 +1440,7 @@ void s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.6k</span>&nbsp;字
+                class="white-color">19.7k</span>&nbsp;字
             
             
             
