@@ -275,7 +275,7 @@ mark {
 }
 
 .white-color {
-    color: #fff;
+    color: #ddd;
 }
 
 .progress-bar {
@@ -1899,8 +1899,13 @@ footer a {
     color: #fff;
 }
 
+footer a:hover {
+    color: #fff;
+    font-weight: 500;
+}
+
 footer .copy-right {
-    color: #dbdbdb;
+    color: #ddd;
 }
 
 /*搜索层样式*/
