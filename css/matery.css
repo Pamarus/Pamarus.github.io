@@ -1006,6 +1006,11 @@ article .article-tags .chip {
     right: 10px;
 }
 
+.prev-next .right-badge:hover {
+    border-radius: 0 8px 0 8px;
+    right: 10px;
+}
+
 .paging {
     margin-bottom: 15px;
 }
