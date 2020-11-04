@@ -458,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    720
+                    922
                 </div>
                 
 
@@ -481,11 +481,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>这一篇介绍Processing描边属性。</p>
+<p>这一篇介绍Processing的描边属性、填充和背景色。<br>Processing绘图默认的是浅灰色背景、黑色线条、白色的图形（如下图）。若想改变这些默认值，需要使用<code>background()</code>、<code>stroke()</code>、<code>fill()</code>函数。</p>
 </blockquote>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9503-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%BD%A2.jpg" alt="Processing学习记录03-第一个图形"></p>
 <a id="more"></a>
 
-<h1>1. 类型及函数表</h1>
+<h1>1. 描边函数及类型表</h1>
 
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-01%E6%8F%8F%E8%BE%B9%E5%B1%9E%E6%80%A7%E5%87%BD%E6%95%B0.jpg" alt="Processing学习记录（4）-01描边属性函数"></p>
 <h1 id="描边粗细">2. 描边粗细</h1><h2 id="函数及代码">2.1. 函数及代码</h2><p>这个属性在上一节点的绘制时介绍过，如下。</p>
@@ -530,6 +531,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-04%E7%9B%B4%E7%BA%BF%E7%AB%AF%E7%82%B9%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%AF%B9%E6%AF%94.jpg" alt="Processing学习记录（4）-04上圆大、中方等、下方大"></p>
 <h1 id="描边颜色">4. 描边颜色</h1><h2 id="函数及代码-2">4.1. 函数及代码</h2><pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果没有定义，默认色是0，黑色。</p>
 <h2 id="示例及效果-1">4.2. 示例及效果</h2><pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">size</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 设置画布大小为200*200  </span>
 <span class="token punctuation">}</span>
@@ -577,6 +579,22 @@
 </ul>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-08%E6%8F%8F%E8%BE%B9%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.jpg" alt="Processing学习记录（4）-08描边平滑处理"></p>
 <p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-09%E6%8F%8F%E8%BE%B9%E4%B8%8D%E4%BD%9C%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.jpg" alt="Processing学习记录（4）-09描边不作平滑处理"></p>
+<h1 id="背景色函数">7. 背景色函数</h1><p>函数<code>background()</code>可以设置显示窗口的背景颜色。</p>
+<p>参数值可设置为0~255。0表示黑色，255表示白色，二者之间是各种灰度值。如果没有定义，默认背景色是204浅灰色。</p>
+<h1 id="填充色函数">8. 填充色函数</h1><p>函数<code>fill()</code>可以设置填充色。如果没有定义，默认填充色是255，即白色。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">size</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 设置画布大小为200*200</span>
+  <span class="token function">background</span><span class="token punctuation">(</span><span class="token number">235</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">204</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ellipse</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">153</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ellipse</span><span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">72</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ellipse</span><span class="token punctuation">(</span><span class="token number">120</span><span class="token punctuation">,</span><span class="token number">120</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%884%EF%BC%89-10%E5%A1%AB%E5%85%85%E5%B1%9E%E6%80%A7.jpg" alt="Processing学习记录（4）-10填充属性"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1108,20 +1126,12 @@
                     <div class="summary block-with-text">
                         
                             
-这一篇介绍Processing描边属性。
+这一篇介绍Processing的描边属性、填充和背景色。Processing绘图默认的是浅灰色背景、黑色线条、白色的图形（如下图）。若想改变这些默认值，需要使用background()、stroke()、fill()函数。
 
 
 
-1. 类型及函数表
 
-
-2. 描边粗细2.1. 函数及代码这个属性在上一节点的绘制时介绍过，如下。
-strokeWeight(x);
-
-数值x表示粗细，默认为1。
-举例如下：
-
-void s
+1. 
                         
                     </div>
                     <div class="publish-info">
@@ -1440,7 +1450,7 @@ void s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.3k</span>&nbsp;字
+                class="white-color">21.5k</span>&nbsp;字
             
             
             

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pamarus.github.io/"/>
-  <updated>2020-11-03T12:43:12.938Z</updated>
+  <updated>2020-11-04T14:46:26.509Z</updated>
   <id>https://pamarus.github.io/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="https://pamarus.github.io/2020/06/13/processing-xue-xi-ji-lu-4-miao-bian-shu-xing/"/>
     <id>https://pamarus.github.io/2020/06/13/processing-xue-xi-ji-lu-4-miao-bian-shu-xing/</id>
     <published>2020-06-13T07:25:00.000Z</published>
-    <updated>2020-11-03T12:43:12.938Z</updated>
+    <updated>2020-11-04T14:46:26.509Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;这一篇介绍Processing描边属性。&lt;/p&gt;
+&lt;p&gt;这一篇介绍Processing的描边属性、填充和背景色。&lt;br&gt;Processing绘图默认的是浅灰色背景、黑色线条、白色的图形（如下图）。若想改变这些默认值，需要使用&lt;code&gt;background()&lt;/code&gt;、&lt;code&gt;stroke()&lt;/code&gt;、&lt;code&gt;fill()&lt;/code&gt;函数。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/Pamarus/Images/master/2020/Processing%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9503-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%BD%A2.jpg&quot; alt=&quot;Processing学习记录03-第一个图形&quot;&gt;&lt;/p&gt;
     
     </summary>
     
