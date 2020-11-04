@@ -1076,7 +1076,7 @@ article .article-tags .chip {
     font-size: 1rem;
     font-weight: 400;
     height: 25px;
-    line-height: 24px;
+    line-height: 22px;
     border-radius: 15px;
     margin-right: 5px;
     margin-bottom: 2px;
@@ -1088,6 +1088,7 @@ article .article-tags .chip {
 
 #artDetail .article-tag .chip:hover {
     color: #fff;
+    font-weight: 500;
     background: #4F72E1;  /*文章顶部标签,hover填充色*/
 }
 
@@ -1095,7 +1096,7 @@ article .article-tags .chip {
     font-size: 1rem;
     font-weight: 400;
     height: 25px;
-    line-height: 24px;
+    line-height: 22px;
     border-radius: 15px;
     margin-right: 5px;
     margin-bottom: 2px;
@@ -1106,6 +1107,7 @@ article .article-tags .chip {
 }
 
 #artDetail .tag_share .article-tag .chip:hover {
+	font-weight: 500;
     color: #fff;
     background: #4F72E1;  /*文章底部标签,hover填充色*/
 }
@@ -1851,14 +1853,14 @@ thead {
 
 .other-skills .chip {
     background-color: #fff;
-    border: 1px solid #eee;
+    border: 1px solid rgba(238, 238, 238, 0.5);
 }
 
 .other-skills .chip:hover {
     color: #fff;
     background: linear-gradient(to right, #6358DC 0%, #3C8CE7 100%);
-    border: 1px solid #6358DC;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
+    border: 1px solid rgba(238, 238, 238, 0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
 }
 
 .my-gallery {
